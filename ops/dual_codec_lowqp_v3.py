@@ -38,7 +38,8 @@ def _read_json(bundle: tarfile.TarFile, name: str) -> dict:
     return json.load(stream)
 
 
-def load_pilot(archive: Path, codec: str) -> tuple[dict, dict, dict, dict[str, list[dict]]]:
+def load_pilot(archive: Path, codec: str,
+               stages: tuple[str, ...] = ("calibration", "dev")) -> tuple[dict, dict, dict, dict[str, list[dict]]]:
     root = f"outputs/dual_codec_search_v2/{codec}"
     with tarfile.open(archive, "r:gz") as bundle:
         manifest = _read_json(bundle, f"{root}/manifest.json")
@@ -60,7 +61,11 @@ def load_pilot(archive: Path, codec: str) -> tuple[dict, dict, dict, dict[str, l
                 or json.loads((local / "risk_model.json").read_text(encoding="utf-8")) != risk):
             raise ValueError("pilot archive disagrees with repository frozen artifacts")
         records = {}
-        for stage, expected in (("calibration", 200), ("dev", 200)):
+        expected_counts = {"fit": 400, "calibration": 200, "dev": 200}
+        if not stages or any(stage not in expected_counts for stage in stages):
+            raise ValueError("unsupported pilot stage request")
+        for stage in stages:
+            expected = expected_counts[stage]
             prefix = f"{root}/cache/{stage}/clip_"
             names = sorted(name for name in bundle.getnames()
                            if name.startswith(prefix) and name.endswith(".json"))
