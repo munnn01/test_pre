@@ -7,6 +7,7 @@ import pytest
 
 from ops.dual_codec_search import digest
 from ops.dual_codec_v4_eval import _curve, load_v4
+from ops.push_v4_dual_val import payload
 
 
 def test_v4_frozen_artifacts_require_matching_hashes(tmp_path) -> None:
@@ -51,3 +52,17 @@ def test_all_analyzers_use_same_selected_stream() -> None:
     assert _curve(rows, "v4_frozen", "r3d_18")["30"]["top1"] == 1
     assert _curve(rows, "v4_frozen", "mc3_18")["30"]["top1"] == .5
     assert _curve(rows, "v4_frozen", "mc3_18")["30"]["bpp"] == .5
+
+
+def test_v4_val_notebook_is_private_and_commit_pinned(tmp_path) -> None:
+    archive = tmp_path / "pilot.tgz"
+    archive.write_bytes(b"fixture")
+    commit = "a" * 40
+    book, meta = payload(commit, "vtk269", "h264", 1, archive)
+    script = "".join(book["cells"][0]["source"])
+    assert commit in script
+    assert "__REF__" not in script
+    assert "__CODEC__" not in script
+    assert meta["id"] == "vtk269/dual-v4-val-h264-s1"
+    assert meta["is_private"] is True
+    assert meta["dataset_sources"][0] == "qktttttttttt/kineticscleaned"
