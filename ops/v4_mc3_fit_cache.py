@@ -198,9 +198,13 @@ def merge(args: argparse.Namespace) -> None:
     bundles.sort(key=lambda pair: pair[0]["shard"])
     if [item[0]["shard"] for item in bundles] != [0, 1]:
         raise ValueError("missing or duplicate V4 shard")
+    # Raw index hashes can differ across Kaggle mounts because records contain
+    # absolute paths and filesystem enumeration order. The paired pilot IDs,
+    # archive hash, and exact per-candidate bitrates are the mount-independent
+    # invariants. Preserve each raw index hash in its source manifest instead.
     common = ("experiment", "codec", "qps", "candidates", "model",
               "stage_full_fingerprints", "pilot_manifest_sha256",
-              "pilot_archive_sha256", "index_sha256", "code_commit")
+              "pilot_archive_sha256", "code_commit")
     if any(bundles[0][0][key] != bundles[1][0][key] for key in common):
         raise ValueError("V4 shard provenance mismatch")
     args.out_dir.mkdir(parents=True, exist_ok=True)
