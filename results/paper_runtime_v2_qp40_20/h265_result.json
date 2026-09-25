@@ -1,0 +1,1298 @@
+{
+  "manifest": {
+    "experiment": "dual_v2_full_runtime",
+    "codec": "h265",
+    "split": "val",
+    "clips": 20,
+    "sample_ids": [
+      "tying knot (not on a tie)/awNohBOJHgw.mp4",
+      "drinking beer/h0ea069drlc.mp4",
+      "dribbling basketball/uSMilNFMGTY.mp4",
+      "jogging/u_9OTjkL7D8.mp4",
+      "swimming backstroke/jI3i52BEMwg.mp4",
+      "news anchoring/K6TTpn3t6ag.mp4",
+      "weaving basket/NvaIZlHvN_M.mp4",
+      "digging/2zSBmewIxV0.mp4",
+      "tap dancing/J8meqbE6gZI.mp4",
+      "taking a shower/U-5QC_ezpLE.mp4",
+      "passing American football (in game)/et-lVSK-la4.mp4",
+      "skateboarding/WK4iVu_0wIk.mp4",
+      "golf chipping/3N1GwK8oadI.mp4",
+      "shaking head/OslRvwb5h0o.mp4",
+      "picking fruit/gRp3UjWkkK0.mp4",
+      "jumping into pool/___dTOdxzXY.mp4",
+      "rock scissors paper/jDFnViSc30g.mp4",
+      "shaving head/dAry8tI-DnY.mp4",
+      "cleaning floor/ltoeikYSp1g.mp4",
+      "eating ice cream/PU1DCcuxBqo.mp4"
+    ],
+    "code_commit": "b25f75d767f24163a1edc6f976c52c7051981057",
+    "config_sha256": "7161844038eb90a6ad3c2739865736484643249c50cc4cc648cafddf287232c0",
+    "index_sha256": "1a7adb6ad3aac2fa3fc93767c9567e49441b35f7ad6375fe7e1949ef0507acb2",
+    "frozen_policy_sha256": "582efbc14f41f0dba9da2856a6d028a55575a8644f097c5b31538a92931e0adf",
+    "risk_sha256": "9fe9e7c96ce339883f410b7b96f37ac01bcc9b4bf2b65febb002593919e26a93",
+    "policy": {
+      "mode": "C",
+      "primary": {
+        "kl": 0.1,
+        "feature": 0.05,
+        "confidence": 0.6
+      },
+      "risk_low_qp": 0.2,
+      "risk_high_qp": 0.1
+    },
+    "qps": [
+      40
+    ],
+    "candidates": [
+      "identity128",
+      "area112",
+      "area96",
+      "area112_up128",
+      "blur020_128",
+      "blur040_128"
+    ],
+    "models": [
+      "r2plus1d_18",
+      "r3d_18"
+    ],
+    "frames": 16,
+    "frame_size": 128,
+    "temporal_stride": 2,
+    "preset": "medium",
+    "hardware": {
+      "cpu": "x86_64",
+      "logical_cpus": 4,
+      "gpu": "Tesla T4"
+    },
+    "versions": {
+      "python": "3.12.13",
+      "torch": "2.10.0+cu128",
+      "torchvision": "0.25.0+cu128",
+      "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers"
+    },
+    "comparison": "same clips/QPs; codec-only one encode+decode and zero analyzer passes versus full six-candidate search"
+  },
+  "summary": {
+    "n": 20,
+    "unit": "one 16-frame source clip",
+    "qps": [
+      40
+    ],
+    "baseline_codec_calls_per_clip": 1,
+    "full_codec_calls_per_clip": 6,
+    "scope": "paired, order-balanced wall time of FFmpeg encode+decode; codec-only baseline has no analyzer pass; full arm includes candidate generation, all two-analyzer passes and selection; model load/download excluded",
+    "identity_only_s": {
+      "median": 0.4489856494999742,
+      "mean": 0.47093872889999205,
+      "p95": 0.7025922676499762
+    },
+    "full_selector_s": {
+      "median": 2.612142212500032,
+      "mean": 2.6667127897000085,
+      "p95": 2.9385332914501197
+    },
+    "overhead_ratio": {
+      "median": 6.152220505585646,
+      "mean": 5.883314336655951,
+      "p95": 6.930379947578778
+    },
+    "candidate_codec_s": {
+      "median": 1.8114763970000638,
+      "mean": 1.8397583592499955,
+      "p95": 1.9907346726000867
+    },
+    "analyzer_s": {
+      "median": 0.5958570559999998,
+      "mean": 0.6273939531499735,
+      "p95": 0.6581641229500097
+    },
+    "selector_s": {
+      "median": 0.00038393150001070353,
+      "mean": 0.0005185358999966639,
+      "p95": 0.0006730634000149407
+    }
+  },
+  "records": [
+    {
+      "sequence_id": "tying knot (not on a tie)/awNohBOJHgw.mp4",
+      "decode_s": 0.15407082900003388,
+      "candidate_generation_s": 0.03799600799999325,
+      "clean_analyzers_s": 0.6776429320000261,
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3971311160000255,
+              "both_analyzers_s": 0.09899441599992542
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.33929351699998733,
+              "both_analyzers_s": 0.08267736300001616
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.32798851199999035,
+              "both_analyzers_s": 0.08239379599996255
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3012370200000305,
+              "both_analyzers_s": 0.08283497799999395
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.30740856200003464,
+              "both_analyzers_s": 0.08316410200001201
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.31577521600002,
+              "both_analyzers_s": 0.08150619300005246
+            }
+          ],
+          "selector_s": 0.002469254999994064
+        }
+      ],
+      "candidate_codec_s": 1.9888339430000883,
+      "analyzer_s": 1.1892137799999887,
+      "selector_s": 0.002469254999994064,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.46284423200006586,
+      "full_selector_s": 3.432006468000054,
+      "overhead_ratio": 7.415035622609997
+    },
+    {
+      "sequence_id": "drinking beer/h0ea069drlc.mp4",
+      "decode_s": 0.3036923679999859,
+      "candidate_generation_s": 0.025908334999996896,
+      "clean_analyzers_s": 0.08155310300003293,
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30129937100002735,
+              "both_analyzers_s": 0.08153309099998296
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2887504020000051,
+              "both_analyzers_s": 0.08592255199999954
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.28278733100000863,
+              "both_analyzers_s": 0.08859295399992106
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.2910714099999723,
+              "both_analyzers_s": 0.09342966899998828
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3109478709999962,
+              "both_analyzers_s": 0.09918385599996782
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3015174490000163,
+              "both_analyzers_s": 0.09890319800001635
+            }
+          ],
+          "selector_s": 0.0003720060000205194
+        }
+      ],
+      "candidate_codec_s": 1.776373834000026,
+      "analyzer_s": 0.6291184229999089,
+      "selector_s": 0.0003720060000205194,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.6023657929999899,
+      "full_selector_s": 2.753200149999941,
+      "overhead_ratio": 4.570644917082778
+    },
+    {
+      "sequence_id": "dribbling basketball/uSMilNFMGTY.mp4",
+      "decode_s": 0.22977156899997908,
+      "candidate_generation_s": 0.02640335699999241,
+      "clean_analyzers_s": 0.09911035700002913,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.293178437999984,
+              "both_analyzers_s": 0.08444146699997646
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.28627623800002766,
+              "both_analyzers_s": 0.08098169400000188
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.2784474900000191,
+              "both_analyzers_s": 0.08098529199997984
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.2933115480000197,
+              "both_analyzers_s": 0.08159635499998785
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3599806739999849,
+              "both_analyzers_s": 0.0816412039999932
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3345633609999936,
+              "both_analyzers_s": 0.08760126199996421
+            }
+          ],
+          "selector_s": 0.0003311079999548383
+        }
+      ],
+      "candidate_codec_s": 1.845757749000029,
+      "analyzer_s": 0.5963576309999326,
+      "selector_s": 0.0003311079999548383,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.5302644459999328,
+      "full_selector_s": 2.716377756999975,
+      "overhead_ratio": 5.122685063068172
+    },
+    {
+      "sequence_id": "jogging/u_9OTjkL7D8.mp4",
+      "decode_s": 0.05272165699994957,
+      "candidate_generation_s": 0.025774428999966403,
+      "clean_analyzers_s": 0.08136985400000185,
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.31695730999996385,
+              "both_analyzers_s": 0.08148844599992344
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30555703700002823,
+              "both_analyzers_s": 0.08104537399998435
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.2955373940000072,
+              "both_analyzers_s": 0.0809681929999897
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3175722780000001,
+              "both_analyzers_s": 0.08171557800000073
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.36733311099999355,
+              "both_analyzers_s": 0.09194819800001142
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3302177619999611,
+              "both_analyzers_s": 0.08292966400000523
+            }
+          ],
+          "selector_s": 0.0005785270000160381
+        }
+      ],
+      "candidate_codec_s": 1.933174891999954,
+      "analyzer_s": 0.5814653069999167,
+      "selector_s": 0.0005785270000160381,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.38008392499995125,
+      "full_selector_s": 2.6127341909999586,
+      "overhead_ratio": 6.874098111358679
+    },
+    {
+      "sequence_id": "swimming backstroke/jI3i52BEMwg.mp4",
+      "decode_s": 0.16101581199995962,
+      "candidate_generation_s": 0.02734013600002072,
+      "clean_analyzers_s": 0.08154182900000251,
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.28347210999999106,
+              "both_analyzers_s": 0.08151183099994341
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.28559789000001956,
+              "both_analyzers_s": 0.08092544399994495
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.28066383399999495,
+              "both_analyzers_s": 0.08089092999995273
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3027758239999798,
+              "both_analyzers_s": 0.08902042699992307
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3359879359999809,
+              "both_analyzers_s": 0.09800877899999705
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.2829071070000282,
+              "both_analyzers_s": 0.0989564110000174
+            }
+          ],
+          "selector_s": 0.0003322549999893454
+        }
+      ],
+      "candidate_codec_s": 1.7714047009999945,
+      "analyzer_s": 0.6108556509997811,
+      "selector_s": 0.0003322549999893454,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.4521549199999413,
+      "full_selector_s": 2.588886247000005,
+      "overhead_ratio": 5.725662007615313
+    },
+    {
+      "sequence_id": "news anchoring/K6TTpn3t6ag.mp4",
+      "decode_s": 0.13725876300003392,
+      "candidate_generation_s": 0.026393584000004466,
+      "clean_analyzers_s": 0.09918791800004101,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30527858300001753,
+              "both_analyzers_s": 0.08289691900000662
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2903170360000331,
+              "both_analyzers_s": 0.08096399700002621
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29465509999999995,
+              "both_analyzers_s": 0.08089958700003308
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3025571819999868,
+              "both_analyzers_s": 0.08159894199997098
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3033812940000189,
+              "both_analyzers_s": 0.08153695700002572
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.31384696799995027,
+              "both_analyzers_s": 0.08942535900001758
+            }
+          ],
+          "selector_s": 0.0004814459999806786
+        }
+      ],
+      "candidate_codec_s": 1.8100361630000066,
+      "analyzer_s": 0.5965096790001212,
+      "selector_s": 0.0004814459999806786,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.45484424400001444,
+      "full_selector_s": 2.5880564180000647,
+      "overhead_ratio": 5.689983883801732
+    },
+    {
+      "sequence_id": "weaving basket/NvaIZlHvN_M.mp4",
+      "decode_s": 0.0638280860000009,
+      "candidate_generation_s": 0.02780434599998216,
+      "clean_analyzers_s": 0.09929394999994656,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "area112_up128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.34467053600002373,
+              "both_analyzers_s": 0.08292646199998899
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3232448460000228,
+              "both_analyzers_s": 0.08230496300001278
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30516102499996123,
+              "both_analyzers_s": 0.08238289100000884
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3518724890000158,
+              "both_analyzers_s": 0.08299271500004579
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3571296830000392,
+              "both_analyzers_s": 0.09908293900002718
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.34476995599999327,
+              "both_analyzers_s": 0.08300618999999188
+            }
+          ],
+          "selector_s": 0.00043926099999680446
+        }
+      ],
+      "candidate_codec_s": 2.026848535000056,
+      "analyzer_s": 0.611990110000022,
+      "selector_s": 0.00043926099999680446,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.4111574720000135,
+      "full_selector_s": 2.748341202000006,
+      "overhead_ratio": 6.6844004770997225
+    },
+    {
+      "sequence_id": "digging/2zSBmewIxV0.mp4",
+      "decode_s": 0.07201594800000066,
+      "candidate_generation_s": 0.02643047399999432,
+      "clean_analyzers_s": 0.08169396699997833,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.29850873200001615,
+              "both_analyzers_s": 0.08153188999995109
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.3349258520000262,
+              "both_analyzers_s": 0.08098245700000462
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29641946300000654,
+              "both_analyzers_s": 0.08099456600001531
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3205245879999552,
+              "both_analyzers_s": 0.0976056249999715
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3008173260000149,
+              "both_analyzers_s": 0.0989347470000439
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.30082299299999704,
+              "both_analyzers_s": 0.09903686699999525
+            }
+          ],
+          "selector_s": 0.0003842469999995046
+        }
+      ],
+      "candidate_codec_s": 1.852018954000016,
+      "analyzer_s": 0.62078011899996,
+      "selector_s": 0.0003842469999995046,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.40168070499998976,
+      "full_selector_s": 2.5894489149999913,
+      "overhead_ratio": 6.4465354764801495
+    },
+    {
+      "sequence_id": "tap dancing/J8meqbE6gZI.mp4",
+      "decode_s": 0.07397062699999424,
+      "candidate_generation_s": 0.02623062099996787,
+      "clean_analyzers_s": 0.09909757500003025,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3031357710000293,
+              "both_analyzers_s": 0.08293600800004697
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2919622459999687,
+              "both_analyzers_s": 0.080909298999984
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.28450299400003587,
+              "both_analyzers_s": 0.08085092699997176
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30373997100002725,
+              "both_analyzers_s": 0.08146694999993542
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.29779728600004773,
+              "both_analyzers_s": 0.08163652299998603
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.306828621999955,
+              "both_analyzers_s": 0.08774147000002586
+            }
+          ],
+          "selector_s": 0.00037971599999764294
+        }
+      ],
+      "candidate_codec_s": 1.7879668900000638,
+      "analyzer_s": 0.5946387519999803,
+      "selector_s": 0.00037971599999764294,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.3803719950000186,
+      "full_selector_s": 2.50121754700001,
+      "overhead_ratio": 6.575714247837536
+    },
+    {
+      "sequence_id": "taking a shower/U-5QC_ezpLE.mp4",
+      "decode_s": 0.05998829400004979,
+      "candidate_generation_s": 0.02914271699995652,
+      "clean_analyzers_s": 0.09326298000001998,
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30221061999998255,
+              "both_analyzers_s": 0.07641433600002756
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.28734891400000606,
+              "both_analyzers_s": 0.07582513699998117
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.283075072000031,
+              "both_analyzers_s": 0.07585496900003363
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.2959921960000429,
+              "both_analyzers_s": 0.07649164700001165
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.30246006800001624,
+              "both_analyzers_s": 0.0860321740000245
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3028756879999719,
+              "both_analyzers_s": 0.08148546600000373
+            }
+          ],
+          "selector_s": 0.0004763000000025386
+        }
+      ],
+      "candidate_codec_s": 1.7739625580000506,
+      "analyzer_s": 0.5653667090001022,
+      "selector_s": 0.0004763000000025386,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.37206480700007205,
+      "full_selector_s": 2.445534973000008,
+      "overhead_ratio": 6.572873668751837
+    },
+    {
+      "sequence_id": "passing American football (in game)/et-lVSK-la4.mp4",
+      "decode_s": 0.07992200500001445,
+      "candidate_generation_s": 0.026852464000000964,
+      "clean_analyzers_s": 0.08182785599996123,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.3255590880000341,
+              "both_analyzers_s": 0.08151369900002692
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2930787920000171,
+              "both_analyzers_s": 0.08581179699996255
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30161674300001096,
+              "both_analyzers_s": 0.09030487700010781
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.37263838499995927,
+              "both_analyzers_s": 0.09900818999994954
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.30466315499995744,
+              "both_analyzers_s": 0.08451171900003374
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3042497930000536,
+              "both_analyzers_s": 0.08294473799992375
+            }
+          ],
+          "selector_s": 0.0003667490000225371
+        }
+      ],
+      "candidate_codec_s": 1.9018059560000324,
+      "analyzer_s": 0.6059228759999655,
+      "selector_s": 0.0003667490000225371,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.39189107499998954,
+      "full_selector_s": 2.6329354439999406,
+      "overhead_ratio": 6.718538930747558
+    },
+    {
+      "sequence_id": "skateboarding/WK4iVu_0wIk.mp4",
+      "decode_s": 0.16149237600006927,
+      "candidate_generation_s": 0.02728845400008595,
+      "clean_analyzers_s": 0.08169034100001227,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "blur040_128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.32056203000001915,
+              "both_analyzers_s": 0.08142446700003347
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.307154573000048,
+              "both_analyzers_s": 0.08094974400000865
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29113901099992745,
+              "both_analyzers_s": 0.08105833000013263
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.31693806999999197,
+              "both_analyzers_s": 0.08757095099997514
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.3161849619999657,
+              "both_analyzers_s": 0.08151376199998595
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3147121549999383,
+              "both_analyzers_s": 0.08153126900003826
+            }
+          ],
+          "selector_s": 0.000486851999994542
+        }
+      ],
+      "candidate_codec_s": 1.8666908009998906,
+      "analyzer_s": 0.5757388640001864,
+      "selector_s": 0.000486851999994542,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.49520806100008485,
+      "full_selector_s": 2.6491494090000742,
+      "overhead_ratio": 5.3495684291771255
+    },
+    {
+      "sequence_id": "golf chipping/3N1GwK8oadI.mp4",
+      "decode_s": 0.16442488399991362,
+      "candidate_generation_s": 0.025374655999939932,
+      "clean_analyzers_s": 0.0815585390000706,
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.2988388669999722,
+              "both_analyzers_s": 0.08147480599996015
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2897717429999602,
+              "both_analyzers_s": 0.08084890300006009
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.2838661289999891,
+              "both_analyzers_s": 0.08647904899999048
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.28878659199995127,
+              "both_analyzers_s": 0.08294439599990255
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.2917342839999719,
+              "both_analyzers_s": 0.08307099700004983
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.2913791339999534,
+              "both_analyzers_s": 0.0828749309999921
+            }
+          ],
+          "selector_s": 0.00033923300009064405
+        }
+      ],
+      "candidate_codec_s": 1.744376748999798,
+      "analyzer_s": 0.5792516210000258,
+      "selector_s": 0.00033923300009064405,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.47160634099986964,
+      "full_selector_s": 2.5304773069999555,
+      "overhead_ratio": 5.365655817169462
+    },
+    {
+      "sequence_id": "shaking head/OslRvwb5h0o.mp4",
+      "decode_s": 0.049588977999974304,
+      "candidate_generation_s": 0.027109276000032878,
+      "clean_analyzers_s": 0.08307941699990806,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.2892353340000682,
+              "both_analyzers_s": 0.08147160300006817
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2823886260000563,
+              "both_analyzers_s": 0.0809429439999576
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29366440299997976,
+              "both_analyzers_s": 0.08087824099993668
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.2883340199999793,
+              "both_analyzers_s": 0.08153862899985143
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.28833465000002434,
+              "both_analyzers_s": 0.08518255999990743
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.30073265699991225,
+              "both_analyzers_s": 0.0955451779999521
+            }
+          ],
+          "selector_s": 0.0003644579999217967
+        }
+      ],
+      "candidate_codec_s": 1.7426896900000202,
+      "analyzer_s": 0.5886385719995815,
+      "selector_s": 0.0003644579999217967,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.3511769159999858,
+      "full_selector_s": 2.424831567999945,
+      "overhead_ratio": 6.9048717541560825
+    },
+    {
+      "sequence_id": "picking fruit/gRp3UjWkkK0.mp4",
+      "decode_s": 0.1847047429999975,
+      "candidate_generation_s": 0.027416876999950546,
+      "clean_analyzers_s": 0.09917775400003848,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "area112",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.31435560900001747,
+              "both_analyzers_s": 0.0829056780000883
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.303884657000026,
+              "both_analyzers_s": 0.08102750400007608
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.30586405199994715,
+              "both_analyzers_s": 0.0813848699999653
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3326970690000053,
+              "both_analyzers_s": 0.08173406200000954
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.31795689899990975,
+              "both_analyzers_s": 0.0815165239999942
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3192084770000747,
+              "both_analyzers_s": 0.0876100889998952
+            }
+          ],
+          "selector_s": 0.00038958700008606684
+        }
+      ],
+      "candidate_codec_s": 1.8939667629999803,
+      "analyzer_s": 0.5953564810000671,
+      "selector_s": 0.00038958700008606684,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.5662702459999309,
+      "full_selector_s": 2.719200991999969,
+      "overhead_ratio": 4.801949265757998
+    },
+    {
+      "sequence_id": "jumping into pool/___dTOdxzXY.mp4",
+      "decode_s": 0.07486960200003523,
+      "candidate_generation_s": 0.02894811099997696,
+      "clean_analyzers_s": 0.0819202249999762,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.31843186099990817,
+              "both_analyzers_s": 0.0816023589999304
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.30628606900006616,
+              "both_analyzers_s": 0.08094834799999262
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.29370591400004287,
+              "both_analyzers_s": 0.08093654899994362
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3218569269999989,
+              "both_analyzers_s": 0.09718153100004656
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.32594865999999456,
+              "both_analyzers_s": 0.09911762300009741
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.31441690799999833,
+              "both_analyzers_s": 0.08600923800008786
+            }
+          ],
+          "selector_s": 0.00036400699991645524
+        }
+      ],
+      "candidate_codec_s": 1.880646339000009,
+      "analyzer_s": 0.6077158730000747,
+      "selector_s": 0.00036400699991645524,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.44581637900000715,
+      "full_selector_s": 2.6115502340001058,
+      "overhead_ratio": 5.857905534691143
+    },
+    {
+      "sequence_id": "rock scissors paper/jDFnViSc30g.mp4",
+      "decode_s": 0.07308110099995702,
+      "candidate_generation_s": 0.026450726000007307,
+      "clean_analyzers_s": 0.08162146600000142,
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30793263900000056,
+              "both_analyzers_s": 0.08155579000003854
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2928459610000118,
+              "both_analyzers_s": 0.08093154800008051
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.28497594199996,
+              "both_analyzers_s": 0.08090538799990554
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.29403084300008686,
+              "both_analyzers_s": 0.08149979100005567
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.30833426000003783,
+              "both_analyzers_s": 0.09104099400008181
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.2979271560000143,
+              "both_analyzers_s": 0.0829273159999957
+            }
+          ],
+          "selector_s": 0.0005768019999550233
+        }
+      ],
+      "candidate_codec_s": 1.7860468010001114,
+      "analyzer_s": 0.5804822930001592,
+      "selector_s": 0.0005768019999550233,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.3784228809998922,
+      "full_selector_s": 2.483760830999927,
+      "overhead_ratio": 6.5634530989172255
+    },
+    {
+      "sequence_id": "shaving head/dAry8tI-DnY.mp4",
+      "decode_s": 0.0762824000000819,
+      "candidate_generation_s": 0.026022366000006514,
+      "clean_analyzers_s": 0.08156774699989455,
+      "arm_order": [
+        "full",
+        "identity"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.29703031799999735,
+              "both_analyzers_s": 0.08149053899990122
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.2855697910000572,
+              "both_analyzers_s": 0.0809727580000299
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3085685650000869,
+              "both_analyzers_s": 0.0808409590000565
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3269082240000216,
+              "both_analyzers_s": 0.08757269800003087
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.2978324130000374,
+              "both_analyzers_s": 0.09452533599994695
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.2970073199999206,
+              "both_analyzers_s": 0.08765280499994788
+            }
+          ],
+          "selector_s": 0.00047329599999557104
+        }
+      ],
+      "candidate_codec_s": 1.812916631000121,
+      "analyzer_s": 0.5946228419998079,
+      "selector_s": 0.00047329599999557104,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.3806053030000385,
+      "full_selector_s": 2.52865824100013,
+      "overhead_ratio": 6.64378089603201
+    },
+    {
+      "sequence_id": "cleaning floor/ltoeikYSp1g.mp4",
+      "decode_s": 0.3907608249999157,
+      "candidate_generation_s": 0.02681374799999503,
+      "clean_analyzers_s": 0.08177200900001935,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "identity128",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30571697199991377,
+              "both_analyzers_s": 0.08156435199998668
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.29139409300000807,
+              "both_analyzers_s": 0.08437501699995664
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.3032494259999794,
+              "both_analyzers_s": 0.0893036380000467
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.30208826299997327,
+              "both_analyzers_s": 0.09514310099996237
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.29790634500000124,
+              "both_analyzers_s": 0.09895587000005435
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.2987013019999267,
+              "both_analyzers_s": 0.09910015399998429
+            }
+          ],
+          "selector_s": 0.00038361600002190244
+        }
+      ],
+      "candidate_codec_s": 1.7990564009998025,
+      "analyzer_s": 0.6302141410000104,
+      "selector_s": 0.00038361600002190244,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.6978833619999705,
+      "full_selector_s": 2.8653268809999872,
+      "overhead_ratio": 4.105738920023298
+    },
+    {
+      "sequence_id": "eating ice cream/PU1DCcuxBqo.mp4",
+      "decode_s": 0.4743361760000653,
+      "candidate_generation_s": 0.026475491000041984,
+      "clean_analyzers_s": 0.09914864600000328,
+      "arm_order": [
+        "identity",
+        "full"
+      ],
+      "qps": [
+        {
+          "qp": 40,
+          "chosen": "area96",
+          "candidate_costs": [
+            {
+              "name": "identity128",
+              "codec_s": 0.30755996999994295,
+              "both_analyzers_s": 0.0829138999999941
+            },
+            {
+              "name": "area112",
+              "codec_s": 0.29797704099996736,
+              "both_analyzers_s": 0.08094773599998462
+            },
+            {
+              "name": "area96",
+              "codec_s": 0.28773551299991595,
+              "both_analyzers_s": 0.08099939400005951
+            },
+            {
+              "name": "area112_up128",
+              "codec_s": 0.3029002709999986,
+              "both_analyzers_s": 0.0815258879998737
+            },
+            {
+              "name": "blur020_128",
+              "codec_s": 0.30348673399998916,
+              "both_analyzers_s": 0.08153502400000434
+            },
+            {
+              "name": "blur040_128",
+              "codec_s": 0.3009333060000472,
+              "both_analyzers_s": 0.08656875099995887
+            }
+          ],
+          "selector_s": 0.0003819969999767636
+        }
+      ],
+      "candidate_codec_s": 1.8005928349998612,
+      "analyzer_s": 0.5936393389998784,
+      "selector_s": 0.0003819969999767636,
+      "baseline_codec_calls": 1,
+      "full_codec_calls": 6,
+      "baseline_analyzer_calls": 0,
+      "full_analyzer_calls": 14,
+      "identity_only_s": 0.7920614750000823,
+      "full_selector_s": 2.9125610190001225,
+      "overhead_ratio": 3.6771906107411927
+    }
+  ]
+}

@@ -26,8 +26,9 @@ quotient of the two displayed medians. With just 20 clips, these are
 descriptive pilot timings, not a confidence interval or a general hardware
 benchmark.
 
-The full downloadable Kaggle outputs include per-clip timing records and
-manifests. Locally audited `runtime_result.json` SHA-256:
+The raw [H.264](h264_result.json) and [H.265](h265_result.json) JSON files
+include per-clip timing records and manifests. Their SHA-256 values, checked
+against the downloaded Kaggle artifacts, are:
 
 - H.264: `3d3afc54975b8c38aaed83a1c191a9d321c8d4390ce606e7f2c3ddf10df616d2`
 - H.265: `183421076eccf0882122bb7e22f2f3c6bee42b4a4a1fec02f232e4a9f3ccdcbcb`
