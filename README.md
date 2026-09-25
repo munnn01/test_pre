@@ -20,17 +20,20 @@ compares all fixed candidates and frozen A/B/C policies on the existing V2
 records; it is **not** a fresh holdout.
 
 V4 is an **ongoing development experiment**, not a new performance result.
-The [predeclared V4 design](docs/DUAL_CODEC_V4_DESIGN.md) collects
+The [predeclared V4 design](docs/DUAL_CODEC_V4_DESIGN.md) collected
 `mc3_18` correctness on 400 TRAIN-fit and 200 disjoint TRAIN-calibration
 clips per codec, paired at QP30/35/40 with the six frozen V2 candidates.
 The [collector](ops/v4_mc3_fit_cache.py), [TRAIN-only fitter](ops/dual_codec_v4_fit.py),
 and [five-QP VAL evaluator](ops/dual_codec_v4_eval.py) are separate stages.
-Four private Kaggle collector shards are running on
+Four private Kaggle collector shards completed on
 [`nguyenhoanglan1232` H.264 s0](https://www.kaggle.com/code/nguyenhoanglan1232/dual-v4-mc3-fit-h264-s0),
 [`vtk269` H.264 s1](https://www.kaggle.com/code/vtk269/dual-v4-mc3-fit-h264-s1),
 [`wagur124705` H.265 s0](https://www.kaggle.com/code/wagur124705/dual-v4-mc3-fit-h265-s0),
 and [`hieusunday0412` H.265 s1](https://www.kaggle.com/code/hieusunday0412/dual-v4-mc3-fit-h265-s1).
-No V4 BD-rate is claimed before merging, freezing, and paired evaluation.
+The shards were merged and policies frozen before VAL; see the
+[TRAIN-calibration report](results/dual_codec_v4_train_calibration/README.md).
+The four paired VAL evaluation shards are running. No V4 BD-rate is claimed
+before they are merged and checked.
 
 V2 adds a shared-bitstream selector targeting **both r2plus1d_18 and r3d_18**.
 See [the V2 pilot protocol](docs/RUN_DESIGN_DUAL_CODEC_SEARCH_V2.md),
