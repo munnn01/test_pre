@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "codec": "h264",
+  "qps_modified": [
+    30,
+    35,
+    40
+  ],
+  "risk_model_sha256": "59e420c1bcd59f85de7dd32ffb601df2b62f4c0d0cf5065d96a55921c084d1ef",
+  "calibration_sha256": "cc2aa9a7dbcb61a60da827091bffde3ec4aec08d57a8ef90ebe03bf0169ced08",
+  "v2_manifest_sha256": "52af76749cc87cccaeab8cd9aaecea33c21c1209b6316c18206b9e0b4392bf2f",
+  "v4_manifest_sha256": "b3fb8813f208baf5434fd76024404513bc0175a4bd0b1588578ea9fe4d03cd43",
+  "v2_frozen_policy_sha256": "ccbb6ad77eb1320a933e5b697049ced3cc04d8f2f4b61821ef3427a0284b90d8",
+  "selected_policy": {
+    "mode": "identity"
+  },
+  "scope": "development policy frozen using TRAIN fit/calibration only"
+}
