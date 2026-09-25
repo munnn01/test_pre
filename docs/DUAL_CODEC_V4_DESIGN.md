@@ -1,7 +1,8 @@
 # V4: source-motion-conditioned candidate regret, stage 1
 
-Status: pre-measurement design for Kaggle TRAIN-label collection. No V4 policy
-has been fitted, selected or evaluated yet.
+Status: Kaggle TRAIN-label collection running; the fitting and calibration
+algorithm is committed before reading its results. No V4 policy has yet been
+fitted, selected or evaluated.
 
 The V3 development replay showed that blocking `area96` at QP30/35 improves
 `mc3_18` on H.264 VAL but leaves a 7-point same-QP loss at H.264 QP40, while
@@ -30,15 +31,31 @@ candidate-risk model is the next *hypothesis*, not an established result.
 
 1. Merge the two shards per codec and verify all 400 fit and 200 calibration
    sources, all 3 QPs x 6 candidates, bpp agreement and source disjointness.
-2. Fit a regularized risk/regret predictor on TRAIN-fit only. Calibrate its
-   codec-QP constraints on TRAIN-calibration only. The V2 policy is the fixed
-   control; freeze one V4 policy before any further evaluation.
-3. Audit all source IDs previously used in project experiments before choosing
+2. Fit one codec-specific, regularized logistic harm head and one gain head for
+   each of `r2plus1d_18`, `r3d_18`, and `mc3_18` on TRAIN-fit only. A harm is a
+   correct anchor becoming incorrect; a gain is the reverse. Features are the
+   existing label-free two-analyzer `risk_features` and four source-only
+   motion/edge statistics. The deployed selector never sees mc3 predictions
+   or any ground-truth label. `C=0.1`, per-video weighting, clipping of
+   standardized features at +/-10, and random seed 53 are fixed in code.
+3. On disjoint TRAIN-calibration, test only the preregistered low-QP/40 harm
+   limits `(0.04,0.04)`, `(0.08,0.04)`, `(0.08,0.08)`, `(0.12,0.08)`,
+   `(0.12,0.12)`, `(0.20,0.12)`, `(0.20,0.20)`, `(0.30,0.20)`, each with
+   gain weights `0`, `0.5`, `1`. A candidate must reduce bitrate and its
+   predicted harm must be below the limit for **all three** analyzers. Among
+   candidates passing the gate, maximize `rate-saving + gain_weight * mean
+   predicted net gain`. Eligibility requires every analyzer's QP30/35/40
+   Top-1 accuracy to be no worse than identity by more than 1 percentage
+   point. Among eligible arms select greatest mean bitrate saving; otherwise
+   fall back to identity at QP30/35/40. QP45/50 keep the frozen V2 selector.
+   This 3-QP calibration is *not* a BD-rate result. The V2 policy is a fixed
+   control, not retuned here. Freeze the V4 policy before further evaluation.
+4. Audit all source IDs previously used in project experiments before choosing
    an untouched evaluation subset. If fully untouched sources cannot be
    demonstrated, describe the run as further development replication. Once
    `mc3_18` supplies V4 training labels it is no longer an independent analyzer;
    reserve a fourth compatible frozen model and untouched clips for transfer.
-4. Compare all analyzers at the same five QPs, with BD-rate Top-1,
+5. Compare all analyzers at the same five QPs, with BD-rate Top-1,
    BD-accuracy Top-1, every same-QP Top-1 gap, and full encoder-side wall time.
    Paired bootstrap resamples whole source videos, not QP observations.
 
