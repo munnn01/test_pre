@@ -8,7 +8,7 @@ import pytest
 
 from ops.dual_codec_v4_fit import (ANALYZERS, OUTCOME_FIELDS, QPS,
                                    SOURCE_FEATURES, feature_vector,
-                                   fit_regret, join_records, predict_events,
+                                   calibrate, fit_regret, join_records, predict_events,
                                    select_v4)
 from src.models.codec_search import CANDIDATES
 from src.models.dual_codec_search import MODELS, SIGNALS, observations
@@ -80,3 +80,17 @@ def test_fitted_selector_never_chooses_higher_bitrate() -> None:
                                "qp40_harm": 1., "gain_weight": 0.}, {}, {})
     assert 0 <= choice < len(CANDIDATES)
     assert obs[choice]["bpp"] <= obs[0]["bpp"]
+
+
+def test_calibration_reports_three_qp_gaps_without_test_data() -> None:
+    pairs = [_pair(i) for i in range(16)]
+    rows = join_records([a for a, _ in pairs], [b for _, b in pairs])
+    state = fit_regret(rows)
+    legacy_risk = {"schema": 1, "models": {model: {"constant": 0.}
+                                            for model in MODELS}}
+    report = calibrate(rows, state, legacy_risk, {"mode": "identity"})
+    assert report["calibration_videos"] == 16
+    assert len(report["grid"]) == 2 + 8 * 3
+    assert set(report["selected_summary"]["same_qp_top1_gaps"]) == set(ANALYZERS)
+    assert set(report["selected_summary"]["same_qp_top1_gaps"]["mc3_18"]) == {
+        str(qp) for qp in QPS}
