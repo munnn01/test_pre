@@ -36,3 +36,7 @@ SHA-256 of committed aggregates:
 
 - `h264_result.json`: `52aabb9a63464b39842e394479e301b1842df05b6a1ccb4111c68a5c677c1286`
 - `h265_result.json`: `c0fbb81131abeb79916b2ddb0196eafbe0694596fc6c0eef6380f791c716e72e`
+
+Verify both checksums against these exact committed files with
+`python -m ops.verify_ar_result_hashes` from the repository root. A matching
+checksum is a repository-integrity check, not an independent re-run.

@@ -4,6 +4,11 @@ This `preprocessing` checkout is the development copy for the paper-validation
 work. The separate `pre_updated_v2` checkout is intentionally unchanged.
 The [paper-validation plan](docs/PAPER_VALIDATION_PLAN.md) specifies the
 follow-up controls, unseen-analyzer test and runtime benchmark. The
+[AR validation status](docs/AR_VALIDATION_STATUS.md) distinguishes completed
+measurements from pending experiments and verifies the committed result hashes.
+The V2-C method searches six real-codec candidates per codec/QP; its BD-rate
+counts only the selected stream's bytes, not search compute.
+The
 [exploratory 1,000-clip reanalysis](results/paper_validation_1000/README.md)
 compares all fixed candidates and frozen A/B/C policies on the existing V2
 records; it is **not** a fresh holdout.

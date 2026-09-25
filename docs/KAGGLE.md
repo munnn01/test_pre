@@ -1,5 +1,13 @@
 # KAGGLE.md — running upgrade-3 on Kaggle
 
+> **Historical guide, not the AR V2-C reproduction path.** The clone URL and
+> commands below belong to the original upgrade-3 experiment. For current
+> historical AR V2-C confirmation use the commit-pinned
+> [`dual_codec_search_confirm_1000_cell.sh`](../kaggle/dual_codec_search_confirm_1000_cell.sh)
+> (which clones `pre_updated_v2`, not this `test_pre` checkout) and its
+> [result/provenance record](../results/dual_codec_search_v2_confirm_1000/README.md).
+> For unresolved validation gates see [AR validation status](AR_VALIDATION_STATUS.md).
+
 A step-by-step guide to reproduce the A1+A2+A3 headline result on a **free Kaggle
 T4/P100 GPU**. Kaggle already ships `ffmpeg` (with `libx264`+`libx265`), `torch`,
 and `torchvision`, so setup is minimal.

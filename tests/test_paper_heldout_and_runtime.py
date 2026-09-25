@@ -40,10 +40,17 @@ def test_heldout_uses_video_as_bootstrap_unit():
 
 def test_runtime_summary_reports_per_clip_overhead():
     report = runtime_summary([
-        {"identity_only_s": 1., "full_selector_s": 6., "overhead_ratio": 6.},
-        {"identity_only_s": 2., "full_selector_s": 10., "overhead_ratio": 5.},
+        {"qps": [{"qp": 40}], "identity_only_s": 1., "full_selector_s": 6.,
+         "overhead_ratio": 6., "candidate_codec_s": 3., "analyzer_s": 2.,
+         "selector_s": .01},
+        {"qps": [{"qp": 40}], "identity_only_s": 2., "full_selector_s": 10.,
+         "overhead_ratio": 5., "candidate_codec_s": 5., "analyzer_s": 3.,
+         "selector_s": .02},
     ])
     assert report["n"] == 2
+    assert report["qps"] == [40]
+    assert report["baseline_codec_calls_per_clip"] == 1
+    assert report["full_codec_calls_per_clip"] == 6
     assert report["overhead_ratio"]["median"] == 5.5
     assert report["full_selector_s"]["mean"] == 8.
 
@@ -58,7 +65,11 @@ class _FakeDataset:
 
 
 class _FakeCodec:
+    def __init__(self):
+        self.calls = []
+
     def _encode_decode_clip(self, candidate, qp):
+        self.calls.append(qp)
         return candidate, .3
 
 
@@ -92,10 +103,33 @@ def test_full_runtime_includes_all_six_candidates(monkeypatch):
                         lambda *_args: ((logits, feature), .001))
     monkeypatch.setattr(paper_runtime, "select", lambda *_args: 0)
     analyzers = {model: object() for model in paper_runtime.MODELS}
+    codec = _FakeCodec()
     row = paper_runtime.measure_clip(
-        _FakeDataset(), 0, analyzers, _FakeCodec(), {}, {})
+        _FakeDataset(), 0, analyzers, codec, {}, {})
     assert len(row["qps"]) == 5
     assert all(len(q["candidate_costs"]) == 6 for q in row["qps"])
+    assert row["baseline_codec_calls"] == 5
+    assert row["full_codec_calls"] == 30
+    assert row["baseline_analyzer_calls"] == 0
+    assert row["full_analyzer_calls"] == 62
+    assert len(codec.calls) == 35
     assert row["identity_only_s"] > 0
     assert row["full_selector_s"] > 0
     assert row["arm_order"] in (["full", "identity"], ["identity", "full"])
+
+
+def test_runtime_one_qp_measures_six_versus_one(monkeypatch):
+    logits = torch.tensor([[.1, .9]], dtype=torch.float32)
+    feature = torch.ones(1, 4)
+    monkeypatch.setattr(paper_runtime, "measured_prediction",
+                        lambda *_args: ((logits, feature), .001))
+    monkeypatch.setattr(paper_runtime, "select", lambda *_args: 0)
+    codec = _FakeCodec()
+    row = paper_runtime.measure_clip(
+        _FakeDataset(), 0, {model: object() for model in paper_runtime.MODELS},
+        codec, {}, {}, qps=(40,))
+    assert [point["qp"] for point in row["qps"]] == [40]
+    assert row["baseline_codec_calls"] == 1
+    assert row["full_codec_calls"] == 6
+    assert row["full_analyzer_calls"] == 14
+    assert len(codec.calls) == 7

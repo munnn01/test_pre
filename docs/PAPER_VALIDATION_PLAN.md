@@ -30,9 +30,13 @@ bootstrap is descriptive because this TEST set influenced earlier V1 research.
 1. Evaluate a frozen third analyzer (`mc3_18`) that never enters policy fitting,
    calibration, or selection. Decode the bitstream actually chosen by the frozen
    policy; do not select using the third model or its labels.
-2. Repeat on a genuinely new source-disjoint holdout/dataset. The unused tail
-   of the current TEST split is only a diagnostic if it has been inspected in
-   earlier work; it is not automatically a pristine holdout.
+2. Repeat on a genuinely new source-disjoint holdout/dataset. The existing
+   `qktttttttttt/kineticscleaned` dataset supplied for these experiments is
+   **not** a new data source; its unused clips can support only a labeled
+   within-dataset diagnostic unless historical inspection and source identity
+   can be audited. Require explicit source IDs and exclude sources used in
+   pilot fit, calibration, development, and prior inspection before making a
+   source-disjoint claim.
 3. Record encoder, decoder, analyzer, and selection wall times and peak memory
    on one specified machine. Include every trial encoding in total cost.
 
@@ -64,14 +68,19 @@ to one unseen analyzer, not universal model independence. The sample remains
 the previously inspected 1,000 TEST clips.
 
 `ops/paper_runtime.py` benchmarks the *complete* six-candidate selector
-against an identity-only encoder on the same predetermined source clips.
+against a codec-only arm on the same predetermined source clips. The baseline
+does not run an AR analyzer at the encoder; the full selector does. The default
+is one codec at QP 40 (six versus one encode/decode call per clip). A separate
+five-QP RD sweep is 30 versus five calls per clip and codec. Both arms measure
+FFmpeg encode **and decode**, not production encode-only latency.
 The clip is the paired block; arm order is balanced by a fixed hash. It times
 all trial encodes, the two feature analyzers and the selector, excluding model
 startup/download. Report both absolute wall time and overhead ratio.
 
 ```powershell
 python -m ops.paper_runtime --index <kinetics-index.json> `
-  --codec h264 --split val --clips 20 --out-dir <runtime-h264-output>
+  --codec h264 --split val --clips 20 --qps 40 `
+  --out-dir <runtime-h264-output>
 ```
 
 The CLI examples describe how to run the follow-ups; their numerical outcomes
