@@ -43,7 +43,7 @@ bootstrap is descriptive because this TEST set influenced earlier V1 research.
 These three items are prospective. This reanalysis cannot satisfy them by
 recomputing statistics from the existing two-analyzer JSONL records.
 
-## Implemented follow-up runners (not yet measured)
+## Follow-up runners and measurement status
 
 `ops/paper_heldout_mc3.py` runs the frozen C selector from the cached
 two-analyzer measurements, then **re-encodes only the identity and chosen
@@ -51,6 +51,7 @@ streams** and evaluates `mc3_18`. It never lets mc3 predictions or labels
 affect selection. Run two 500-clip shards per codec and merge their records;
 the shard BD-rates are diagnostic only. Both prior V2 cache directories and
 the Kinetics index/videos must be mounted in the runtime environment.
+No completed `mc3_18` result is claimed here.
 
 ```powershell
 python -m ops.paper_heldout_mc3 evaluate --index <kinetics-index.json> `
@@ -76,6 +77,9 @@ FFmpeg encode **and decode**, not production encode-only latency.
 The clip is the paired block; arm order is balanced by a fixed hash. It times
 all trial encodes, the two feature analyzers and the selector, excluding model
 startup/download. Report both absolute wall time and overhead ratio.
+The 20-clip QP-40 pilot on both codecs is complete; see
+[`results/paper_runtime_v2_qp40_20/`](../results/paper_runtime_v2_qp40_20/README.md).
+It does not replace a larger or encode-only deployment benchmark.
 
 ```powershell
 python -m ops.paper_runtime --index <kinetics-index.json> `
@@ -83,8 +87,8 @@ python -m ops.paper_runtime --index <kinetics-index.json> `
   --out-dir <runtime-h264-output>
 ```
 
-The CLI examples describe how to run the follow-ups; their numerical outcomes
-must not be claimed until the jobs finish and the results have been audited.
+The CLI examples describe how to run the follow-ups. Do not infer a third-model
+or new-source result from the completed runtime pilot.
 
 ## Paired visual and image-dataset checks
 

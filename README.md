@@ -8,6 +8,8 @@ follow-up controls, unseen-analyzer test and runtime benchmark. The
 measurements from pending experiments and verifies the committed result hashes.
 The V2-C method searches six real-codec candidates per codec/QP; its BD-rate
 counts only the selected stream's bytes, not search compute.
+The [QP-40 runtime pilot](results/paper_runtime_v2_qp40_20/README.md) reports
+the separate search cost on 20 paired clips; it is not a new accuracy test.
 The
 [exploratory 1,000-clip reanalysis](results/paper_validation_1000/README.md)
 compares all fixed candidates and frozen A/B/C policies on the existing V2

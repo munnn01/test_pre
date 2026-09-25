@@ -20,6 +20,16 @@ TEMPLATE = REPO / "kaggle/paper_runtime_cell.sh"
 DATASET = "qktttttttttt/kineticscleaned"
 
 
+def require_local_commit(commit: str) -> None:
+    """Reject syntactically valid but nonexistent commit IDs before upload."""
+    if not re.fullmatch(r"[0-9a-f]{40}", commit):
+        raise ValueError("full commit SHA required")
+    result = subprocess.run(["git", "rev-parse", "--verify", f"{commit}^{{commit}}"],
+                            cwd=REPO, capture_output=True, text=True, check=False)
+    if result.returncode or result.stdout.strip() != commit:
+        raise ValueError(f"commit is not present in this checkout: {commit}")
+
+
 def payload(commit: str, account: str, slug: str, codec: str, qps: str,
             clips: int) -> tuple[dict, dict]:
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
@@ -66,6 +76,7 @@ def main() -> None:
     parser.add_argument("--pool", type=Path, default=Path("D:/STUDY/LAB/pool.json"))
     parser.add_argument("--write-only", action="store_true")
     args = parser.parse_args()
+    require_local_commit(args.commit)
     book, meta = payload(args.commit, args.account, args.slug,
                          args.codec, args.qps, args.clips)
     target = REPO / "ops/_push" / args.account / args.slug

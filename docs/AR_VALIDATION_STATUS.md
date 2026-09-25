@@ -36,8 +36,9 @@ baseline does not run task analyzers; its full arm includes candidate creation,
 FFmpeg encode/decode, both analyzers, and selection. It reports the one-QP
 deployment case by default (`--qps 40`) and accepts all five QPs for an RD
 sweep. These are **encode+decode search timings**, not production encoder-only
-latency. Model download/startup is excluded. No measured Kaggle runtime value is
-claimed here until a completed artifact is inspected.
+latency. Model download/startup is excluded. A completed **20-clip QP 40
+pilot** is recorded with manifests and artifact hashes in
+[`results/paper_runtime_v2_qp40_20/`](../results/paper_runtime_v2_qp40_20/README.md).
 
 ## Data/model transfer are separate questions
 
@@ -73,9 +74,9 @@ from whichever repository branch is currently `main`.
 
 ## Remaining gates
 
-1. Run and audit wall-time measurements for H.264 and H.265 on fixed clips,
-   reporting absolute seconds, overhead ratio, codec calls, analyzer passes,
-   platform, and codec settings.
+1. Extend the completed 20-clip, one-QP runtime pilot to more clips, repeated
+   workers, all predeclared QPs where relevant, and production encode-only
+   latency if a deployment-cost claim is desired.
 2. Obtain a **new source-disjoint** dataset with stable source IDs and compatible
    Kinetics-400 labels; do not relabel the existing cleaned dataset as new.
 3. Run the frozen policy on the new source with both original analyzers and

@@ -1,7 +1,9 @@
 """Runtime Kaggle notebook creation must be private and commit-pinned."""
+import subprocess
+
 import pytest
 
-from ops.push_paper_runtime import payload
+from ops.push_paper_runtime import REPO, payload, require_local_commit
 
 
 SHA = "a" * 40
@@ -25,3 +27,11 @@ def test_payload_rejects_unpinned_or_invalid_settings():
         payload("main", "qktttttttttt", "runtime", "h264", "40", 20)
     with pytest.raises(ValueError, match="QPs"):
         payload(SHA, "qktttttttttt", "runtime", "h264", "40,40", 20)
+
+
+def test_uploader_rejects_nonexistent_full_sha():
+    with pytest.raises(ValueError, match="not present"):
+        require_local_commit("f" * 40)
+    current = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=REPO,
+                                      text=True).strip()
+    require_local_commit(current)
