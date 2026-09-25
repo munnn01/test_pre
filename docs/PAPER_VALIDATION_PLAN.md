@@ -8,8 +8,10 @@ It reuses the already collected 1,000 paired TEST clips per codec; it is
 
 Does frozen dual-analyzer mode C improve the rate--accuracy trade-off over
 simple fixed transforms and the frozen A/B policies? The independent sampling
-unit for uncertainty is a source video. All five QPs, six candidates, policies,
-and analyzers are repeated measurements of that video, not new samples.
+unit recorded in the existing artifact is a clip. All five QPs, six candidates,
+policies, and analyzers are repeated measurements of that clip, not new samples.
+The historical index lacks audited `source_id`, so clip-level resampling is
+descriptive and is **not** proof that distinct clips are source-independent.
 
 ## Fixed comparisons
 
@@ -22,8 +24,9 @@ against B with paired whole-video bootstrap resampling.
 
 Report Top-1 BD-rate, BD-accuracy (percentage points), each QP's bitrate and
 Top-1 accuracy, the minimum same-QP accuracy gap, choice counts, and 95%
-bootstrap intervals. Bootstrap whole videos with all their QPs paired. The
-bootstrap is descriptive because this TEST set influenced earlier V1 research.
+bootstrap intervals. Bootstrap whole clip records with all their QPs paired.
+The bootstrap is descriptive because this TEST set influenced earlier V1
+research and source-level independence was not audited.
 
 ## Independent experiments still required
 
@@ -37,11 +40,14 @@ bootstrap is descriptive because this TEST set influenced earlier V1 research.
    can be audited. Require explicit source IDs and exclude sources used in
    pilot fit, calibration, development, and prior inspection before making a
    source-disjoint claim.
-3. Record encoder, decoder, analyzer, and selection wall times and peak memory
-   on one specified machine. Include every trial encoding in total cost.
+3. Extend the measured QP-40 compute pilot to encoder-only latency, peak
+   memory, relevant QPs, more clips and repeated workers. Include every trial
+   encoding in total cost.
 
-These three items are prospective. This reanalysis cannot satisfy them by
-recomputing statistics from the existing two-analyzer JSONL records.
+Items 1 and 2 have **no completed results**. Item 3 has a completed 20-clip
+encode+decode wall-time pilot, but its deployment-cost extension is pending.
+The existing two-analyzer JSONL records cannot supply the missing experiments.
+See the [five evidence gates](PAPER_EVIDENCE_GATES.md) for decisions and limits.
 
 ## Follow-up runners and measurement status
 
@@ -51,7 +57,13 @@ streams** and evaluates `mc3_18`. It never lets mc3 predictions or labels
 affect selection. Run two 500-clip shards per codec and merge their records;
 the shard BD-rates are diagnostic only. Both prior V2 cache directories and
 the Kinetics index/videos must be mounted in the runtime environment.
-No completed `mc3_18` result is claimed here.
+No completed `mc3_18` result is claimed here. The private Kaggle launcher
+[`ops/push_paper_heldout_mc3.py`](../ops/push_paper_heldout_mc3.py) prepares
+one commit-pinned codec/shard notebook at a time, provided the account can
+access both Kinetics-cleaned and the private V2 cache dataset. Preparing or
+pushing a notebook is not a completed evaluation. `--cpu` disables the Kaggle
+GPU requirement when that account has no accelerator quota; record hardware
+separately for every shard, and never compare its timing with GPU shards.
 
 ```powershell
 python -m ops.paper_heldout_mc3 evaluate --index <kinetics-index.json> `

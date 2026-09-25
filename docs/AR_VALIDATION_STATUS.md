@@ -4,6 +4,11 @@ This is a code-and-artifact status note, not a fresh experiment or an independen
 peer-review report. The primary paired TEST result remains the previously
 inspected 1,000-video Kinetics sample in
 [`results/dual_codec_search_v2_confirm_1000/`](../results/dual_codec_search_v2_confirm_1000/README.md).
+The [paper evidence gates](PAPER_EVIDENCE_GATES.md) preserve the historical
+strict <−15% two-analyzer target as failed and record the later, exploratory
+directional objective without a 15% threshold. `mc3_18` and new-source tests
+remain unmeasured. The completed runtime pilot answers only the narrow compute
+question.
 
 ## Verified artifacts
 

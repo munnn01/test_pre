@@ -24,6 +24,14 @@ Neither analyzer is independent of V2 policy development. Moreover, the
 same TEST set was inspected in earlier V1 work: this is a paired replication,
 not a new untouched holdout or a generalization claim.
 
+**Later amendment (2026-09-25):** Future experiments no longer require the
+<−15% threshold. The revised directional objective is Top-1 BD-rate < 0 and
+BD-accuracy > 0 on both development-involved analyzers for at least one
+codec. These historical V2 measurements meet that weaker objective on both
+codecs, but it was chosen after seeing them and is therefore descriptive/
+exploratory on this TEST. It does not replace the failed original decision or
+establish transfer to `mc3_18` or a new video source.
+
 The Kaggle runs are [H.264 shard 0](https://www.kaggle.com/code/trnhlng/dual-ar-v2-confirm-h264-s0),
 [H.264 shard 1](https://www.kaggle.com/code/huolgggnuyen/dual-ar-v2-confirm-h264-s1),
 [H.265 shard 0](https://www.kaggle.com/code/baoancut/dual-ar-v2-confirm-h265-s0),

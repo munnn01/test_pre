@@ -6,6 +6,10 @@ The [paper-validation plan](docs/PAPER_VALIDATION_PLAN.md) specifies the
 follow-up controls, unseen-analyzer test and runtime benchmark. The
 [AR validation status](docs/AR_VALIDATION_STATUS.md) distinguishes completed
 measurements from pending experiments and verifies the committed result hashes.
+The [paper evidence gates](docs/PAPER_EVIDENCE_GATES.md) record the current
+decisions: unseen-analyzer and new-source tests are missing; the predeclared
+dual-analyzer target failed; a 20-clip compute pilot exists; OD is a separate
+exploratory study, not evidence for a unified AR/OD method.
 The V2-C method searches six real-codec candidates per codec/QP; its BD-rate
 counts only the selected stream's bytes, not search compute.
 The [QP-40 runtime pilot](results/paper_runtime_v2_qp40_20/README.md) reports
@@ -25,11 +29,16 @@ Both analyzers improve on both codecs, but **neither codec reaches the
 predeclared Top-1 BD-rate below -15% on both analyzers**. These TEST clips
 were previously inspected during V1 work, so this is a paired comparative
 replication, not a fresh independent holdout.
+The [2026-09-25 amendment](docs/PAPER_EVIDENCE_GATES.md#outcome-amendment-2026-09-25)
+removes the −15% requirement for *future work*: the directional objective is
+negative Top-1 BD-rate and positive BD-accuracy on both analyzers. Existing
+V2 results meet that revised objective descriptively, but the change is
+post hoc for the already inspected TEST and does not erase the historical miss.
 
 The material below and `results/codec_search_ar_confirm_1000` describe inherited
 V1 work. Its large primary-only gain does NOT establish the V2 dual-model target.
 
-## Inherited V1 project
+## Inherited V1 project: separate OD work, not V2-C validation
 
 Line riêng cho task **Object Detection** của VCM: ảnh → preprocessing → codec đóng băng
 (All-Intra) → decode → detector đóng băng → mAP. Đích là một con số BD-rate âm trên **trục mAP**
@@ -38,13 +47,17 @@ Line riêng cho task **Object Detection** của VCM: ảnh → preprocessing →
 Repo này phát triển nhánh OD thành một đường đo độc lập, đồng thời thêm primitive
 **spatio-temporal importance tube** để cơ chế "giữ vật, giảm nền" dùng được cho cả
 ảnh (`T=1`) và action recognition (`T>1`).
+Đây là ý tưởng và các probe V1; chúng **không** chứng minh V2-C dùng chung một
+can thiệp có hiệu quả trên cả OD lẫn AR. Kết quả OD 100 ảnh phải báo cáo riêng
+tại [`results/paper_od_pilot_100/`](results/paper_od_pilot_100/README.md).
 
 ## AR codec-search confirmation (2026-09-24)
 
 Nhánh codec-search đã khóa policy trước khi đánh giá 1.000 clip TEST giống nhau
 cho H.264/H.265. Trên **analyzer mục tiêu `r2plus1d_18`**, BD-rate Top-1 là
 **−24,88% H.264** (bootstrap 95% [−26,82%, −22,94%]) và **−16,09% H.265**
-([−17,44%, −14,74%]). Trên analyzer độc lập `r3d_18`, cải thiện chỉ khoảng
+([−17,44%, −14,74%]). Trên `r3d_18` (kiểm tra chéo tương đối với V1, nhưng
+**không độc lập với quá trình phát triển V2**), cải thiện chỉ khoảng
 −1% và CI chứa 0: **không được xem đây là kết quả tổng quát cho mọi mô hình AR**.
 Mã nguồn, policy, bản ghi từng clip và provenance nằm trong
 [`results/codec_search_ar_confirm_1000/`](results/codec_search_ar_confirm_1000/README.md).

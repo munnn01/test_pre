@@ -29,8 +29,10 @@ the intervals should not be presented as pristine confirmatory evidence.
 
 The fixed-transform row is selected **only for display in this overview**;
 the complete per-transform tables show every outcome. Do not claim that the
-displayed fixed transform was prospectively selected. Runtime, memory, a third
-unseen analyzer, and a genuinely new source-disjoint holdout remain to be
+displayed fixed transform was prospectively selected. A 20-clip, QP-40
+[runtime pilot](../paper_runtime_v2_qp40_20/README.md) has since measured
+encode+decode search wall time; production encoder-only latency and memory,
+a third unseen analyzer, and a genuinely new source-disjoint holdout remain to be
 measured; see [the validation plan](../../docs/PAPER_VALIDATION_PLAN.md).
 
 To reproduce from the downloaded per-clip records:

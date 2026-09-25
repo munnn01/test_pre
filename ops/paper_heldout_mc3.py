@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import platform
 import subprocess
 import sys
@@ -26,7 +27,8 @@ import torchvision
 
 from ops.codec_search_ar import QPS, as_video
 from ops.dual_codec_search import digest, write_json
-from ops.dual_codec_search_confirm_1000 import CONFIG, load_frozen, sample_plan
+from ops.dual_codec_search_confirm_1000 import (CONFIG, file_sha256,
+                                                load_frozen, sample_plan)
 from ops.merge_dual_codec_search_confirm_1000 import fingerprint, load_shards
 from ops.rcts_pilot import clip_id
 from src.codecs.standard import StandardCodec, ffmpeg_available
@@ -170,6 +172,15 @@ def run(args) -> None:
         raise ValueError("incomplete or mismatched cached 500-video shard")
     manifest = {"experiment": "dual_v2_heldout_mc3", "codec": args.codec,
                 "shard": args.shard, "model": MODEL, "n": len(indices),
+                "code_commit": subprocess.check_output(
+                    ["git", "rev-parse", "HEAD"], cwd=REPO, text=True).strip(),
+                "config_sha256": file_sha256(CONFIG),
+                "index_sha256": file_sha256(args.index),
+                "source_cache": [
+                    {"manifest_sha256": file_sha256(directory / "manifest.json"),
+                     "records_sha256": file_sha256(directory / "shard_records.jsonl"),
+                     "result_sha256": file_sha256(directory / "shard_result.json")}
+                    for directory in sorted(args.cache_dir, key=str)],
                 "sample_ids": [clip_id(dataset.samples[i]) for i in indices],
                 "shard_fingerprint": fingerprint(
                     [clip_id(dataset.samples[i]) for i in indices]),
@@ -181,6 +192,9 @@ def run(args) -> None:
                              "torchvision": torchvision.__version__,
                              "ffmpeg": subprocess.check_output(
                                  ["ffmpeg", "-version"], text=True).splitlines()[0]},
+                "hardware": {"logical_cpus": os.cpu_count(),
+                             "gpu": torch.cuda.get_device_name(0)
+                             if torch.cuda.is_available() else None},
                 "limitation": "same previously inspected 1,000-video TEST sample"}
     args.out_dir.mkdir(parents=True, exist_ok=True)
     manifest_path = args.out_dir / "manifest.json"
@@ -231,7 +245,9 @@ def merge(args) -> None:
         raise ValueError("missing or duplicate shard")
     if any(bundles[0][0][key] != bundles[1][0][key]
            for key in ("experiment", "codec", "model", "qps", "test_fingerprint",
-                       "frozen_policy_sha256", "risk_sha256", "policy")):
+                       "code_commit", "config_sha256", "index_sha256",
+                       "source_cache", "frozen_policy_sha256", "risk_sha256",
+                       "policy")):
         raise ValueError("held-out shard provenance mismatch")
     rows = bundles[0][1] + bundles[1][1]
     ids = [r["sequence_id"] for r in rows]
