@@ -16,7 +16,6 @@ from pathlib import Path
 
 import numpy as np
 from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import StandardScaler
 
 from ops.dual_codec_lowqp_v3 import load_pilot
 from ops.dual_codec_search import digest, write_json
@@ -87,11 +86,15 @@ def _fit_binary(x: np.ndarray, y: np.ndarray, weight: np.ndarray) -> dict:
         # A constant empirical probability is more honest than an invented fit.
         return {"constant": float((count + .5) / (len(y) + 1)),
                 "positive_count": count}
-    scaler = StandardScaler().fit(x, sample_weight=weight)
-    z = np.clip(scaler.transform(x), -10, 10)
+    mean = np.average(x, axis=0, weights=weight)
+    variance = np.average((x - mean) ** 2, axis=0, weights=weight)
+    # Weighted zero-variance columns are common (one-hot candidate identity).
+    # An explicit floor avoids negative-roundoff variance and NaN scales.
+    scale = np.where(variance > 1e-24, np.sqrt(np.maximum(variance, 0)), 1.)
+    z = np.clip((x - mean) / scale, -10, 10)
     estimator = LogisticRegression(C=.1, max_iter=2000, random_state=53)
     estimator.fit(z, y, sample_weight=weight * (len(y) / weight.sum()))
-    return {"mean": scaler.mean_.tolist(), "scale": scaler.scale_.tolist(),
+    return {"mean": mean.tolist(), "scale": scale.tolist(),
             "coef": estimator.coef_[0].tolist(),
             "intercept": float(estimator.intercept_[0]),
             "positive_count": count}
