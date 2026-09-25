@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
+import io
 import json
 import re
 import shutil
@@ -66,6 +68,31 @@ def _command(args: list[str], env: dict[str, str]) -> subprocess.CompletedProces
     return result
 
 
+def _verify_owned_dataset_absent(handle: str, env: dict[str, str]) -> None:
+    """Kaggle returns HTTP 403 for both missing and inaccessible private datasets."""
+    owner = handle.split("/", 1)[0]
+    observed = 0
+    for page in range(1, 101):
+        listed = _command(["datasets", "list", "--mine", "--csv",
+                           "--page-size", "100", "--page", str(page)], env)
+        if listed.returncode:
+            raise RuntimeError("cannot verify owned dataset list")
+        reader = csv.DictReader(io.StringIO(listed.stdout))
+        if not reader.fieldnames or "ref" not in reader.fieldnames:
+            raise RuntimeError("unexpected dataset list format")
+        refs = [row["ref"] for row in reader if row.get("ref")]
+        if any(not ref.startswith(owner + "/") for ref in refs):
+            raise RuntimeError("Kaggle token belongs to a different dataset owner")
+        if handle in refs:
+            raise RuntimeError("dataset exists but status is unavailable; refusing overwrite")
+        observed += len(refs)
+        if len(refs) < 100:
+            if observed == 0:
+                raise RuntimeError("cannot establish authenticated dataset ownership")
+            return
+    raise RuntimeError("owned dataset enumeration incomplete")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--commit", required=True)
@@ -109,8 +136,9 @@ def main() -> None:
         print(f"[dataset] existing READY {dataset_metadata['id']}", flush=True)
     else:
         output = (status.stdout + status.stderr).lower()
-        if not any(word in output for word in ("404", "not found", "does not exist")):
+        if not any(word in output for word in ("403", "404", "not found", "does not exist")):
             raise RuntimeError("cannot verify private cache dataset status")
+        _verify_owned_dataset_absent(dataset_metadata["id"], env)
         created = _command(["datasets", "create", "-p", str(data_dir), "-q"], env)
         message = (created.stdout + created.stderr).strip()
         print(message, flush=True)
