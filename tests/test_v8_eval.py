@@ -1,8 +1,12 @@
 """Pure, fast checks for V8 reporting and commit-pinned Kaggle packaging."""
 from __future__ import annotations
 
+from pathlib import Path
+from tempfile import TemporaryDirectory
+
 from ops.codec_search_ar import QPS
 from ops.push_v8_eval import payload
+from ops.push_v8_train import payload as train_payload
 from ops.v8_eval import ARMS, MODELS, compare_curves, report_curves, summarize
 
 
@@ -55,3 +59,15 @@ def test_eval_payload_uses_private_sources_and_locked_commit():
     assert commit in source and "__REF__" not in source
     assert meta["is_private"] and len(meta["dataset_sources"]) == 3
     assert meta["id"].endswith("-s1")
+
+
+def test_train_payload_can_read_a_public_cache_from_another_owner():
+    with TemporaryDirectory() as directory:
+        archive = Path(directory) / "archive.tgz"
+        archive.write_bytes(b"test-only archive")
+        book, meta = train_payload("a" * 40, "shungg05", archive,
+                                   dataset_owner="baooo25r")
+    assert meta["id"].startswith("shungg05/")
+    assert meta["dataset_sources"][1].startswith("baooo25r/")
+    source = "".join(book["cells"][0]["source"])
+    assert 'ACCOUNT="baooo25r"' in source

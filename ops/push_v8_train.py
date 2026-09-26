@@ -21,21 +21,26 @@ from ops.push_dual_codec_lowqp_v3 import archive_slug
 TEMPLATE = REPO / "kaggle/v8_train_cell.sh"
 
 
-def payload(commit: str, account: str, archive: Path) -> tuple[dict, dict]:
-    if not re.fullmatch(r"[0-9a-f]{40}", commit) or not re.fullmatch(r"[a-z0-9]+", account):
-        raise ValueError("full commit SHA and lowercase Kaggle account required")
+def payload(commit: str, account: str, archive: Path,
+            dataset_owner: str | None = None) -> tuple[dict, dict]:
+    dataset_owner = dataset_owner or account
+    if (not re.fullmatch(r"[0-9a-f]{40}", commit)
+            or not re.fullmatch(r"[a-z0-9]+", account)
+            or not re.fullmatch(r"[a-z0-9]+", dataset_owner)):
+        raise ValueError("full commit SHA and lowercase Kaggle accounts required")
     dataset_slug = archive_slug("h264", hashlib.sha256(archive.read_bytes()).hexdigest())
     slug = "dual-v8-restorer-h264-train"
     script = TEMPLATE.read_text(encoding="utf-8")
     for old, new in (("__REF__", commit), ("__DATASET_SLUG__", dataset_slug),
-                     ("__ACCOUNT__", account)):
+                     ("__ACCOUNT__", dataset_owner)):
         script = script.replace(old, new)
     book = notebook(script, "h264")
     book["cells"][0]["id"] = slug
     metadata = {"id": f"{account}/{slug}", "title": slug,
         "code_file": "notebook.ipynb", "language": "python", "kernel_type": "notebook",
         "is_private": True, "enable_gpu": True, "enable_internet": True,
-        "dataset_sources": ["qktttttttttt/kineticscleaned", f"{account}/{dataset_slug}"],
+        "dataset_sources": ["qktttttttttt/kineticscleaned",
+                            f"{dataset_owner}/{dataset_slug}"],
         "kernel_sources": [], "competition_sources": [], "model_sources": []}
     return book, metadata
 
@@ -44,6 +49,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--commit", required=True)
     parser.add_argument("--account", required=True)
+    parser.add_argument("--dataset-owner", help="owner of an existing public H.264 pilot cache")
     parser.add_argument("--archive", type=Path, required=True)
     parser.add_argument("--pool", type=Path, default=Path("D:/STUDY/LAB/pool.json"))
     parser.add_argument("--write-only", action="store_true")
@@ -51,7 +57,8 @@ def main() -> None:
     require_local_commit(args.commit)
     if not args.archive.is_file():
         raise ValueError("pilot cache archive missing")
-    book, metadata = payload(args.commit, args.account, args.archive)
+    book, metadata = payload(args.commit, args.account, args.archive,
+                             args.dataset_owner)
     target = REPO / "ops/_push" / args.account / metadata["id"].split("/", 1)[1]
     target.mkdir(parents=True, exist_ok=True)
     (target / "notebook.ipynb").write_text(json.dumps(book), encoding="utf-8")
@@ -63,11 +70,20 @@ def main() -> None:
     env["PYTHONIOENCODING"] = "utf-8"
     require_inactive(metadata["id"], env)
     dataset = metadata["dataset_sources"][1]
-    ready = subprocess.run(kaggle_command() + ["datasets", "status", dataset],
-                           capture_output=True, text=True, encoding="utf-8", errors="replace",
+    # Kaggle's status endpoint can return 404 to a non-owner even when a public
+    # dataset's file listing is readable. Check the latter for shared sources.
+    public_source = (args.dataset_owner is not None
+                     and args.dataset_owner != args.account)
+    probe = (["datasets", "files", dataset] if public_source
+             else ["datasets", "status", dataset])
+    ready = subprocess.run(kaggle_command() + probe, capture_output=True,
+                           text=True, encoding="utf-8", errors="replace",
                            env=env, check=False)
-    if ready.returncode or "ready" not in (ready.stdout + ready.stderr).lower():
-        raise RuntimeError(f"private pilot cache not READY: {dataset}")
+    output = ready.stdout + ready.stderr
+    if (ready.returncode or
+            ("dual_codec_search_v2_h264.tgz" not in output if public_source
+             else "ready" not in output.lower())):
+        raise RuntimeError(f"pilot cache inaccessible: {dataset}")
     result = subprocess.run(kaggle_command() + ["kernels", "push", "-p", str(target)],
                             capture_output=True, text=True, encoding="utf-8", errors="replace",
                             env=env, check=False)
