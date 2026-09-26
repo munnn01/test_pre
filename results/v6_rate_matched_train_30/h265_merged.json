@@ -1,0 +1,194 @@
+{
+  "experiment": "v6_resolution_qp_train_oracle",
+  "codec": "h265",
+  "source_manifests": [
+    {
+      "experiment": "v6_resolution_qp_train_oracle",
+      "codec": "h265",
+      "shard": 0,
+      "shards": 2,
+      "qps": [
+        30,
+        35,
+        40
+      ],
+      "resolutions": [
+        96,
+        112,
+        128
+      ],
+      "qp_offsets": [
+        -4,
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "rate_match_interval": [
+        0.95,
+        1.02
+      ],
+      "sample_ids": [
+        "throwing ball/7xqRDAa1x4o.mp4",
+        "golf putting/22UVIF_-GR0.mp4",
+        "playing basketball/r7UGrPXW9No.mp4",
+        "playing guitar/nkfBebi9Hpo.mp4",
+        "paragliding/9WLPju5q_3M.mp4",
+        "parasailing/g0HR_kMMUbE.mp4",
+        "faceplanting/OJo2--4-0KI.mp4",
+        "feeding birds/Nt6uPn4NoQ8.mp4",
+        "headbanging/2dYrcD0PGmc.mp4",
+        "cutting pineapple/7f-DtONd58g.mp4",
+        "swimming butterfly stroke/vDrc5meBNxc.mp4",
+        "playing organ/v1Vh91MvgY4.mp4",
+        "cooking sausages/9-P215O-ILE.mp4",
+        "dodgeball/7gk2ky99gtA.mp4",
+        "kissing/r005aSoAxkg.mp4"
+      ],
+      "sample_fingerprint": "e2fef06135076118f15e8c968e0041b19b74f941ad383686e1a6337d97c5ce5b",
+      "full_sample_fingerprint": "8895eab04bbf0c74ee92ccd54a05d76d12e35981c431b3b6ccdf987537463644",
+      "pilot_manifest_sha256": "18138ad1f8946c23ada90185b37be8ccdf87a9b9b732985d03ed42bc66feba0f",
+      "pilot_archive_sha256": "64d4388cbe3c776d1ec3b8f365ce8b8c9dc59e80e1e3ad2b4d0f37f3b8ba2693",
+      "v2_risk_sha256": "9fe9e7c96ce339883f410b7b96f37ac01bcc9b4bf2b65febb002593919e26a93",
+      "v2_frozen_sha256": "582efbc14f41f0dba9da2856a6d028a55575a8644f097c5b31538a92931e0adf",
+      "index_sha256": "1a7adb6ad3aac2fa3fc93767c9567e49441b35f7ad6375fe7e1949ef0507acb2",
+      "code_commit": "62234e21ea0eae46509b499d547f6e17a2e52973",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128"
+      },
+      "scope": "First 30 frozen V2 TRAIN-fit IDs; label-aware feasibility, no policy fit."
+    },
+    {
+      "experiment": "v6_resolution_qp_train_oracle",
+      "codec": "h265",
+      "shard": 1,
+      "shards": 2,
+      "qps": [
+        30,
+        35,
+        40
+      ],
+      "resolutions": [
+        96,
+        112,
+        128
+      ],
+      "qp_offsets": [
+        -4,
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "rate_match_interval": [
+        0.95,
+        1.02
+      ],
+      "sample_ids": [
+        "doing nails/OFyANM01a3Y.mp4",
+        "mopping floor/2fI3WUJimoE.mp4",
+        "tossing coin/UrWU_52LNFg.mp4",
+        "holding snake/xvVOj1TplmM.mp4",
+        "pushing cart/HNDv7KH8b90.mp4",
+        "washing feet/143RWL3Guqk.mp4",
+        "presenting weather forecast/rTgSLZjSz1Y.mp4",
+        "kicking soccer ball/-nwugnzr8JA.mp4",
+        "headbutting/rP0PEZvx9kw.mp4",
+        "eating chips/ltId_cnRF-Q.mp4",
+        "juggling fire/Qr7ln6NNNGY.mp4",
+        "making jewelry/669Sx_gcPzI.mp4",
+        "snowkiting/dIcrF81xFF0.mp4",
+        "using computer/LrDCJ7r-anc.mp4",
+        "kitesurfing/EVYWMkEyg0k.mp4"
+      ],
+      "sample_fingerprint": "2d40d7fb34841cb9b87a37dfdab25a38e518bf84f85254c1b65b6bbb853905e1",
+      "full_sample_fingerprint": "8895eab04bbf0c74ee92ccd54a05d76d12e35981c431b3b6ccdf987537463644",
+      "pilot_manifest_sha256": "18138ad1f8946c23ada90185b37be8ccdf87a9b9b732985d03ed42bc66feba0f",
+      "pilot_archive_sha256": "64d4388cbe3c776d1ec3b8f365ce8b8c9dc59e80e1e3ad2b4d0f37f3b8ba2693",
+      "v2_risk_sha256": "9fe9e7c96ce339883f410b7b96f37ac01bcc9b4bf2b65febb002593919e26a93",
+      "v2_frozen_sha256": "582efbc14f41f0dba9da2856a6d028a55575a8644f097c5b31538a92931e0adf",
+      "index_sha256": "1a7adb6ad3aac2fa3fc93767c9567e49441b35f7ad6375fe7e1949ef0507acb2",
+      "code_commit": "62234e21ea0eae46509b499d547f6e17a2e52973",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128"
+      },
+      "scope": "First 30 frozen V2 TRAIN-fit IDs; label-aware feasibility, no policy fit."
+    }
+  ],
+  "result": {
+    "n_videos": 30,
+    "n_qp_video_points": 90,
+    "qps": {
+      "30": {
+        "n": 30,
+        "v2_mc3_wrong": 15,
+        "matched_any": 30,
+        "rescue_matched": 2,
+        "rescue_under_budget": 2,
+        "matched_by_resolution": {
+          "96": 28,
+          "112": 26,
+          "128": 27
+        },
+        "rescue_by_resolution": {
+          "96": 0,
+          "112": 1,
+          "128": 2
+        },
+        "oracle_mean_bpp_change_pct": -0.11462573424151357,
+        "search_encodes": 804,
+        "search_encode_decode_s": 255.29529218499852,
+        "evaluated_candidates": 102
+      },
+      "35": {
+        "n": 30,
+        "v2_mc3_wrong": 17,
+        "matched_any": 30,
+        "rescue_matched": 3,
+        "rescue_under_budget": 3,
+        "matched_by_resolution": {
+          "96": 29,
+          "112": 30,
+          "128": 29
+        },
+        "rescue_by_resolution": {
+          "96": 0,
+          "112": 3,
+          "128": 0
+        },
+        "oracle_mean_bpp_change_pct": 0.08993348948651558,
+        "search_encodes": 795,
+        "search_encode_decode_s": 245.06602786099813,
+        "evaluated_candidates": 98
+      },
+      "40": {
+        "n": 30,
+        "v2_mc3_wrong": 19,
+        "matched_any": 30,
+        "rescue_matched": 3,
+        "rescue_under_budget": 3,
+        "matched_by_resolution": {
+          "96": 30,
+          "112": 30,
+          "128": 30
+        },
+        "rescue_by_resolution": {
+          "96": 1,
+          "112": 1,
+          "128": 2
+        },
+        "oracle_mean_bpp_change_pct": -0.06072839865199908,
+        "search_encodes": 618,
+        "search_encode_decode_s": 188.31597711699982,
+        "evaluated_candidates": 93
+      }
+    },
+    "scope": "TRAIN-fit oracle feasibility only; reads labels"
+  }
+}

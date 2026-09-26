@@ -19,16 +19,19 @@ The
 compares all fixed candidates and frozen A/B/C policies on the existing V2
 records; it is **not** a fresh holdout.
 
-V6 is a TRAIN-only feasibility pilot for **joint resolution and QP choice at
-V2-matched measured bytes**. It reuses the frozen V2 baseline, searches
-96/112/128-pixel representations with real x264/x265 QPs, and evaluates
-shortlisted decoded streams on the same three frozen AR analyzers. Its
-label-aware oracle can reveal whether the expanded candidate family contains
-MC3 rescues that preserve the two primary predictions, but it is not a
-deployable policy or a BD-rate result. See the
-[V6 protocol](docs/V6_RATE_MATCHED_DESIGN.md),
-[pilot](ops/v6_rate_matched_pilot.py) and
-[Kaggle runner](kaggle/v6_rate_matched_cell.sh).
+V6 is a completed **TRAIN-only feasibility pilot** for joint resolution/QP
+choice at V2-matched measured bytes. Its label-aware ceiling found safe MC3
+rescues at only 5/90 H.264 and 8/90 H.265 clip/QP points, with over 2,100
+search encodes per codec. This family is not promoted to a selector; these
+counts are not achieved BD-rate. See the [merged V6 result](docs/V6_RESULT.md)
+and [protocol](docs/V6_RATE_MATCHED_DESIGN.md).
+
+V7 tests deterministic **temporal denoise and temporal unsharp** on V2's
+selected representation, with real-codec rate matching and the same frozen
+analyzers. It is again a TRAIN-only label-aware feasibility gate, not a new
+policy or BD-rate claim. See the [V7 protocol](docs/V7_TEMPORAL_DESIGN.md),
+[pilot](ops/v7_temporal_pilot.py), and
+[Kaggle runner](kaggle/v7_temporal_cell.sh).
 
 V5 is a **TRAIN-fitted, V2-anchored sparse MC3 repair experiment**, not a
 validated performance result. It leaves V2 unchanged at QP45/50 and when V2

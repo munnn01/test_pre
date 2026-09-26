@@ -1,0 +1,194 @@
+{
+  "experiment": "v6_resolution_qp_train_oracle",
+  "codec": "h264",
+  "source_manifests": [
+    {
+      "experiment": "v6_resolution_qp_train_oracle",
+      "codec": "h264",
+      "shard": 0,
+      "shards": 2,
+      "qps": [
+        30,
+        35,
+        40
+      ],
+      "resolutions": [
+        96,
+        112,
+        128
+      ],
+      "qp_offsets": [
+        -4,
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "rate_match_interval": [
+        0.95,
+        1.02
+      ],
+      "sample_ids": [
+        "throwing ball/7xqRDAa1x4o.mp4",
+        "golf putting/22UVIF_-GR0.mp4",
+        "playing basketball/r7UGrPXW9No.mp4",
+        "playing guitar/nkfBebi9Hpo.mp4",
+        "paragliding/9WLPju5q_3M.mp4",
+        "parasailing/g0HR_kMMUbE.mp4",
+        "faceplanting/OJo2--4-0KI.mp4",
+        "feeding birds/Nt6uPn4NoQ8.mp4",
+        "headbanging/2dYrcD0PGmc.mp4",
+        "cutting pineapple/7f-DtONd58g.mp4",
+        "swimming butterfly stroke/vDrc5meBNxc.mp4",
+        "playing organ/v1Vh91MvgY4.mp4",
+        "cooking sausages/9-P215O-ILE.mp4",
+        "dodgeball/7gk2ky99gtA.mp4",
+        "kissing/r005aSoAxkg.mp4"
+      ],
+      "sample_fingerprint": "e2fef06135076118f15e8c968e0041b19b74f941ad383686e1a6337d97c5ce5b",
+      "full_sample_fingerprint": "8895eab04bbf0c74ee92ccd54a05d76d12e35981c431b3b6ccdf987537463644",
+      "pilot_manifest_sha256": "52af76749cc87cccaeab8cd9aaecea33c21c1209b6316c18206b9e0b4392bf2f",
+      "pilot_archive_sha256": "57b7275b7059ac9b4e6dccb362eb7caec0d78a7dc1ab2a742b78460bc85fe172",
+      "v2_risk_sha256": "e5cb2b39c749ba8b624ffd2ee8cccdda827fed164edd8093e7475b5d96967b3c",
+      "v2_frozen_sha256": "ccbb6ad77eb1320a933e5b697049ced3cc04d8f2f4b61821ef3427a0284b90d8",
+      "index_sha256": "1a7adb6ad3aac2fa3fc93767c9567e49441b35f7ad6375fe7e1949ef0507acb2",
+      "code_commit": "62234e21ea0eae46509b499d547f6e17a2e52973",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128"
+      },
+      "scope": "First 30 frozen V2 TRAIN-fit IDs; label-aware feasibility, no policy fit."
+    },
+    {
+      "experiment": "v6_resolution_qp_train_oracle",
+      "codec": "h264",
+      "shard": 1,
+      "shards": 2,
+      "qps": [
+        30,
+        35,
+        40
+      ],
+      "resolutions": [
+        96,
+        112,
+        128
+      ],
+      "qp_offsets": [
+        -4,
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "rate_match_interval": [
+        0.95,
+        1.02
+      ],
+      "sample_ids": [
+        "doing nails/OFyANM01a3Y.mp4",
+        "mopping floor/2fI3WUJimoE.mp4",
+        "tossing coin/UrWU_52LNFg.mp4",
+        "holding snake/xvVOj1TplmM.mp4",
+        "pushing cart/HNDv7KH8b90.mp4",
+        "washing feet/143RWL3Guqk.mp4",
+        "presenting weather forecast/rTgSLZjSz1Y.mp4",
+        "kicking soccer ball/-nwugnzr8JA.mp4",
+        "headbutting/rP0PEZvx9kw.mp4",
+        "eating chips/ltId_cnRF-Q.mp4",
+        "juggling fire/Qr7ln6NNNGY.mp4",
+        "making jewelry/669Sx_gcPzI.mp4",
+        "snowkiting/dIcrF81xFF0.mp4",
+        "using computer/LrDCJ7r-anc.mp4",
+        "kitesurfing/EVYWMkEyg0k.mp4"
+      ],
+      "sample_fingerprint": "2d40d7fb34841cb9b87a37dfdab25a38e518bf84f85254c1b65b6bbb853905e1",
+      "full_sample_fingerprint": "8895eab04bbf0c74ee92ccd54a05d76d12e35981c431b3b6ccdf987537463644",
+      "pilot_manifest_sha256": "52af76749cc87cccaeab8cd9aaecea33c21c1209b6316c18206b9e0b4392bf2f",
+      "pilot_archive_sha256": "57b7275b7059ac9b4e6dccb362eb7caec0d78a7dc1ab2a742b78460bc85fe172",
+      "v2_risk_sha256": "e5cb2b39c749ba8b624ffd2ee8cccdda827fed164edd8093e7475b5d96967b3c",
+      "v2_frozen_sha256": "ccbb6ad77eb1320a933e5b697049ced3cc04d8f2f4b61821ef3427a0284b90d8",
+      "index_sha256": "1a7adb6ad3aac2fa3fc93767c9567e49441b35f7ad6375fe7e1949ef0507acb2",
+      "code_commit": "62234e21ea0eae46509b499d547f6e17a2e52973",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.10.0+cu128",
+        "torchvision": "0.25.0+cu128"
+      },
+      "scope": "First 30 frozen V2 TRAIN-fit IDs; label-aware feasibility, no policy fit."
+    }
+  ],
+  "result": {
+    "n_videos": 30,
+    "n_qp_video_points": 90,
+    "qps": {
+      "30": {
+        "n": 30,
+        "v2_mc3_wrong": 13,
+        "matched_any": 30,
+        "rescue_matched": 3,
+        "rescue_under_budget": 3,
+        "matched_by_resolution": {
+          "96": 22,
+          "112": 27,
+          "128": 23
+        },
+        "rescue_by_resolution": {
+          "96": 0,
+          "112": 2,
+          "128": 2
+        },
+        "oracle_mean_bpp_change_pct": -0.03124349093939216,
+        "search_encodes": 795,
+        "search_encode_decode_s": 214.07459292200053,
+        "evaluated_candidates": 106
+      },
+      "35": {
+        "n": 30,
+        "v2_mc3_wrong": 13,
+        "matched_any": 30,
+        "rescue_matched": 1,
+        "rescue_under_budget": 1,
+        "matched_by_resolution": {
+          "96": 25,
+          "112": 24,
+          "128": 27
+        },
+        "rescue_by_resolution": {
+          "96": 0,
+          "112": 0,
+          "128": 1
+        },
+        "oracle_mean_bpp_change_pct": -0.02477898034496384,
+        "search_encodes": 786,
+        "search_encode_decode_s": 209.2833131530008,
+        "evaluated_candidates": 107
+      },
+      "40": {
+        "n": 30,
+        "v2_mc3_wrong": 18,
+        "matched_any": 30,
+        "rescue_matched": 1,
+        "rescue_under_budget": 1,
+        "matched_by_resolution": {
+          "96": 26,
+          "112": 26,
+          "128": 29
+        },
+        "rescue_by_resolution": {
+          "96": 0,
+          "112": 1,
+          "128": 0
+        },
+        "oracle_mean_bpp_change_pct": 0.033413010512250985,
+        "search_encodes": 597,
+        "search_encode_decode_s": 157.7502301559996,
+        "evaluated_candidates": 100
+      }
+    },
+    "scope": "TRAIN-fit oracle feasibility only; reads labels"
+  }
+}
