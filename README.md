@@ -26,7 +26,14 @@ selects a checkpoint using 200 disjoint TRAIN-calibration clips and only
 states the three-analyzer target, selection rule, four concurrent controls,
 and the historical-data limitation. The [training code](ops/v8_train.py)
 and [Kaggle cell](kaggle/v8_train_cell.sh) save both candidate checkpoints
-and the frozen two-analyzer decision for subsequent evaluation.
+and the frozen two-analyzer decision for subsequent evaluation. The
+[paired evaluator](ops/v8_eval.py) runs four arms on the same real H.264
+bitstreams, records all five QPs per clip, and computes BD-rate only after
+merging both 500-clip TEST shards. The [checkpoint publisher](ops/publish_v8_checkpoint.py),
+[evaluation cell](kaggle/v8_eval_cell.sh), and [Kaggle pusher](ops/push_v8_eval.py)
+keep the selected checkpoint frozen before scoring `mc3_18`. Because prior
+research already inspected MC3 and these TEST clips, this remains a
+historical paired replication, not a new-model or new-source holdout.
 
 V6 is a completed **TRAIN-only feasibility pilot** for joint resolution/QP
 choice at V2-matched measured bytes. Its label-aware ceiling found safe MC3
