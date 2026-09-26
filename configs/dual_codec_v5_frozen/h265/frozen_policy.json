@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "codec": "h265",
+  "qps_modified": [
+    30,
+    35,
+    40
+  ],
+  "risk_model_sha256": "e4895b6303dd16f44ccbf1e930e201956d2991c082fd5539794b6ba03ef20c03",
+  "calibration_sha256": "b36bceceb8bfb65ac3b922ed1527a0c9300484b31020b8b6ba437a9868fd4a4a",
+  "v2_manifest_sha256": "18138ad1f8946c23ada90185b37be8ccdf87a9b9b732985d03ed42bc66feba0f",
+  "v4_manifest_sha256": "38de1a7546f59fbee913eb0782152496a28f68ccded9fa96d78e5e9b69dcea9f",
+  "v2_frozen_policy_sha256": "582efbc14f41f0dba9da2856a6d028a55575a8644f097c5b31538a92931e0adf",
+  "selected_policy": {
+    "mode": "sparse_repair",
+    "min_score": 0.08,
+    "primary_weight": 2.0,
+    "premium_cap": 0.2
+  },
+  "scope": "frozen TRAIN-only development; MC3 is not an independent analyzer"
+}

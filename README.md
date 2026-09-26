@@ -19,7 +19,19 @@ The
 compares all fixed candidates and frozen A/B/C policies on the existing V2
 records; it is **not** a fresh holdout.
 
-V4 is an **ongoing development experiment**, not a new performance result.
+V5 is a **TRAIN-fitted, V2-anchored sparse MC3 repair experiment**, not a
+validated performance result. It leaves V2 unchanged at QP45/50 and when V2
+chooses identity, and switches candidate only when a label-free pairwise
+model predicts an MC3 rescue under a 20% local bitrate cap. The frozen
+TRAIN-calibration policy permits at most 2% aggregate bpp cost and one extra
+primary-model error per 200 clips at each measured QP30/35/40. MC3 is a
+development target, **not an unseen independent analyzer**. See the
+[V5 protocol](docs/DUAL_CODEC_V5_SPARSE_REPAIR.md),
+[fit code](ops/dual_codec_v5_repair.py), and
+[five-QP VAL runner](ops/dual_codec_v5_eval.py). The old VAL is a development
+replication; five-QP BD-rate and paired intervals remain to be measured.
+
+V4 was a **development experiment**, not a validated performance result.
 The [predeclared V4 design](docs/DUAL_CODEC_V4_DESIGN.md) collected
 `mc3_18` correctness on 400 TRAIN-fit and 200 disjoint TRAIN-calibration
 clips per codec, paired at QP30/35/40 with the six frozen V2 candidates.
@@ -32,8 +44,10 @@ Four private Kaggle collector shards completed on
 and [`hieusunday0412` H.265 s1](https://www.kaggle.com/code/hieusunday0412/dual-v4-mc3-fit-h265-s1).
 The shards were merged and policies frozen before VAL; see the
 [TRAIN-calibration report](results/dual_codec_v4_train_calibration/README.md).
-The four paired VAL evaluation shards are running. No V4 BD-rate is claimed
-before they are merged and checked.
+The four paired VAL evaluation shards have been merged and checked. V4's
+global gate regressed the two primary BD-rate curves substantially; it is
+not the selected follow-up policy. See the V5 protocol for the sparse-repair
+rationale. The VAL set was previously inspected and is not a fresh holdout.
 
 V2 adds a shared-bitstream selector targeting **both r2plus1d_18 and r3d_18**.
 See [the V2 pilot protocol](docs/RUN_DESIGN_DUAL_CODEC_SEARCH_V2.md),
