@@ -19,6 +19,17 @@ The
 compares all fixed candidates and frozen A/B/C policies on the existing V2
 records; it is **not** a fresh holdout.
 
+V6 is a TRAIN-only feasibility pilot for **joint resolution and QP choice at
+V2-matched measured bytes**. It reuses the frozen V2 baseline, searches
+96/112/128-pixel representations with real x264/x265 QPs, and evaluates
+shortlisted decoded streams on the same three frozen AR analyzers. Its
+label-aware oracle can reveal whether the expanded candidate family contains
+MC3 rescues that preserve the two primary predictions, but it is not a
+deployable policy or a BD-rate result. See the
+[V6 protocol](docs/V6_RATE_MATCHED_DESIGN.md),
+[pilot](ops/v6_rate_matched_pilot.py) and
+[Kaggle runner](kaggle/v6_rate_matched_cell.sh).
+
 V5 is a **TRAIN-fitted, V2-anchored sparse MC3 repair experiment**, not a
 validated performance result. It leaves V2 unchanged at QP45/50 and when V2
 chooses identity, and switches candidate only when a label-free pairwise
