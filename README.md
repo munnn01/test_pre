@@ -19,6 +19,15 @@ The
 compares all fixed candidates and frozen A/B/C policies on the existing V2
 records; it is **not** a fresh holdout.
 
+V8 is an H.264 decoder-restoration study built on the frozen V2 choice.
+It fits a single QP-conditioned video restorer on 400 TRAIN-fit clips and
+selects a checkpoint using 200 disjoint TRAIN-calibration clips and only
+`r2plus1d_18`/`r3d_18`. The [protocol](docs/V8_SHARED_DECODER_DESIGN.md)
+states the three-analyzer target, selection rule, four concurrent controls,
+and the historical-data limitation. The [training code](ops/v8_train.py)
+and [Kaggle cell](kaggle/v8_train_cell.sh) save both candidate checkpoints
+and the frozen two-analyzer decision for subsequent evaluation.
+
 V6 is a completed **TRAIN-only feasibility pilot** for joint resolution/QP
 choice at V2-matched measured bytes. Its label-aware ceiling found safe MC3
 rescues at only 5/90 H.264 and 8/90 H.265 clip/QP points, with over 2,100
