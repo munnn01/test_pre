@@ -1,0 +1,16 @@
+{
+  "id": "trnhlng/v12-mc3-cal-s3-43f62f3",
+  "title": "v12-mc3-cal-s3-43f62f3",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "qktttttttttt/kineticscleaned"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}

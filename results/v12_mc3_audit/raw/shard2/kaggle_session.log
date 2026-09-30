@@ -1,0 +1,858 @@
+[{"stream_name":"stderr","time":6.465003125,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.465065688,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.465071739,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.465075619,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.042692179,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.042722793,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.042728649,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.042733029,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":252.193141159,"data":"{\n"}
+,{"stream_name":"stdout","time":252.1931977,"data":"  \"experiment\": \"v12_mc3_frozen_CAL_diagnostic\",\n"}
+,{"stream_name":"stdout","time":252.193202544,"data":"  \"scope\": \"post-freeze diagnostic on reused CAL; no fit or policy selection\",\n"}
+,{"stream_name":"stdout","time":252.193206034,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.193209265,"data":"  \"code_commit\": \"43f62f3aff682b557bc00bbb4707479abbe268b7\",\n"}
+,{"stream_name":"stdout","time":252.193212591,"data":"  \"code_fingerprint\": \"c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c\",\n"}
+,{"stream_name":"stdout","time":252.193216042,"data":"  \"preregistration_commit\": \"fda9e069643e084d715c6f71a0cdefc9000f0204\",\n"}
+,{"stream_name":"stdout","time":252.193219241,"data":"  \"preregistration_sha256\": \"093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f\",\n"}
+,{"stream_name":"stdout","time":252.193222386,"data":"  \"protocol_sha256\": \"994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd\",\n"}
+,{"stream_name":"stdout","time":252.193225585,"data":"  \"selection_sha256\": \"bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103\",\n"}
+,{"stream_name":"stdout","time":252.19322869,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":252.1932319,"data":"  \"parent_freezes\": {\n"}
+,{"stream_name":"stdout","time":252.193235022,"data":"    \"v12a\": {\n"}
+,{"stream_name":"stdout","time":252.193238032,"data":"      \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.19324119,"data":"      \"freeze_commit\": \"31733000ce4c4c4af007d09db96be88838dd63fa\",\n"}
+,{"stream_name":"stdout","time":252.193244366,"data":"      \"frozen_policy_sha256\": \"918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe\",\n"}
+,{"stream_name":"stdout","time":252.193247533,"data":"      \"calibration_result_sha256\": \"2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d\",\n"}
+,{"stream_name":"stdout","time":252.193250683,"data":"      \"selected_choices_sha256\": \"bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35\",\n"}
+,{"stream_name":"stdout","time":252.193253824,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193256812,"data":"        \"tau_relative\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193260129,"data":"        \"rate_slack\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193263253,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193273941,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.19327639,"data":"    },\n"}
+,{"stream_name":"stdout","time":252.193278595,"data":"    \"v12b\": {\n"}
+,{"stream_name":"stdout","time":252.193281042,"data":"      \"repository_url\": \"https://github.com/munnn01/test_pre.git\",\n"}
+,{"stream_name":"stdout","time":252.193283483,"data":"      \"freeze_commit\": \"67859444caeae26f4f4c927106d0efa1924616d9\",\n"}
+,{"stream_name":"stdout","time":252.193285888,"data":"      \"frozen_policy_sha256\": \"68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8\",\n"}
+,{"stream_name":"stdout","time":252.193288419,"data":"      \"calibration_result_sha256\": \"366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861\",\n"}
+,{"stream_name":"stdout","time":252.193290897,"data":"      \"selected_choices_sha256\": \"e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499\",\n"}
+,{"stream_name":"stdout","time":252.193293435,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193295787,"data":"        \"tau_relative\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193298086,"data":"        \"rate_slack\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193300422,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193302743,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.193304946,"data":"    }\n"}
+,{"stream_name":"stdout","time":252.193307142,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193309353,"data":"  \"model\": {\n"}
+,{"stream_name":"stdout","time":252.19331165,"data":"    \"name\": \"mc3_18\",\n"}
+,{"stream_name":"stdout","time":252.193314022,"data":"    \"weights\": \"KINETICS400_V1\",\n"}
+,{"stream_name":"stdout","time":252.193317815,"data":"    \"url\": \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\",\n"}
+,{"stream_name":"stdout","time":252.193320327,"data":"    \"checkpoint_sha256\": \"a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b\",\n"}
+,{"stream_name":"stdout","time":252.193322792,"data":"    \"state_sha256\": \"8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7\",\n"}
+,{"stream_name":"stdout","time":252.193325174,"data":"    \"categories_sha256\": \"af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57\",\n"}
+,{"stream_name":"stdout","time":252.193327676,"data":"    \"clip_size\": 112,\n"}
+,{"stream_name":"stdout","time":252.193329983,"data":"    \"mean\": [\n"}
+,{"stream_name":"stdout","time":252.193332262,"data":"      0.43216,\n"}
+,{"stream_name":"stdout","time":252.193334517,"data":"      0.394666,\n"}
+,{"stream_name":"stdout","time":252.193336758,"data":"      0.37645\n"}
+,{"stream_name":"stdout","time":252.193338977,"data":"    ],\n"}
+,{"stream_name":"stdout","time":252.193341163,"data":"    \"std\": [\n"}
+,{"stream_name":"stdout","time":252.193343417,"data":"      0.22803,\n"}
+,{"stream_name":"stdout","time":252.193345637,"data":"      0.22145,\n"}
+,{"stream_name":"stdout","time":252.193347832,"data":"      0.216989\n"}
+,{"stream_name":"stdout","time":252.193350064,"data":"    ]\n"}
+,{"stream_name":"stdout","time":252.193352246,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193354441,"data":"  \"bootstrap_unit\": \"source video; all QPs and five arms paired\",\n"}
+,{"stream_name":"stdout","time":252.193356865,"data":"  \"bootstrap_seed\": 20261010,\n"}
+,{"stream_name":"stdout","time":252.193359187,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":252.193361485,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":252.193366224,"data":"  \"bootstrap_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":252.193368704,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193371064,"data":"Downloading: \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\" to /root/.cache/torch/hub/checkpoints/mc3_18-a90a0ba3.pth\n"}
+,{"stream_name":"stdout","time":252.193375227,"data":"\r  0%|          | 0.00/44.7M [00:00\u003c?, ?B/s]\r  0%|          | 128k/44.7M [00:00\u003c00:39, 1.19MB/s]\r  1%|          | 384k/44.7M [00:00\u003c00:24, 1.92MB/s]\r  3%|▎         | 1.50M/44.7M [00:00\u003c00:07, 6.18MB/s]\r 13%|█▎        | 6.00M/44.7M [00:00\u003c00:01, 21.5MB/s]\r 18%|█▊        | 8.12M/44.7M [00:00\u003c00:01, 20.8MB/s]\r 32%|███▏      | 14.5M/44.7M [00:00\u003c00:00, 34.6MB/s]\r 40%|████      | 17.9M/44.7M [00:00\u003c00:00, 33.0MB/s]\r 53%|█████▎    | 23.8M/44.7M [00:00\u003c00:00, 40.7MB/s]\r 62%|██████▏   | 27.9M/44.7M [00:01\u003c00:00, 37.9MB/s]\r 72%|███████▏  | 32.0M/44.7M [00:01\u003c00:00, 33.9MB/s]\r 88%|████████▊ | 39.2M/44.7M [00:01\u003c00:00, 41.5MB/s]\r 97%|█████████▋| 43.4M/44.7M [00:01\u003c00:00, 35.7MB/s]\r100%|██████████| 44.7M/44.7M [00:01\u003c00:00, 31.4MB/s]\n"}
+,{"stream_name":"stdout","time":252.193382742,"data":"[MC3 V12] shard=2 1/50 unique_trials=10\n"}
+,{"stream_name":"stdout","time":252.193385059,"data":"[MC3 V12] shard=2 2/50 unique_trials=20\n"}
+,{"stream_name":"stdout","time":252.193387368,"data":"[MC3 V12] shard=2 3/50 unique_trials=30\n"}
+,{"stream_name":"stdout","time":252.193389627,"data":"[MC3 V12] shard=2 4/50 unique_trials=41\n"}
+,{"stream_name":"stdout","time":252.193393822,"data":"[MC3 V12] shard=2 5/50 unique_trials=54\n"}
+,{"stream_name":"stdout","time":252.193396147,"data":"[MC3 V12] shard=2 6/50 unique_trials=65\n"}
+,{"stream_name":"stdout","time":252.193399,"data":"[MC3 V12] shard=2 7/50 unique_trials=75\n"}
+,{"stream_name":"stdout","time":252.193401784,"data":"[MC3 V12] shard=2 8/50 unique_trials=85\n"}
+,{"stream_name":"stdout","time":252.193404159,"data":"[MC3 V12] shard=2 9/50 unique_trials=98\n"}
+,{"stream_name":"stdout","time":252.193406503,"data":"[MC3 V12] shard=2 10/50 unique_trials=109\n"}
+,{"stream_name":"stdout","time":252.193408931,"data":"[MC3 V12] shard=2 11/50 unique_trials=121\n"}
+,{"stream_name":"stdout","time":252.193411389,"data":"[MC3 V12] shard=2 12/50 unique_trials=131\n"}
+,{"stream_name":"stdout","time":252.193413753,"data":"[MC3 V12] shard=2 13/50 unique_trials=141\n"}
+,{"stream_name":"stdout","time":252.193416103,"data":"[MC3 V12] shard=2 14/50 unique_trials=153\n"}
+,{"stream_name":"stdout","time":252.193418418,"data":"[MC3 V12] shard=2 15/50 unique_trials=163\n"}
+,{"stream_name":"stdout","time":252.193420762,"data":"[MC3 V12] shard=2 16/50 unique_trials=174\n"}
+,{"stream_name":"stdout","time":252.1934236,"data":"[MC3 V12] shard=2 17/50 unique_trials=187\n"}
+,{"stream_name":"stdout","time":252.193426008,"data":"[MC3 V12] shard=2 18/50 unique_trials=199\n"}
+,{"stream_name":"stdout","time":252.193428853,"data":"[MC3 V12] shard=2 19/50 unique_trials=209\n"}
+,{"stream_name":"stdout","time":252.193432221,"data":"[MC3 V12] shard=2 20/50 unique_trials=221\n"}
+,{"stream_name":"stdout","time":252.193435628,"data":"[MC3 V12] shard=2 21/50 unique_trials=231\n"}
+,{"stream_name":"stdout","time":252.193438343,"data":"[MC3 V12] shard=2 22/50 unique_trials=241\n"}
+,{"stream_name":"stdout","time":252.193440663,"data":"[MC3 V12] shard=2 23/50 unique_trials=251\n"}
+,{"stream_name":"stdout","time":252.193443026,"data":"[MC3 V12] shard=2 24/50 unique_trials=261\n"}
+,{"stream_name":"stdout","time":252.193447371,"data":"[MC3 V12] shard=2 25/50 unique_trials=271\n"}
+,{"stream_name":"stdout","time":252.19344981,"data":"[MC3 V12] shard=2 26/50 unique_trials=283\n"}
+,{"stream_name":"stdout","time":252.193452153,"data":"[MC3 V12] shard=2 27/50 unique_trials=296\n"}
+,{"stream_name":"stdout","time":252.193455429,"data":"[MC3 V12] shard=2 28/50 unique_trials=308\n"}
+,{"stream_name":"stdout","time":252.193457763,"data":"[MC3 V12] shard=2 29/50 unique_trials=319\n"}
+,{"stream_name":"stdout","time":252.193460012,"data":"[MC3 V12] shard=2 30/50 unique_trials=329\n"}
+,{"stream_name":"stdout","time":252.193462438,"data":"[MC3 V12] shard=2 31/50 unique_trials=341\n"}
+,{"stream_name":"stdout","time":252.19346476,"data":"[MC3 V12] shard=2 32/50 unique_trials=352\n"}
+,{"stream_name":"stdout","time":252.193467121,"data":"[MC3 V12] shard=2 33/50 unique_trials=365\n"}
+,{"stream_name":"stdout","time":252.19346938,"data":"[MC3 V12] shard=2 34/50 unique_trials=375\n"}
+,{"stream_name":"stdout","time":252.193471645,"data":"[MC3 V12] shard=2 35/50 unique_trials=385\n"}
+,{"stream_name":"stdout","time":252.193473883,"data":"[MC3 V12] shard=2 36/50 unique_trials=395\n"}
+,{"stream_name":"stdout","time":252.193476136,"data":"[MC3 V12] shard=2 37/50 unique_trials=405\n"}
+,{"stream_name":"stdout","time":252.193478419,"data":"[MC3 V12] shard=2 38/50 unique_trials=418\n"}
+,{"stream_name":"stdout","time":252.193480701,"data":"[MC3 V12] shard=2 39/50 unique_trials=429\n"}
+,{"stream_name":"stdout","time":252.193482936,"data":"[MC3 V12] shard=2 40/50 unique_trials=442\n"}
+,{"stream_name":"stdout","time":252.193485201,"data":"[MC3 V12] shard=2 41/50 unique_trials=452\n"}
+,{"stream_name":"stdout","time":252.193487468,"data":"[MC3 V12] shard=2 42/50 unique_trials=463\n"}
+,{"stream_name":"stdout","time":252.193489714,"data":"[MC3 V12] shard=2 43/50 unique_trials=476\n"}
+,{"stream_name":"stdout","time":252.193491961,"data":"[MC3 V12] shard=2 44/50 unique_trials=490\n"}
+,{"stream_name":"stdout","time":252.193494222,"data":"[MC3 V12] shard=2 45/50 unique_trials=503\n"}
+,{"stream_name":"stdout","time":252.193496462,"data":"[MC3 V12] shard=2 46/50 unique_trials=514\n"}
+,{"stream_name":"stdout","time":252.193498744,"data":"[MC3 V12] shard=2 47/50 unique_trials=524\n"}
+,{"stream_name":"stdout","time":252.193500981,"data":"[MC3 V12] shard=2 48/50 unique_trials=534\n"}
+,{"stream_name":"stdout","time":252.193503269,"data":"[MC3 V12] shard=2 49/50 unique_trials=546\n"}
+,{"stream_name":"stdout","time":252.193505525,"data":"[MC3 V12] shard=2 50/50 unique_trials=556\n"}
+,{"stream_name":"stdout","time":252.193507794,"data":"{\n"}
+,{"stream_name":"stdout","time":252.193509955,"data":"  \"shard\": 2,\n"}
+,{"stream_name":"stdout","time":252.193512254,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":252.193514529,"data":"  \"unique_trials\": 556\n"}
+,{"stream_name":"stdout","time":252.19351683,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193519016,"data":"[done] V12 MC3 CAL shard=2\n"}
+,{"stream_name":"stdout","time":252.193521314,"data":"[exit] rc=0 shard=2\n"}
+,{"stream_name":"stderr","time":252.194298917,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.19431186,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":252.194315954,"data":"\n"}
+,{"stream_name":"stderr","time":252.194320424,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.194331209,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":254.477233942,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":254.477263117,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":254.620666675,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":254.62069122,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":255.204879697,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":255.490161325,"data":"[NbConvertApp] Writing 10205 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":257.788024161,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":258.193562039,"data":"[NbConvertApp] Writing 287124 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":6.465003125,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.465065688,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.465071739,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.465075619,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.042692179,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.042722793,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.042728649,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.042733029,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":252.193141159,"data":"{\n"}
+,{"stream_name":"stdout","time":252.1931977,"data":"  \"experiment\": \"v12_mc3_frozen_CAL_diagnostic\",\n"}
+,{"stream_name":"stdout","time":252.193202544,"data":"  \"scope\": \"post-freeze diagnostic on reused CAL; no fit or policy selection\",\n"}
+,{"stream_name":"stdout","time":252.193206034,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.193209265,"data":"  \"code_commit\": \"43f62f3aff682b557bc00bbb4707479abbe268b7\",\n"}
+,{"stream_name":"stdout","time":252.193212591,"data":"  \"code_fingerprint\": \"c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c\",\n"}
+,{"stream_name":"stdout","time":252.193216042,"data":"  \"preregistration_commit\": \"fda9e069643e084d715c6f71a0cdefc9000f0204\",\n"}
+,{"stream_name":"stdout","time":252.193219241,"data":"  \"preregistration_sha256\": \"093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f\",\n"}
+,{"stream_name":"stdout","time":252.193222386,"data":"  \"protocol_sha256\": \"994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd\",\n"}
+,{"stream_name":"stdout","time":252.193225585,"data":"  \"selection_sha256\": \"bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103\",\n"}
+,{"stream_name":"stdout","time":252.19322869,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":252.1932319,"data":"  \"parent_freezes\": {\n"}
+,{"stream_name":"stdout","time":252.193235022,"data":"    \"v12a\": {\n"}
+,{"stream_name":"stdout","time":252.193238032,"data":"      \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.19324119,"data":"      \"freeze_commit\": \"31733000ce4c4c4af007d09db96be88838dd63fa\",\n"}
+,{"stream_name":"stdout","time":252.193244366,"data":"      \"frozen_policy_sha256\": \"918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe\",\n"}
+,{"stream_name":"stdout","time":252.193247533,"data":"      \"calibration_result_sha256\": \"2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d\",\n"}
+,{"stream_name":"stdout","time":252.193250683,"data":"      \"selected_choices_sha256\": \"bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35\",\n"}
+,{"stream_name":"stdout","time":252.193253824,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193256812,"data":"        \"tau_relative\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193260129,"data":"        \"rate_slack\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193263253,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193273941,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.19327639,"data":"    },\n"}
+,{"stream_name":"stdout","time":252.193278595,"data":"    \"v12b\": {\n"}
+,{"stream_name":"stdout","time":252.193281042,"data":"      \"repository_url\": \"https://github.com/munnn01/test_pre.git\",\n"}
+,{"stream_name":"stdout","time":252.193283483,"data":"      \"freeze_commit\": \"67859444caeae26f4f4c927106d0efa1924616d9\",\n"}
+,{"stream_name":"stdout","time":252.193285888,"data":"      \"frozen_policy_sha256\": \"68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8\",\n"}
+,{"stream_name":"stdout","time":252.193288419,"data":"      \"calibration_result_sha256\": \"366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861\",\n"}
+,{"stream_name":"stdout","time":252.193290897,"data":"      \"selected_choices_sha256\": \"e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499\",\n"}
+,{"stream_name":"stdout","time":252.193293435,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193295787,"data":"        \"tau_relative\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193298086,"data":"        \"rate_slack\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193300422,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193302743,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.193304946,"data":"    }\n"}
+,{"stream_name":"stdout","time":252.193307142,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193309353,"data":"  \"model\": {\n"}
+,{"stream_name":"stdout","time":252.19331165,"data":"    \"name\": \"mc3_18\",\n"}
+,{"stream_name":"stdout","time":252.193314022,"data":"    \"weights\": \"KINETICS400_V1\",\n"}
+,{"stream_name":"stdout","time":252.193317815,"data":"    \"url\": \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\",\n"}
+,{"stream_name":"stdout","time":252.193320327,"data":"    \"checkpoint_sha256\": \"a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b\",\n"}
+,{"stream_name":"stdout","time":252.193322792,"data":"    \"state_sha256\": \"8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7\",\n"}
+,{"stream_name":"stdout","time":252.193325174,"data":"    \"categories_sha256\": \"af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57\",\n"}
+,{"stream_name":"stdout","time":252.193327676,"data":"    \"clip_size\": 112,\n"}
+,{"stream_name":"stdout","time":252.193329983,"data":"    \"mean\": [\n"}
+,{"stream_name":"stdout","time":252.193332262,"data":"      0.43216,\n"}
+,{"stream_name":"stdout","time":252.193334517,"data":"      0.394666,\n"}
+,{"stream_name":"stdout","time":252.193336758,"data":"      0.37645\n"}
+,{"stream_name":"stdout","time":252.193338977,"data":"    ],\n"}
+,{"stream_name":"stdout","time":252.193341163,"data":"    \"std\": [\n"}
+,{"stream_name":"stdout","time":252.193343417,"data":"      0.22803,\n"}
+,{"stream_name":"stdout","time":252.193345637,"data":"      0.22145,\n"}
+,{"stream_name":"stdout","time":252.193347832,"data":"      0.216989\n"}
+,{"stream_name":"stdout","time":252.193350064,"data":"    ]\n"}
+,{"stream_name":"stdout","time":252.193352246,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193354441,"data":"  \"bootstrap_unit\": \"source video; all QPs and five arms paired\",\n"}
+,{"stream_name":"stdout","time":252.193356865,"data":"  \"bootstrap_seed\": 20261010,\n"}
+,{"stream_name":"stdout","time":252.193359187,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":252.193361485,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":252.193366224,"data":"  \"bootstrap_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":252.193368704,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193371064,"data":"Downloading: \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\" to /root/.cache/torch/hub/checkpoints/mc3_18-a90a0ba3.pth\n"}
+,{"stream_name":"stdout","time":252.193375227,"data":"\r  0%|          | 0.00/44.7M [00:00\u003c?, ?B/s]\r  0%|          | 128k/44.7M [00:00\u003c00:39, 1.19MB/s]\r  1%|          | 384k/44.7M [00:00\u003c00:24, 1.92MB/s]\r  3%|▎         | 1.50M/44.7M [00:00\u003c00:07, 6.18MB/s]\r 13%|█▎        | 6.00M/44.7M [00:00\u003c00:01, 21.5MB/s]\r 18%|█▊        | 8.12M/44.7M [00:00\u003c00:01, 20.8MB/s]\r 32%|███▏      | 14.5M/44.7M [00:00\u003c00:00, 34.6MB/s]\r 40%|████      | 17.9M/44.7M [00:00\u003c00:00, 33.0MB/s]\r 53%|█████▎    | 23.8M/44.7M [00:00\u003c00:00, 40.7MB/s]\r 62%|██████▏   | 27.9M/44.7M [00:01\u003c00:00, 37.9MB/s]\r 72%|███████▏  | 32.0M/44.7M [00:01\u003c00:00, 33.9MB/s]\r 88%|████████▊ | 39.2M/44.7M [00:01\u003c00:00, 41.5MB/s]\r 97%|█████████▋| 43.4M/44.7M [00:01\u003c00:00, 35.7MB/s]\r100%|██████████| 44.7M/44.7M [00:01\u003c00:00, 31.4MB/s]\n"}
+,{"stream_name":"stdout","time":252.193382742,"data":"[MC3 V12] shard=2 1/50 unique_trials=10\n"}
+,{"stream_name":"stdout","time":252.193385059,"data":"[MC3 V12] shard=2 2/50 unique_trials=20\n"}
+,{"stream_name":"stdout","time":252.193387368,"data":"[MC3 V12] shard=2 3/50 unique_trials=30\n"}
+,{"stream_name":"stdout","time":252.193389627,"data":"[MC3 V12] shard=2 4/50 unique_trials=41\n"}
+,{"stream_name":"stdout","time":252.193393822,"data":"[MC3 V12] shard=2 5/50 unique_trials=54\n"}
+,{"stream_name":"stdout","time":252.193396147,"data":"[MC3 V12] shard=2 6/50 unique_trials=65\n"}
+,{"stream_name":"stdout","time":252.193399,"data":"[MC3 V12] shard=2 7/50 unique_trials=75\n"}
+,{"stream_name":"stdout","time":252.193401784,"data":"[MC3 V12] shard=2 8/50 unique_trials=85\n"}
+,{"stream_name":"stdout","time":252.193404159,"data":"[MC3 V12] shard=2 9/50 unique_trials=98\n"}
+,{"stream_name":"stdout","time":252.193406503,"data":"[MC3 V12] shard=2 10/50 unique_trials=109\n"}
+,{"stream_name":"stdout","time":252.193408931,"data":"[MC3 V12] shard=2 11/50 unique_trials=121\n"}
+,{"stream_name":"stdout","time":252.193411389,"data":"[MC3 V12] shard=2 12/50 unique_trials=131\n"}
+,{"stream_name":"stdout","time":252.193413753,"data":"[MC3 V12] shard=2 13/50 unique_trials=141\n"}
+,{"stream_name":"stdout","time":252.193416103,"data":"[MC3 V12] shard=2 14/50 unique_trials=153\n"}
+,{"stream_name":"stdout","time":252.193418418,"data":"[MC3 V12] shard=2 15/50 unique_trials=163\n"}
+,{"stream_name":"stdout","time":252.193420762,"data":"[MC3 V12] shard=2 16/50 unique_trials=174\n"}
+,{"stream_name":"stdout","time":252.1934236,"data":"[MC3 V12] shard=2 17/50 unique_trials=187\n"}
+,{"stream_name":"stdout","time":252.193426008,"data":"[MC3 V12] shard=2 18/50 unique_trials=199\n"}
+,{"stream_name":"stdout","time":252.193428853,"data":"[MC3 V12] shard=2 19/50 unique_trials=209\n"}
+,{"stream_name":"stdout","time":252.193432221,"data":"[MC3 V12] shard=2 20/50 unique_trials=221\n"}
+,{"stream_name":"stdout","time":252.193435628,"data":"[MC3 V12] shard=2 21/50 unique_trials=231\n"}
+,{"stream_name":"stdout","time":252.193438343,"data":"[MC3 V12] shard=2 22/50 unique_trials=241\n"}
+,{"stream_name":"stdout","time":252.193440663,"data":"[MC3 V12] shard=2 23/50 unique_trials=251\n"}
+,{"stream_name":"stdout","time":252.193443026,"data":"[MC3 V12] shard=2 24/50 unique_trials=261\n"}
+,{"stream_name":"stdout","time":252.193447371,"data":"[MC3 V12] shard=2 25/50 unique_trials=271\n"}
+,{"stream_name":"stdout","time":252.19344981,"data":"[MC3 V12] shard=2 26/50 unique_trials=283\n"}
+,{"stream_name":"stdout","time":252.193452153,"data":"[MC3 V12] shard=2 27/50 unique_trials=296\n"}
+,{"stream_name":"stdout","time":252.193455429,"data":"[MC3 V12] shard=2 28/50 unique_trials=308\n"}
+,{"stream_name":"stdout","time":252.193457763,"data":"[MC3 V12] shard=2 29/50 unique_trials=319\n"}
+,{"stream_name":"stdout","time":252.193460012,"data":"[MC3 V12] shard=2 30/50 unique_trials=329\n"}
+,{"stream_name":"stdout","time":252.193462438,"data":"[MC3 V12] shard=2 31/50 unique_trials=341\n"}
+,{"stream_name":"stdout","time":252.19346476,"data":"[MC3 V12] shard=2 32/50 unique_trials=352\n"}
+,{"stream_name":"stdout","time":252.193467121,"data":"[MC3 V12] shard=2 33/50 unique_trials=365\n"}
+,{"stream_name":"stdout","time":252.19346938,"data":"[MC3 V12] shard=2 34/50 unique_trials=375\n"}
+,{"stream_name":"stdout","time":252.193471645,"data":"[MC3 V12] shard=2 35/50 unique_trials=385\n"}
+,{"stream_name":"stdout","time":252.193473883,"data":"[MC3 V12] shard=2 36/50 unique_trials=395\n"}
+,{"stream_name":"stdout","time":252.193476136,"data":"[MC3 V12] shard=2 37/50 unique_trials=405\n"}
+,{"stream_name":"stdout","time":252.193478419,"data":"[MC3 V12] shard=2 38/50 unique_trials=418\n"}
+,{"stream_name":"stdout","time":252.193480701,"data":"[MC3 V12] shard=2 39/50 unique_trials=429\n"}
+,{"stream_name":"stdout","time":252.193482936,"data":"[MC3 V12] shard=2 40/50 unique_trials=442\n"}
+,{"stream_name":"stdout","time":252.193485201,"data":"[MC3 V12] shard=2 41/50 unique_trials=452\n"}
+,{"stream_name":"stdout","time":252.193487468,"data":"[MC3 V12] shard=2 42/50 unique_trials=463\n"}
+,{"stream_name":"stdout","time":252.193489714,"data":"[MC3 V12] shard=2 43/50 unique_trials=476\n"}
+,{"stream_name":"stdout","time":252.193491961,"data":"[MC3 V12] shard=2 44/50 unique_trials=490\n"}
+,{"stream_name":"stdout","time":252.193494222,"data":"[MC3 V12] shard=2 45/50 unique_trials=503\n"}
+,{"stream_name":"stdout","time":252.193496462,"data":"[MC3 V12] shard=2 46/50 unique_trials=514\n"}
+,{"stream_name":"stdout","time":252.193498744,"data":"[MC3 V12] shard=2 47/50 unique_trials=524\n"}
+,{"stream_name":"stdout","time":252.193500981,"data":"[MC3 V12] shard=2 48/50 unique_trials=534\n"}
+,{"stream_name":"stdout","time":252.193503269,"data":"[MC3 V12] shard=2 49/50 unique_trials=546\n"}
+,{"stream_name":"stdout","time":252.193505525,"data":"[MC3 V12] shard=2 50/50 unique_trials=556\n"}
+,{"stream_name":"stdout","time":252.193507794,"data":"{\n"}
+,{"stream_name":"stdout","time":252.193509955,"data":"  \"shard\": 2,\n"}
+,{"stream_name":"stdout","time":252.193512254,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":252.193514529,"data":"  \"unique_trials\": 556\n"}
+,{"stream_name":"stdout","time":252.19351683,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193519016,"data":"[done] V12 MC3 CAL shard=2\n"}
+,{"stream_name":"stdout","time":252.193521314,"data":"[exit] rc=0 shard=2\n"}
+,{"stream_name":"stderr","time":252.194298917,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.19431186,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":252.194315954,"data":"\n"}
+,{"stream_name":"stderr","time":252.194320424,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.194331209,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":254.477233942,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":254.477263117,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":254.620666675,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":254.62069122,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":255.204879697,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":255.490161325,"data":"[NbConvertApp] Writing 10205 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":257.788024161,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":258.193562039,"data":"[NbConvertApp] Writing 287124 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":6.465003125,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.465065688,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.465071739,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.465075619,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.042692179,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.042722793,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.042728649,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.042733029,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":252.193141159,"data":"{\n"}
+,{"stream_name":"stdout","time":252.1931977,"data":"  \"experiment\": \"v12_mc3_frozen_CAL_diagnostic\",\n"}
+,{"stream_name":"stdout","time":252.193202544,"data":"  \"scope\": \"post-freeze diagnostic on reused CAL; no fit or policy selection\",\n"}
+,{"stream_name":"stdout","time":252.193206034,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.193209265,"data":"  \"code_commit\": \"43f62f3aff682b557bc00bbb4707479abbe268b7\",\n"}
+,{"stream_name":"stdout","time":252.193212591,"data":"  \"code_fingerprint\": \"c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c\",\n"}
+,{"stream_name":"stdout","time":252.193216042,"data":"  \"preregistration_commit\": \"fda9e069643e084d715c6f71a0cdefc9000f0204\",\n"}
+,{"stream_name":"stdout","time":252.193219241,"data":"  \"preregistration_sha256\": \"093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f\",\n"}
+,{"stream_name":"stdout","time":252.193222386,"data":"  \"protocol_sha256\": \"994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd\",\n"}
+,{"stream_name":"stdout","time":252.193225585,"data":"  \"selection_sha256\": \"bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103\",\n"}
+,{"stream_name":"stdout","time":252.19322869,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":252.1932319,"data":"  \"parent_freezes\": {\n"}
+,{"stream_name":"stdout","time":252.193235022,"data":"    \"v12a\": {\n"}
+,{"stream_name":"stdout","time":252.193238032,"data":"      \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.19324119,"data":"      \"freeze_commit\": \"31733000ce4c4c4af007d09db96be88838dd63fa\",\n"}
+,{"stream_name":"stdout","time":252.193244366,"data":"      \"frozen_policy_sha256\": \"918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe\",\n"}
+,{"stream_name":"stdout","time":252.193247533,"data":"      \"calibration_result_sha256\": \"2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d\",\n"}
+,{"stream_name":"stdout","time":252.193250683,"data":"      \"selected_choices_sha256\": \"bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35\",\n"}
+,{"stream_name":"stdout","time":252.193253824,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193256812,"data":"        \"tau_relative\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193260129,"data":"        \"rate_slack\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193263253,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193273941,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.19327639,"data":"    },\n"}
+,{"stream_name":"stdout","time":252.193278595,"data":"    \"v12b\": {\n"}
+,{"stream_name":"stdout","time":252.193281042,"data":"      \"repository_url\": \"https://github.com/munnn01/test_pre.git\",\n"}
+,{"stream_name":"stdout","time":252.193283483,"data":"      \"freeze_commit\": \"67859444caeae26f4f4c927106d0efa1924616d9\",\n"}
+,{"stream_name":"stdout","time":252.193285888,"data":"      \"frozen_policy_sha256\": \"68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8\",\n"}
+,{"stream_name":"stdout","time":252.193288419,"data":"      \"calibration_result_sha256\": \"366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861\",\n"}
+,{"stream_name":"stdout","time":252.193290897,"data":"      \"selected_choices_sha256\": \"e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499\",\n"}
+,{"stream_name":"stdout","time":252.193293435,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193295787,"data":"        \"tau_relative\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193298086,"data":"        \"rate_slack\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193300422,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193302743,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.193304946,"data":"    }\n"}
+,{"stream_name":"stdout","time":252.193307142,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193309353,"data":"  \"model\": {\n"}
+,{"stream_name":"stdout","time":252.19331165,"data":"    \"name\": \"mc3_18\",\n"}
+,{"stream_name":"stdout","time":252.193314022,"data":"    \"weights\": \"KINETICS400_V1\",\n"}
+,{"stream_name":"stdout","time":252.193317815,"data":"    \"url\": \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\",\n"}
+,{"stream_name":"stdout","time":252.193320327,"data":"    \"checkpoint_sha256\": \"a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b\",\n"}
+,{"stream_name":"stdout","time":252.193322792,"data":"    \"state_sha256\": \"8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7\",\n"}
+,{"stream_name":"stdout","time":252.193325174,"data":"    \"categories_sha256\": \"af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57\",\n"}
+,{"stream_name":"stdout","time":252.193327676,"data":"    \"clip_size\": 112,\n"}
+,{"stream_name":"stdout","time":252.193329983,"data":"    \"mean\": [\n"}
+,{"stream_name":"stdout","time":252.193332262,"data":"      0.43216,\n"}
+,{"stream_name":"stdout","time":252.193334517,"data":"      0.394666,\n"}
+,{"stream_name":"stdout","time":252.193336758,"data":"      0.37645\n"}
+,{"stream_name":"stdout","time":252.193338977,"data":"    ],\n"}
+,{"stream_name":"stdout","time":252.193341163,"data":"    \"std\": [\n"}
+,{"stream_name":"stdout","time":252.193343417,"data":"      0.22803,\n"}
+,{"stream_name":"stdout","time":252.193345637,"data":"      0.22145,\n"}
+,{"stream_name":"stdout","time":252.193347832,"data":"      0.216989\n"}
+,{"stream_name":"stdout","time":252.193350064,"data":"    ]\n"}
+,{"stream_name":"stdout","time":252.193352246,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193354441,"data":"  \"bootstrap_unit\": \"source video; all QPs and five arms paired\",\n"}
+,{"stream_name":"stdout","time":252.193356865,"data":"  \"bootstrap_seed\": 20261010,\n"}
+,{"stream_name":"stdout","time":252.193359187,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":252.193361485,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":252.193366224,"data":"  \"bootstrap_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":252.193368704,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193371064,"data":"Downloading: \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\" to /root/.cache/torch/hub/checkpoints/mc3_18-a90a0ba3.pth\n"}
+,{"stream_name":"stdout","time":252.193375227,"data":"\r  0%|          | 0.00/44.7M [00:00\u003c?, ?B/s]\r  0%|          | 128k/44.7M [00:00\u003c00:39, 1.19MB/s]\r  1%|          | 384k/44.7M [00:00\u003c00:24, 1.92MB/s]\r  3%|▎         | 1.50M/44.7M [00:00\u003c00:07, 6.18MB/s]\r 13%|█▎        | 6.00M/44.7M [00:00\u003c00:01, 21.5MB/s]\r 18%|█▊        | 8.12M/44.7M [00:00\u003c00:01, 20.8MB/s]\r 32%|███▏      | 14.5M/44.7M [00:00\u003c00:00, 34.6MB/s]\r 40%|████      | 17.9M/44.7M [00:00\u003c00:00, 33.0MB/s]\r 53%|█████▎    | 23.8M/44.7M [00:00\u003c00:00, 40.7MB/s]\r 62%|██████▏   | 27.9M/44.7M [00:01\u003c00:00, 37.9MB/s]\r 72%|███████▏  | 32.0M/44.7M [00:01\u003c00:00, 33.9MB/s]\r 88%|████████▊ | 39.2M/44.7M [00:01\u003c00:00, 41.5MB/s]\r 97%|█████████▋| 43.4M/44.7M [00:01\u003c00:00, 35.7MB/s]\r100%|██████████| 44.7M/44.7M [00:01\u003c00:00, 31.4MB/s]\n"}
+,{"stream_name":"stdout","time":252.193382742,"data":"[MC3 V12] shard=2 1/50 unique_trials=10\n"}
+,{"stream_name":"stdout","time":252.193385059,"data":"[MC3 V12] shard=2 2/50 unique_trials=20\n"}
+,{"stream_name":"stdout","time":252.193387368,"data":"[MC3 V12] shard=2 3/50 unique_trials=30\n"}
+,{"stream_name":"stdout","time":252.193389627,"data":"[MC3 V12] shard=2 4/50 unique_trials=41\n"}
+,{"stream_name":"stdout","time":252.193393822,"data":"[MC3 V12] shard=2 5/50 unique_trials=54\n"}
+,{"stream_name":"stdout","time":252.193396147,"data":"[MC3 V12] shard=2 6/50 unique_trials=65\n"}
+,{"stream_name":"stdout","time":252.193399,"data":"[MC3 V12] shard=2 7/50 unique_trials=75\n"}
+,{"stream_name":"stdout","time":252.193401784,"data":"[MC3 V12] shard=2 8/50 unique_trials=85\n"}
+,{"stream_name":"stdout","time":252.193404159,"data":"[MC3 V12] shard=2 9/50 unique_trials=98\n"}
+,{"stream_name":"stdout","time":252.193406503,"data":"[MC3 V12] shard=2 10/50 unique_trials=109\n"}
+,{"stream_name":"stdout","time":252.193408931,"data":"[MC3 V12] shard=2 11/50 unique_trials=121\n"}
+,{"stream_name":"stdout","time":252.193411389,"data":"[MC3 V12] shard=2 12/50 unique_trials=131\n"}
+,{"stream_name":"stdout","time":252.193413753,"data":"[MC3 V12] shard=2 13/50 unique_trials=141\n"}
+,{"stream_name":"stdout","time":252.193416103,"data":"[MC3 V12] shard=2 14/50 unique_trials=153\n"}
+,{"stream_name":"stdout","time":252.193418418,"data":"[MC3 V12] shard=2 15/50 unique_trials=163\n"}
+,{"stream_name":"stdout","time":252.193420762,"data":"[MC3 V12] shard=2 16/50 unique_trials=174\n"}
+,{"stream_name":"stdout","time":252.1934236,"data":"[MC3 V12] shard=2 17/50 unique_trials=187\n"}
+,{"stream_name":"stdout","time":252.193426008,"data":"[MC3 V12] shard=2 18/50 unique_trials=199\n"}
+,{"stream_name":"stdout","time":252.193428853,"data":"[MC3 V12] shard=2 19/50 unique_trials=209\n"}
+,{"stream_name":"stdout","time":252.193432221,"data":"[MC3 V12] shard=2 20/50 unique_trials=221\n"}
+,{"stream_name":"stdout","time":252.193435628,"data":"[MC3 V12] shard=2 21/50 unique_trials=231\n"}
+,{"stream_name":"stdout","time":252.193438343,"data":"[MC3 V12] shard=2 22/50 unique_trials=241\n"}
+,{"stream_name":"stdout","time":252.193440663,"data":"[MC3 V12] shard=2 23/50 unique_trials=251\n"}
+,{"stream_name":"stdout","time":252.193443026,"data":"[MC3 V12] shard=2 24/50 unique_trials=261\n"}
+,{"stream_name":"stdout","time":252.193447371,"data":"[MC3 V12] shard=2 25/50 unique_trials=271\n"}
+,{"stream_name":"stdout","time":252.19344981,"data":"[MC3 V12] shard=2 26/50 unique_trials=283\n"}
+,{"stream_name":"stdout","time":252.193452153,"data":"[MC3 V12] shard=2 27/50 unique_trials=296\n"}
+,{"stream_name":"stdout","time":252.193455429,"data":"[MC3 V12] shard=2 28/50 unique_trials=308\n"}
+,{"stream_name":"stdout","time":252.193457763,"data":"[MC3 V12] shard=2 29/50 unique_trials=319\n"}
+,{"stream_name":"stdout","time":252.193460012,"data":"[MC3 V12] shard=2 30/50 unique_trials=329\n"}
+,{"stream_name":"stdout","time":252.193462438,"data":"[MC3 V12] shard=2 31/50 unique_trials=341\n"}
+,{"stream_name":"stdout","time":252.19346476,"data":"[MC3 V12] shard=2 32/50 unique_trials=352\n"}
+,{"stream_name":"stdout","time":252.193467121,"data":"[MC3 V12] shard=2 33/50 unique_trials=365\n"}
+,{"stream_name":"stdout","time":252.19346938,"data":"[MC3 V12] shard=2 34/50 unique_trials=375\n"}
+,{"stream_name":"stdout","time":252.193471645,"data":"[MC3 V12] shard=2 35/50 unique_trials=385\n"}
+,{"stream_name":"stdout","time":252.193473883,"data":"[MC3 V12] shard=2 36/50 unique_trials=395\n"}
+,{"stream_name":"stdout","time":252.193476136,"data":"[MC3 V12] shard=2 37/50 unique_trials=405\n"}
+,{"stream_name":"stdout","time":252.193478419,"data":"[MC3 V12] shard=2 38/50 unique_trials=418\n"}
+,{"stream_name":"stdout","time":252.193480701,"data":"[MC3 V12] shard=2 39/50 unique_trials=429\n"}
+,{"stream_name":"stdout","time":252.193482936,"data":"[MC3 V12] shard=2 40/50 unique_trials=442\n"}
+,{"stream_name":"stdout","time":252.193485201,"data":"[MC3 V12] shard=2 41/50 unique_trials=452\n"}
+,{"stream_name":"stdout","time":252.193487468,"data":"[MC3 V12] shard=2 42/50 unique_trials=463\n"}
+,{"stream_name":"stdout","time":252.193489714,"data":"[MC3 V12] shard=2 43/50 unique_trials=476\n"}
+,{"stream_name":"stdout","time":252.193491961,"data":"[MC3 V12] shard=2 44/50 unique_trials=490\n"}
+,{"stream_name":"stdout","time":252.193494222,"data":"[MC3 V12] shard=2 45/50 unique_trials=503\n"}
+,{"stream_name":"stdout","time":252.193496462,"data":"[MC3 V12] shard=2 46/50 unique_trials=514\n"}
+,{"stream_name":"stdout","time":252.193498744,"data":"[MC3 V12] shard=2 47/50 unique_trials=524\n"}
+,{"stream_name":"stdout","time":252.193500981,"data":"[MC3 V12] shard=2 48/50 unique_trials=534\n"}
+,{"stream_name":"stdout","time":252.193503269,"data":"[MC3 V12] shard=2 49/50 unique_trials=546\n"}
+,{"stream_name":"stdout","time":252.193505525,"data":"[MC3 V12] shard=2 50/50 unique_trials=556\n"}
+,{"stream_name":"stdout","time":252.193507794,"data":"{\n"}
+,{"stream_name":"stdout","time":252.193509955,"data":"  \"shard\": 2,\n"}
+,{"stream_name":"stdout","time":252.193512254,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":252.193514529,"data":"  \"unique_trials\": 556\n"}
+,{"stream_name":"stdout","time":252.19351683,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193519016,"data":"[done] V12 MC3 CAL shard=2\n"}
+,{"stream_name":"stdout","time":252.193521314,"data":"[exit] rc=0 shard=2\n"}
+,{"stream_name":"stderr","time":252.194298917,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.19431186,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":252.194315954,"data":"\n"}
+,{"stream_name":"stderr","time":252.194320424,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.194331209,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":254.477233942,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":254.477263117,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":254.620666675,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":254.62069122,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":255.204879697,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":255.490161325,"data":"[NbConvertApp] Writing 10205 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":257.788024161,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":258.193562039,"data":"[NbConvertApp] Writing 287124 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":6.465003125,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.465065688,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.465071739,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.465075619,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.042692179,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.042722793,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.042728649,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.042733029,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":252.193141159,"data":"{\n"}
+,{"stream_name":"stdout","time":252.1931977,"data":"  \"experiment\": \"v12_mc3_frozen_CAL_diagnostic\",\n"}
+,{"stream_name":"stdout","time":252.193202544,"data":"  \"scope\": \"post-freeze diagnostic on reused CAL; no fit or policy selection\",\n"}
+,{"stream_name":"stdout","time":252.193206034,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.193209265,"data":"  \"code_commit\": \"43f62f3aff682b557bc00bbb4707479abbe268b7\",\n"}
+,{"stream_name":"stdout","time":252.193212591,"data":"  \"code_fingerprint\": \"c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c\",\n"}
+,{"stream_name":"stdout","time":252.193216042,"data":"  \"preregistration_commit\": \"fda9e069643e084d715c6f71a0cdefc9000f0204\",\n"}
+,{"stream_name":"stdout","time":252.193219241,"data":"  \"preregistration_sha256\": \"093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f\",\n"}
+,{"stream_name":"stdout","time":252.193222386,"data":"  \"protocol_sha256\": \"994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd\",\n"}
+,{"stream_name":"stdout","time":252.193225585,"data":"  \"selection_sha256\": \"bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103\",\n"}
+,{"stream_name":"stdout","time":252.19322869,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":252.1932319,"data":"  \"parent_freezes\": {\n"}
+,{"stream_name":"stdout","time":252.193235022,"data":"    \"v12a\": {\n"}
+,{"stream_name":"stdout","time":252.193238032,"data":"      \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.19324119,"data":"      \"freeze_commit\": \"31733000ce4c4c4af007d09db96be88838dd63fa\",\n"}
+,{"stream_name":"stdout","time":252.193244366,"data":"      \"frozen_policy_sha256\": \"918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe\",\n"}
+,{"stream_name":"stdout","time":252.193247533,"data":"      \"calibration_result_sha256\": \"2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d\",\n"}
+,{"stream_name":"stdout","time":252.193250683,"data":"      \"selected_choices_sha256\": \"bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35\",\n"}
+,{"stream_name":"stdout","time":252.193253824,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193256812,"data":"        \"tau_relative\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193260129,"data":"        \"rate_slack\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193263253,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193273941,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.19327639,"data":"    },\n"}
+,{"stream_name":"stdout","time":252.193278595,"data":"    \"v12b\": {\n"}
+,{"stream_name":"stdout","time":252.193281042,"data":"      \"repository_url\": \"https://github.com/munnn01/test_pre.git\",\n"}
+,{"stream_name":"stdout","time":252.193283483,"data":"      \"freeze_commit\": \"67859444caeae26f4f4c927106d0efa1924616d9\",\n"}
+,{"stream_name":"stdout","time":252.193285888,"data":"      \"frozen_policy_sha256\": \"68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8\",\n"}
+,{"stream_name":"stdout","time":252.193288419,"data":"      \"calibration_result_sha256\": \"366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861\",\n"}
+,{"stream_name":"stdout","time":252.193290897,"data":"      \"selected_choices_sha256\": \"e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499\",\n"}
+,{"stream_name":"stdout","time":252.193293435,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193295787,"data":"        \"tau_relative\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193298086,"data":"        \"rate_slack\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193300422,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193302743,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.193304946,"data":"    }\n"}
+,{"stream_name":"stdout","time":252.193307142,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193309353,"data":"  \"model\": {\n"}
+,{"stream_name":"stdout","time":252.19331165,"data":"    \"name\": \"mc3_18\",\n"}
+,{"stream_name":"stdout","time":252.193314022,"data":"    \"weights\": \"KINETICS400_V1\",\n"}
+,{"stream_name":"stdout","time":252.193317815,"data":"    \"url\": \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\",\n"}
+,{"stream_name":"stdout","time":252.193320327,"data":"    \"checkpoint_sha256\": \"a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b\",\n"}
+,{"stream_name":"stdout","time":252.193322792,"data":"    \"state_sha256\": \"8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7\",\n"}
+,{"stream_name":"stdout","time":252.193325174,"data":"    \"categories_sha256\": \"af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57\",\n"}
+,{"stream_name":"stdout","time":252.193327676,"data":"    \"clip_size\": 112,\n"}
+,{"stream_name":"stdout","time":252.193329983,"data":"    \"mean\": [\n"}
+,{"stream_name":"stdout","time":252.193332262,"data":"      0.43216,\n"}
+,{"stream_name":"stdout","time":252.193334517,"data":"      0.394666,\n"}
+,{"stream_name":"stdout","time":252.193336758,"data":"      0.37645\n"}
+,{"stream_name":"stdout","time":252.193338977,"data":"    ],\n"}
+,{"stream_name":"stdout","time":252.193341163,"data":"    \"std\": [\n"}
+,{"stream_name":"stdout","time":252.193343417,"data":"      0.22803,\n"}
+,{"stream_name":"stdout","time":252.193345637,"data":"      0.22145,\n"}
+,{"stream_name":"stdout","time":252.193347832,"data":"      0.216989\n"}
+,{"stream_name":"stdout","time":252.193350064,"data":"    ]\n"}
+,{"stream_name":"stdout","time":252.193352246,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193354441,"data":"  \"bootstrap_unit\": \"source video; all QPs and five arms paired\",\n"}
+,{"stream_name":"stdout","time":252.193356865,"data":"  \"bootstrap_seed\": 20261010,\n"}
+,{"stream_name":"stdout","time":252.193359187,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":252.193361485,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":252.193366224,"data":"  \"bootstrap_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":252.193368704,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193371064,"data":"Downloading: \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\" to /root/.cache/torch/hub/checkpoints/mc3_18-a90a0ba3.pth\n"}
+,{"stream_name":"stdout","time":252.193375227,"data":"\r  0%|          | 0.00/44.7M [00:00\u003c?, ?B/s]\r  0%|          | 128k/44.7M [00:00\u003c00:39, 1.19MB/s]\r  1%|          | 384k/44.7M [00:00\u003c00:24, 1.92MB/s]\r  3%|▎         | 1.50M/44.7M [00:00\u003c00:07, 6.18MB/s]\r 13%|█▎        | 6.00M/44.7M [00:00\u003c00:01, 21.5MB/s]\r 18%|█▊        | 8.12M/44.7M [00:00\u003c00:01, 20.8MB/s]\r 32%|███▏      | 14.5M/44.7M [00:00\u003c00:00, 34.6MB/s]\r 40%|████      | 17.9M/44.7M [00:00\u003c00:00, 33.0MB/s]\r 53%|█████▎    | 23.8M/44.7M [00:00\u003c00:00, 40.7MB/s]\r 62%|██████▏   | 27.9M/44.7M [00:01\u003c00:00, 37.9MB/s]\r 72%|███████▏  | 32.0M/44.7M [00:01\u003c00:00, 33.9MB/s]\r 88%|████████▊ | 39.2M/44.7M [00:01\u003c00:00, 41.5MB/s]\r 97%|█████████▋| 43.4M/44.7M [00:01\u003c00:00, 35.7MB/s]\r100%|██████████| 44.7M/44.7M [00:01\u003c00:00, 31.4MB/s]\n"}
+,{"stream_name":"stdout","time":252.193382742,"data":"[MC3 V12] shard=2 1/50 unique_trials=10\n"}
+,{"stream_name":"stdout","time":252.193385059,"data":"[MC3 V12] shard=2 2/50 unique_trials=20\n"}
+,{"stream_name":"stdout","time":252.193387368,"data":"[MC3 V12] shard=2 3/50 unique_trials=30\n"}
+,{"stream_name":"stdout","time":252.193389627,"data":"[MC3 V12] shard=2 4/50 unique_trials=41\n"}
+,{"stream_name":"stdout","time":252.193393822,"data":"[MC3 V12] shard=2 5/50 unique_trials=54\n"}
+,{"stream_name":"stdout","time":252.193396147,"data":"[MC3 V12] shard=2 6/50 unique_trials=65\n"}
+,{"stream_name":"stdout","time":252.193399,"data":"[MC3 V12] shard=2 7/50 unique_trials=75\n"}
+,{"stream_name":"stdout","time":252.193401784,"data":"[MC3 V12] shard=2 8/50 unique_trials=85\n"}
+,{"stream_name":"stdout","time":252.193404159,"data":"[MC3 V12] shard=2 9/50 unique_trials=98\n"}
+,{"stream_name":"stdout","time":252.193406503,"data":"[MC3 V12] shard=2 10/50 unique_trials=109\n"}
+,{"stream_name":"stdout","time":252.193408931,"data":"[MC3 V12] shard=2 11/50 unique_trials=121\n"}
+,{"stream_name":"stdout","time":252.193411389,"data":"[MC3 V12] shard=2 12/50 unique_trials=131\n"}
+,{"stream_name":"stdout","time":252.193413753,"data":"[MC3 V12] shard=2 13/50 unique_trials=141\n"}
+,{"stream_name":"stdout","time":252.193416103,"data":"[MC3 V12] shard=2 14/50 unique_trials=153\n"}
+,{"stream_name":"stdout","time":252.193418418,"data":"[MC3 V12] shard=2 15/50 unique_trials=163\n"}
+,{"stream_name":"stdout","time":252.193420762,"data":"[MC3 V12] shard=2 16/50 unique_trials=174\n"}
+,{"stream_name":"stdout","time":252.1934236,"data":"[MC3 V12] shard=2 17/50 unique_trials=187\n"}
+,{"stream_name":"stdout","time":252.193426008,"data":"[MC3 V12] shard=2 18/50 unique_trials=199\n"}
+,{"stream_name":"stdout","time":252.193428853,"data":"[MC3 V12] shard=2 19/50 unique_trials=209\n"}
+,{"stream_name":"stdout","time":252.193432221,"data":"[MC3 V12] shard=2 20/50 unique_trials=221\n"}
+,{"stream_name":"stdout","time":252.193435628,"data":"[MC3 V12] shard=2 21/50 unique_trials=231\n"}
+,{"stream_name":"stdout","time":252.193438343,"data":"[MC3 V12] shard=2 22/50 unique_trials=241\n"}
+,{"stream_name":"stdout","time":252.193440663,"data":"[MC3 V12] shard=2 23/50 unique_trials=251\n"}
+,{"stream_name":"stdout","time":252.193443026,"data":"[MC3 V12] shard=2 24/50 unique_trials=261\n"}
+,{"stream_name":"stdout","time":252.193447371,"data":"[MC3 V12] shard=2 25/50 unique_trials=271\n"}
+,{"stream_name":"stdout","time":252.19344981,"data":"[MC3 V12] shard=2 26/50 unique_trials=283\n"}
+,{"stream_name":"stdout","time":252.193452153,"data":"[MC3 V12] shard=2 27/50 unique_trials=296\n"}
+,{"stream_name":"stdout","time":252.193455429,"data":"[MC3 V12] shard=2 28/50 unique_trials=308\n"}
+,{"stream_name":"stdout","time":252.193457763,"data":"[MC3 V12] shard=2 29/50 unique_trials=319\n"}
+,{"stream_name":"stdout","time":252.193460012,"data":"[MC3 V12] shard=2 30/50 unique_trials=329\n"}
+,{"stream_name":"stdout","time":252.193462438,"data":"[MC3 V12] shard=2 31/50 unique_trials=341\n"}
+,{"stream_name":"stdout","time":252.19346476,"data":"[MC3 V12] shard=2 32/50 unique_trials=352\n"}
+,{"stream_name":"stdout","time":252.193467121,"data":"[MC3 V12] shard=2 33/50 unique_trials=365\n"}
+,{"stream_name":"stdout","time":252.19346938,"data":"[MC3 V12] shard=2 34/50 unique_trials=375\n"}
+,{"stream_name":"stdout","time":252.193471645,"data":"[MC3 V12] shard=2 35/50 unique_trials=385\n"}
+,{"stream_name":"stdout","time":252.193473883,"data":"[MC3 V12] shard=2 36/50 unique_trials=395\n"}
+,{"stream_name":"stdout","time":252.193476136,"data":"[MC3 V12] shard=2 37/50 unique_trials=405\n"}
+,{"stream_name":"stdout","time":252.193478419,"data":"[MC3 V12] shard=2 38/50 unique_trials=418\n"}
+,{"stream_name":"stdout","time":252.193480701,"data":"[MC3 V12] shard=2 39/50 unique_trials=429\n"}
+,{"stream_name":"stdout","time":252.193482936,"data":"[MC3 V12] shard=2 40/50 unique_trials=442\n"}
+,{"stream_name":"stdout","time":252.193485201,"data":"[MC3 V12] shard=2 41/50 unique_trials=452\n"}
+,{"stream_name":"stdout","time":252.193487468,"data":"[MC3 V12] shard=2 42/50 unique_trials=463\n"}
+,{"stream_name":"stdout","time":252.193489714,"data":"[MC3 V12] shard=2 43/50 unique_trials=476\n"}
+,{"stream_name":"stdout","time":252.193491961,"data":"[MC3 V12] shard=2 44/50 unique_trials=490\n"}
+,{"stream_name":"stdout","time":252.193494222,"data":"[MC3 V12] shard=2 45/50 unique_trials=503\n"}
+,{"stream_name":"stdout","time":252.193496462,"data":"[MC3 V12] shard=2 46/50 unique_trials=514\n"}
+,{"stream_name":"stdout","time":252.193498744,"data":"[MC3 V12] shard=2 47/50 unique_trials=524\n"}
+,{"stream_name":"stdout","time":252.193500981,"data":"[MC3 V12] shard=2 48/50 unique_trials=534\n"}
+,{"stream_name":"stdout","time":252.193503269,"data":"[MC3 V12] shard=2 49/50 unique_trials=546\n"}
+,{"stream_name":"stdout","time":252.193505525,"data":"[MC3 V12] shard=2 50/50 unique_trials=556\n"}
+,{"stream_name":"stdout","time":252.193507794,"data":"{\n"}
+,{"stream_name":"stdout","time":252.193509955,"data":"  \"shard\": 2,\n"}
+,{"stream_name":"stdout","time":252.193512254,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":252.193514529,"data":"  \"unique_trials\": 556\n"}
+,{"stream_name":"stdout","time":252.19351683,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193519016,"data":"[done] V12 MC3 CAL shard=2\n"}
+,{"stream_name":"stdout","time":252.193521314,"data":"[exit] rc=0 shard=2\n"}
+,{"stream_name":"stderr","time":252.194298917,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.19431186,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":252.194315954,"data":"\n"}
+,{"stream_name":"stderr","time":252.194320424,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.194331209,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":254.477233942,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":254.477263117,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":254.620666675,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":254.62069122,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":255.204879697,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":255.490161325,"data":"[NbConvertApp] Writing 10205 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":257.788024161,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":258.193562039,"data":"[NbConvertApp] Writing 287124 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":6.465003125,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.465065688,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.465071739,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.465075619,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.042692179,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.042722793,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.042728649,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.042733029,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":252.193141159,"data":"{\n"}
+,{"stream_name":"stdout","time":252.1931977,"data":"  \"experiment\": \"v12_mc3_frozen_CAL_diagnostic\",\n"}
+,{"stream_name":"stdout","time":252.193202544,"data":"  \"scope\": \"post-freeze diagnostic on reused CAL; no fit or policy selection\",\n"}
+,{"stream_name":"stdout","time":252.193206034,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.193209265,"data":"  \"code_commit\": \"43f62f3aff682b557bc00bbb4707479abbe268b7\",\n"}
+,{"stream_name":"stdout","time":252.193212591,"data":"  \"code_fingerprint\": \"c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c\",\n"}
+,{"stream_name":"stdout","time":252.193216042,"data":"  \"preregistration_commit\": \"fda9e069643e084d715c6f71a0cdefc9000f0204\",\n"}
+,{"stream_name":"stdout","time":252.193219241,"data":"  \"preregistration_sha256\": \"093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f\",\n"}
+,{"stream_name":"stdout","time":252.193222386,"data":"  \"protocol_sha256\": \"994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd\",\n"}
+,{"stream_name":"stdout","time":252.193225585,"data":"  \"selection_sha256\": \"bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103\",\n"}
+,{"stream_name":"stdout","time":252.19322869,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":252.1932319,"data":"  \"parent_freezes\": {\n"}
+,{"stream_name":"stdout","time":252.193235022,"data":"    \"v12a\": {\n"}
+,{"stream_name":"stdout","time":252.193238032,"data":"      \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.19324119,"data":"      \"freeze_commit\": \"31733000ce4c4c4af007d09db96be88838dd63fa\",\n"}
+,{"stream_name":"stdout","time":252.193244366,"data":"      \"frozen_policy_sha256\": \"918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe\",\n"}
+,{"stream_name":"stdout","time":252.193247533,"data":"      \"calibration_result_sha256\": \"2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d\",\n"}
+,{"stream_name":"stdout","time":252.193250683,"data":"      \"selected_choices_sha256\": \"bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35\",\n"}
+,{"stream_name":"stdout","time":252.193253824,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193256812,"data":"        \"tau_relative\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193260129,"data":"        \"rate_slack\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193263253,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193273941,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.19327639,"data":"    },\n"}
+,{"stream_name":"stdout","time":252.193278595,"data":"    \"v12b\": {\n"}
+,{"stream_name":"stdout","time":252.193281042,"data":"      \"repository_url\": \"https://github.com/munnn01/test_pre.git\",\n"}
+,{"stream_name":"stdout","time":252.193283483,"data":"      \"freeze_commit\": \"67859444caeae26f4f4c927106d0efa1924616d9\",\n"}
+,{"stream_name":"stdout","time":252.193285888,"data":"      \"frozen_policy_sha256\": \"68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8\",\n"}
+,{"stream_name":"stdout","time":252.193288419,"data":"      \"calibration_result_sha256\": \"366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861\",\n"}
+,{"stream_name":"stdout","time":252.193290897,"data":"      \"selected_choices_sha256\": \"e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499\",\n"}
+,{"stream_name":"stdout","time":252.193293435,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193295787,"data":"        \"tau_relative\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193298086,"data":"        \"rate_slack\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193300422,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193302743,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.193304946,"data":"    }\n"}
+,{"stream_name":"stdout","time":252.193307142,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193309353,"data":"  \"model\": {\n"}
+,{"stream_name":"stdout","time":252.19331165,"data":"    \"name\": \"mc3_18\",\n"}
+,{"stream_name":"stdout","time":252.193314022,"data":"    \"weights\": \"KINETICS400_V1\",\n"}
+,{"stream_name":"stdout","time":252.193317815,"data":"    \"url\": \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\",\n"}
+,{"stream_name":"stdout","time":252.193320327,"data":"    \"checkpoint_sha256\": \"a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b\",\n"}
+,{"stream_name":"stdout","time":252.193322792,"data":"    \"state_sha256\": \"8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7\",\n"}
+,{"stream_name":"stdout","time":252.193325174,"data":"    \"categories_sha256\": \"af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57\",\n"}
+,{"stream_name":"stdout","time":252.193327676,"data":"    \"clip_size\": 112,\n"}
+,{"stream_name":"stdout","time":252.193329983,"data":"    \"mean\": [\n"}
+,{"stream_name":"stdout","time":252.193332262,"data":"      0.43216,\n"}
+,{"stream_name":"stdout","time":252.193334517,"data":"      0.394666,\n"}
+,{"stream_name":"stdout","time":252.193336758,"data":"      0.37645\n"}
+,{"stream_name":"stdout","time":252.193338977,"data":"    ],\n"}
+,{"stream_name":"stdout","time":252.193341163,"data":"    \"std\": [\n"}
+,{"stream_name":"stdout","time":252.193343417,"data":"      0.22803,\n"}
+,{"stream_name":"stdout","time":252.193345637,"data":"      0.22145,\n"}
+,{"stream_name":"stdout","time":252.193347832,"data":"      0.216989\n"}
+,{"stream_name":"stdout","time":252.193350064,"data":"    ]\n"}
+,{"stream_name":"stdout","time":252.193352246,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193354441,"data":"  \"bootstrap_unit\": \"source video; all QPs and five arms paired\",\n"}
+,{"stream_name":"stdout","time":252.193356865,"data":"  \"bootstrap_seed\": 20261010,\n"}
+,{"stream_name":"stdout","time":252.193359187,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":252.193361485,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":252.193366224,"data":"  \"bootstrap_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":252.193368704,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193371064,"data":"Downloading: \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\" to /root/.cache/torch/hub/checkpoints/mc3_18-a90a0ba3.pth\n"}
+,{"stream_name":"stdout","time":252.193375227,"data":"\r  0%|          | 0.00/44.7M [00:00\u003c?, ?B/s]\r  0%|          | 128k/44.7M [00:00\u003c00:39, 1.19MB/s]\r  1%|          | 384k/44.7M [00:00\u003c00:24, 1.92MB/s]\r  3%|▎         | 1.50M/44.7M [00:00\u003c00:07, 6.18MB/s]\r 13%|█▎        | 6.00M/44.7M [00:00\u003c00:01, 21.5MB/s]\r 18%|█▊        | 8.12M/44.7M [00:00\u003c00:01, 20.8MB/s]\r 32%|███▏      | 14.5M/44.7M [00:00\u003c00:00, 34.6MB/s]\r 40%|████      | 17.9M/44.7M [00:00\u003c00:00, 33.0MB/s]\r 53%|█████▎    | 23.8M/44.7M [00:00\u003c00:00, 40.7MB/s]\r 62%|██████▏   | 27.9M/44.7M [00:01\u003c00:00, 37.9MB/s]\r 72%|███████▏  | 32.0M/44.7M [00:01\u003c00:00, 33.9MB/s]\r 88%|████████▊ | 39.2M/44.7M [00:01\u003c00:00, 41.5MB/s]\r 97%|█████████▋| 43.4M/44.7M [00:01\u003c00:00, 35.7MB/s]\r100%|██████████| 44.7M/44.7M [00:01\u003c00:00, 31.4MB/s]\n"}
+,{"stream_name":"stdout","time":252.193382742,"data":"[MC3 V12] shard=2 1/50 unique_trials=10\n"}
+,{"stream_name":"stdout","time":252.193385059,"data":"[MC3 V12] shard=2 2/50 unique_trials=20\n"}
+,{"stream_name":"stdout","time":252.193387368,"data":"[MC3 V12] shard=2 3/50 unique_trials=30\n"}
+,{"stream_name":"stdout","time":252.193389627,"data":"[MC3 V12] shard=2 4/50 unique_trials=41\n"}
+,{"stream_name":"stdout","time":252.193393822,"data":"[MC3 V12] shard=2 5/50 unique_trials=54\n"}
+,{"stream_name":"stdout","time":252.193396147,"data":"[MC3 V12] shard=2 6/50 unique_trials=65\n"}
+,{"stream_name":"stdout","time":252.193399,"data":"[MC3 V12] shard=2 7/50 unique_trials=75\n"}
+,{"stream_name":"stdout","time":252.193401784,"data":"[MC3 V12] shard=2 8/50 unique_trials=85\n"}
+,{"stream_name":"stdout","time":252.193404159,"data":"[MC3 V12] shard=2 9/50 unique_trials=98\n"}
+,{"stream_name":"stdout","time":252.193406503,"data":"[MC3 V12] shard=2 10/50 unique_trials=109\n"}
+,{"stream_name":"stdout","time":252.193408931,"data":"[MC3 V12] shard=2 11/50 unique_trials=121\n"}
+,{"stream_name":"stdout","time":252.193411389,"data":"[MC3 V12] shard=2 12/50 unique_trials=131\n"}
+,{"stream_name":"stdout","time":252.193413753,"data":"[MC3 V12] shard=2 13/50 unique_trials=141\n"}
+,{"stream_name":"stdout","time":252.193416103,"data":"[MC3 V12] shard=2 14/50 unique_trials=153\n"}
+,{"stream_name":"stdout","time":252.193418418,"data":"[MC3 V12] shard=2 15/50 unique_trials=163\n"}
+,{"stream_name":"stdout","time":252.193420762,"data":"[MC3 V12] shard=2 16/50 unique_trials=174\n"}
+,{"stream_name":"stdout","time":252.1934236,"data":"[MC3 V12] shard=2 17/50 unique_trials=187\n"}
+,{"stream_name":"stdout","time":252.193426008,"data":"[MC3 V12] shard=2 18/50 unique_trials=199\n"}
+,{"stream_name":"stdout","time":252.193428853,"data":"[MC3 V12] shard=2 19/50 unique_trials=209\n"}
+,{"stream_name":"stdout","time":252.193432221,"data":"[MC3 V12] shard=2 20/50 unique_trials=221\n"}
+,{"stream_name":"stdout","time":252.193435628,"data":"[MC3 V12] shard=2 21/50 unique_trials=231\n"}
+,{"stream_name":"stdout","time":252.193438343,"data":"[MC3 V12] shard=2 22/50 unique_trials=241\n"}
+,{"stream_name":"stdout","time":252.193440663,"data":"[MC3 V12] shard=2 23/50 unique_trials=251\n"}
+,{"stream_name":"stdout","time":252.193443026,"data":"[MC3 V12] shard=2 24/50 unique_trials=261\n"}
+,{"stream_name":"stdout","time":252.193447371,"data":"[MC3 V12] shard=2 25/50 unique_trials=271\n"}
+,{"stream_name":"stdout","time":252.19344981,"data":"[MC3 V12] shard=2 26/50 unique_trials=283\n"}
+,{"stream_name":"stdout","time":252.193452153,"data":"[MC3 V12] shard=2 27/50 unique_trials=296\n"}
+,{"stream_name":"stdout","time":252.193455429,"data":"[MC3 V12] shard=2 28/50 unique_trials=308\n"}
+,{"stream_name":"stdout","time":252.193457763,"data":"[MC3 V12] shard=2 29/50 unique_trials=319\n"}
+,{"stream_name":"stdout","time":252.193460012,"data":"[MC3 V12] shard=2 30/50 unique_trials=329\n"}
+,{"stream_name":"stdout","time":252.193462438,"data":"[MC3 V12] shard=2 31/50 unique_trials=341\n"}
+,{"stream_name":"stdout","time":252.19346476,"data":"[MC3 V12] shard=2 32/50 unique_trials=352\n"}
+,{"stream_name":"stdout","time":252.193467121,"data":"[MC3 V12] shard=2 33/50 unique_trials=365\n"}
+,{"stream_name":"stdout","time":252.19346938,"data":"[MC3 V12] shard=2 34/50 unique_trials=375\n"}
+,{"stream_name":"stdout","time":252.193471645,"data":"[MC3 V12] shard=2 35/50 unique_trials=385\n"}
+,{"stream_name":"stdout","time":252.193473883,"data":"[MC3 V12] shard=2 36/50 unique_trials=395\n"}
+,{"stream_name":"stdout","time":252.193476136,"data":"[MC3 V12] shard=2 37/50 unique_trials=405\n"}
+,{"stream_name":"stdout","time":252.193478419,"data":"[MC3 V12] shard=2 38/50 unique_trials=418\n"}
+,{"stream_name":"stdout","time":252.193480701,"data":"[MC3 V12] shard=2 39/50 unique_trials=429\n"}
+,{"stream_name":"stdout","time":252.193482936,"data":"[MC3 V12] shard=2 40/50 unique_trials=442\n"}
+,{"stream_name":"stdout","time":252.193485201,"data":"[MC3 V12] shard=2 41/50 unique_trials=452\n"}
+,{"stream_name":"stdout","time":252.193487468,"data":"[MC3 V12] shard=2 42/50 unique_trials=463\n"}
+,{"stream_name":"stdout","time":252.193489714,"data":"[MC3 V12] shard=2 43/50 unique_trials=476\n"}
+,{"stream_name":"stdout","time":252.193491961,"data":"[MC3 V12] shard=2 44/50 unique_trials=490\n"}
+,{"stream_name":"stdout","time":252.193494222,"data":"[MC3 V12] shard=2 45/50 unique_trials=503\n"}
+,{"stream_name":"stdout","time":252.193496462,"data":"[MC3 V12] shard=2 46/50 unique_trials=514\n"}
+,{"stream_name":"stdout","time":252.193498744,"data":"[MC3 V12] shard=2 47/50 unique_trials=524\n"}
+,{"stream_name":"stdout","time":252.193500981,"data":"[MC3 V12] shard=2 48/50 unique_trials=534\n"}
+,{"stream_name":"stdout","time":252.193503269,"data":"[MC3 V12] shard=2 49/50 unique_trials=546\n"}
+,{"stream_name":"stdout","time":252.193505525,"data":"[MC3 V12] shard=2 50/50 unique_trials=556\n"}
+,{"stream_name":"stdout","time":252.193507794,"data":"{\n"}
+,{"stream_name":"stdout","time":252.193509955,"data":"  \"shard\": 2,\n"}
+,{"stream_name":"stdout","time":252.193512254,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":252.193514529,"data":"  \"unique_trials\": 556\n"}
+,{"stream_name":"stdout","time":252.19351683,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193519016,"data":"[done] V12 MC3 CAL shard=2\n"}
+,{"stream_name":"stdout","time":252.193521314,"data":"[exit] rc=0 shard=2\n"}
+,{"stream_name":"stderr","time":252.194298917,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.19431186,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":252.194315954,"data":"\n"}
+,{"stream_name":"stderr","time":252.194320424,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.194331209,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":254.477233942,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":254.477263117,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":254.620666675,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":254.62069122,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":255.204879697,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":255.490161325,"data":"[NbConvertApp] Writing 10205 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":257.788024161,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":258.193562039,"data":"[NbConvertApp] Writing 287124 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":6.465003125,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.465065688,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.465071739,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.465075619,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.042692179,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.042722793,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.042728649,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.042733029,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":252.193141159,"data":"{\n"}
+,{"stream_name":"stdout","time":252.1931977,"data":"  \"experiment\": \"v12_mc3_frozen_CAL_diagnostic\",\n"}
+,{"stream_name":"stdout","time":252.193202544,"data":"  \"scope\": \"post-freeze diagnostic on reused CAL; no fit or policy selection\",\n"}
+,{"stream_name":"stdout","time":252.193206034,"data":"  \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.193209265,"data":"  \"code_commit\": \"43f62f3aff682b557bc00bbb4707479abbe268b7\",\n"}
+,{"stream_name":"stdout","time":252.193212591,"data":"  \"code_fingerprint\": \"c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c\",\n"}
+,{"stream_name":"stdout","time":252.193216042,"data":"  \"preregistration_commit\": \"fda9e069643e084d715c6f71a0cdefc9000f0204\",\n"}
+,{"stream_name":"stdout","time":252.193219241,"data":"  \"preregistration_sha256\": \"093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f\",\n"}
+,{"stream_name":"stdout","time":252.193222386,"data":"  \"protocol_sha256\": \"994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd\",\n"}
+,{"stream_name":"stdout","time":252.193225585,"data":"  \"selection_sha256\": \"bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103\",\n"}
+,{"stream_name":"stdout","time":252.19322869,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":252.1932319,"data":"  \"parent_freezes\": {\n"}
+,{"stream_name":"stdout","time":252.193235022,"data":"    \"v12a\": {\n"}
+,{"stream_name":"stdout","time":252.193238032,"data":"      \"repository_url\": \"https://github.com/munnn01/preeee.git\",\n"}
+,{"stream_name":"stdout","time":252.19324119,"data":"      \"freeze_commit\": \"31733000ce4c4c4af007d09db96be88838dd63fa\",\n"}
+,{"stream_name":"stdout","time":252.193244366,"data":"      \"frozen_policy_sha256\": \"918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe\",\n"}
+,{"stream_name":"stdout","time":252.193247533,"data":"      \"calibration_result_sha256\": \"2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d\",\n"}
+,{"stream_name":"stdout","time":252.193250683,"data":"      \"selected_choices_sha256\": \"bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35\",\n"}
+,{"stream_name":"stdout","time":252.193253824,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193256812,"data":"        \"tau_relative\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193260129,"data":"        \"rate_slack\": 0.5,\n"}
+,{"stream_name":"stdout","time":252.193263253,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193273941,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.19327639,"data":"    },\n"}
+,{"stream_name":"stdout","time":252.193278595,"data":"    \"v12b\": {\n"}
+,{"stream_name":"stdout","time":252.193281042,"data":"      \"repository_url\": \"https://github.com/munnn01/test_pre.git\",\n"}
+,{"stream_name":"stdout","time":252.193283483,"data":"      \"freeze_commit\": \"67859444caeae26f4f4c927106d0efa1924616d9\",\n"}
+,{"stream_name":"stdout","time":252.193285888,"data":"      \"frozen_policy_sha256\": \"68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8\",\n"}
+,{"stream_name":"stdout","time":252.193288419,"data":"      \"calibration_result_sha256\": \"366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861\",\n"}
+,{"stream_name":"stdout","time":252.193290897,"data":"      \"selected_choices_sha256\": \"e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499\",\n"}
+,{"stream_name":"stdout","time":252.193293435,"data":"      \"policy\": {\n"}
+,{"stream_name":"stdout","time":252.193295787,"data":"        \"tau_relative\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193298086,"data":"        \"rate_slack\": 0.25,\n"}
+,{"stream_name":"stdout","time":252.193300422,"data":"        \"qp_mode\": \"lowmid\"\n"}
+,{"stream_name":"stdout","time":252.193302743,"data":"      }\n"}
+,{"stream_name":"stdout","time":252.193304946,"data":"    }\n"}
+,{"stream_name":"stdout","time":252.193307142,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193309353,"data":"  \"model\": {\n"}
+,{"stream_name":"stdout","time":252.19331165,"data":"    \"name\": \"mc3_18\",\n"}
+,{"stream_name":"stdout","time":252.193314022,"data":"    \"weights\": \"KINETICS400_V1\",\n"}
+,{"stream_name":"stdout","time":252.193317815,"data":"    \"url\": \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\",\n"}
+,{"stream_name":"stdout","time":252.193320327,"data":"    \"checkpoint_sha256\": \"a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b\",\n"}
+,{"stream_name":"stdout","time":252.193322792,"data":"    \"state_sha256\": \"8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7\",\n"}
+,{"stream_name":"stdout","time":252.193325174,"data":"    \"categories_sha256\": \"af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57\",\n"}
+,{"stream_name":"stdout","time":252.193327676,"data":"    \"clip_size\": 112,\n"}
+,{"stream_name":"stdout","time":252.193329983,"data":"    \"mean\": [\n"}
+,{"stream_name":"stdout","time":252.193332262,"data":"      0.43216,\n"}
+,{"stream_name":"stdout","time":252.193334517,"data":"      0.394666,\n"}
+,{"stream_name":"stdout","time":252.193336758,"data":"      0.37645\n"}
+,{"stream_name":"stdout","time":252.193338977,"data":"    ],\n"}
+,{"stream_name":"stdout","time":252.193341163,"data":"    \"std\": [\n"}
+,{"stream_name":"stdout","time":252.193343417,"data":"      0.22803,\n"}
+,{"stream_name":"stdout","time":252.193345637,"data":"      0.22145,\n"}
+,{"stream_name":"stdout","time":252.193347832,"data":"      0.216989\n"}
+,{"stream_name":"stdout","time":252.193350064,"data":"    ]\n"}
+,{"stream_name":"stdout","time":252.193352246,"data":"  },\n"}
+,{"stream_name":"stdout","time":252.193354441,"data":"  \"bootstrap_unit\": \"source video; all QPs and five arms paired\",\n"}
+,{"stream_name":"stdout","time":252.193356865,"data":"  \"bootstrap_seed\": 20261010,\n"}
+,{"stream_name":"stdout","time":252.193359187,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":252.193361485,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":252.193366224,"data":"  \"bootstrap_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":252.193368704,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193371064,"data":"Downloading: \"https://download.pytorch.org/models/mc3_18-a90a0ba3.pth\" to /root/.cache/torch/hub/checkpoints/mc3_18-a90a0ba3.pth\n"}
+,{"stream_name":"stdout","time":252.193375227,"data":"\r  0%|          | 0.00/44.7M [00:00\u003c?, ?B/s]\r  0%|          | 128k/44.7M [00:00\u003c00:39, 1.19MB/s]\r  1%|          | 384k/44.7M [00:00\u003c00:24, 1.92MB/s]\r  3%|▎         | 1.50M/44.7M [00:00\u003c00:07, 6.18MB/s]\r 13%|█▎        | 6.00M/44.7M [00:00\u003c00:01, 21.5MB/s]\r 18%|█▊        | 8.12M/44.7M [00:00\u003c00:01, 20.8MB/s]\r 32%|███▏      | 14.5M/44.7M [00:00\u003c00:00, 34.6MB/s]\r 40%|████      | 17.9M/44.7M [00:00\u003c00:00, 33.0MB/s]\r 53%|█████▎    | 23.8M/44.7M [00:00\u003c00:00, 40.7MB/s]\r 62%|██████▏   | 27.9M/44.7M [00:01\u003c00:00, 37.9MB/s]\r 72%|███████▏  | 32.0M/44.7M [00:01\u003c00:00, 33.9MB/s]\r 88%|████████▊ | 39.2M/44.7M [00:01\u003c00:00, 41.5MB/s]\r 97%|█████████▋| 43.4M/44.7M [00:01\u003c00:00, 35.7MB/s]\r100%|██████████| 44.7M/44.7M [00:01\u003c00:00, 31.4MB/s]\n"}
+,{"stream_name":"stdout","time":252.193382742,"data":"[MC3 V12] shard=2 1/50 unique_trials=10\n"}
+,{"stream_name":"stdout","time":252.193385059,"data":"[MC3 V12] shard=2 2/50 unique_trials=20\n"}
+,{"stream_name":"stdout","time":252.193387368,"data":"[MC3 V12] shard=2 3/50 unique_trials=30\n"}
+,{"stream_name":"stdout","time":252.193389627,"data":"[MC3 V12] shard=2 4/50 unique_trials=41\n"}
+,{"stream_name":"stdout","time":252.193393822,"data":"[MC3 V12] shard=2 5/50 unique_trials=54\n"}
+,{"stream_name":"stdout","time":252.193396147,"data":"[MC3 V12] shard=2 6/50 unique_trials=65\n"}
+,{"stream_name":"stdout","time":252.193399,"data":"[MC3 V12] shard=2 7/50 unique_trials=75\n"}
+,{"stream_name":"stdout","time":252.193401784,"data":"[MC3 V12] shard=2 8/50 unique_trials=85\n"}
+,{"stream_name":"stdout","time":252.193404159,"data":"[MC3 V12] shard=2 9/50 unique_trials=98\n"}
+,{"stream_name":"stdout","time":252.193406503,"data":"[MC3 V12] shard=2 10/50 unique_trials=109\n"}
+,{"stream_name":"stdout","time":252.193408931,"data":"[MC3 V12] shard=2 11/50 unique_trials=121\n"}
+,{"stream_name":"stdout","time":252.193411389,"data":"[MC3 V12] shard=2 12/50 unique_trials=131\n"}
+,{"stream_name":"stdout","time":252.193413753,"data":"[MC3 V12] shard=2 13/50 unique_trials=141\n"}
+,{"stream_name":"stdout","time":252.193416103,"data":"[MC3 V12] shard=2 14/50 unique_trials=153\n"}
+,{"stream_name":"stdout","time":252.193418418,"data":"[MC3 V12] shard=2 15/50 unique_trials=163\n"}
+,{"stream_name":"stdout","time":252.193420762,"data":"[MC3 V12] shard=2 16/50 unique_trials=174\n"}
+,{"stream_name":"stdout","time":252.1934236,"data":"[MC3 V12] shard=2 17/50 unique_trials=187\n"}
+,{"stream_name":"stdout","time":252.193426008,"data":"[MC3 V12] shard=2 18/50 unique_trials=199\n"}
+,{"stream_name":"stdout","time":252.193428853,"data":"[MC3 V12] shard=2 19/50 unique_trials=209\n"}
+,{"stream_name":"stdout","time":252.193432221,"data":"[MC3 V12] shard=2 20/50 unique_trials=221\n"}
+,{"stream_name":"stdout","time":252.193435628,"data":"[MC3 V12] shard=2 21/50 unique_trials=231\n"}
+,{"stream_name":"stdout","time":252.193438343,"data":"[MC3 V12] shard=2 22/50 unique_trials=241\n"}
+,{"stream_name":"stdout","time":252.193440663,"data":"[MC3 V12] shard=2 23/50 unique_trials=251\n"}
+,{"stream_name":"stdout","time":252.193443026,"data":"[MC3 V12] shard=2 24/50 unique_trials=261\n"}
+,{"stream_name":"stdout","time":252.193447371,"data":"[MC3 V12] shard=2 25/50 unique_trials=271\n"}
+,{"stream_name":"stdout","time":252.19344981,"data":"[MC3 V12] shard=2 26/50 unique_trials=283\n"}
+,{"stream_name":"stdout","time":252.193452153,"data":"[MC3 V12] shard=2 27/50 unique_trials=296\n"}
+,{"stream_name":"stdout","time":252.193455429,"data":"[MC3 V12] shard=2 28/50 unique_trials=308\n"}
+,{"stream_name":"stdout","time":252.193457763,"data":"[MC3 V12] shard=2 29/50 unique_trials=319\n"}
+,{"stream_name":"stdout","time":252.193460012,"data":"[MC3 V12] shard=2 30/50 unique_trials=329\n"}
+,{"stream_name":"stdout","time":252.193462438,"data":"[MC3 V12] shard=2 31/50 unique_trials=341\n"}
+,{"stream_name":"stdout","time":252.19346476,"data":"[MC3 V12] shard=2 32/50 unique_trials=352\n"}
+,{"stream_name":"stdout","time":252.193467121,"data":"[MC3 V12] shard=2 33/50 unique_trials=365\n"}
+,{"stream_name":"stdout","time":252.19346938,"data":"[MC3 V12] shard=2 34/50 unique_trials=375\n"}
+,{"stream_name":"stdout","time":252.193471645,"data":"[MC3 V12] shard=2 35/50 unique_trials=385\n"}
+,{"stream_name":"stdout","time":252.193473883,"data":"[MC3 V12] shard=2 36/50 unique_trials=395\n"}
+,{"stream_name":"stdout","time":252.193476136,"data":"[MC3 V12] shard=2 37/50 unique_trials=405\n"}
+,{"stream_name":"stdout","time":252.193478419,"data":"[MC3 V12] shard=2 38/50 unique_trials=418\n"}
+,{"stream_name":"stdout","time":252.193480701,"data":"[MC3 V12] shard=2 39/50 unique_trials=429\n"}
+,{"stream_name":"stdout","time":252.193482936,"data":"[MC3 V12] shard=2 40/50 unique_trials=442\n"}
+,{"stream_name":"stdout","time":252.193485201,"data":"[MC3 V12] shard=2 41/50 unique_trials=452\n"}
+,{"stream_name":"stdout","time":252.193487468,"data":"[MC3 V12] shard=2 42/50 unique_trials=463\n"}
+,{"stream_name":"stdout","time":252.193489714,"data":"[MC3 V12] shard=2 43/50 unique_trials=476\n"}
+,{"stream_name":"stdout","time":252.193491961,"data":"[MC3 V12] shard=2 44/50 unique_trials=490\n"}
+,{"stream_name":"stdout","time":252.193494222,"data":"[MC3 V12] shard=2 45/50 unique_trials=503\n"}
+,{"stream_name":"stdout","time":252.193496462,"data":"[MC3 V12] shard=2 46/50 unique_trials=514\n"}
+,{"stream_name":"stdout","time":252.193498744,"data":"[MC3 V12] shard=2 47/50 unique_trials=524\n"}
+,{"stream_name":"stdout","time":252.193500981,"data":"[MC3 V12] shard=2 48/50 unique_trials=534\n"}
+,{"stream_name":"stdout","time":252.193503269,"data":"[MC3 V12] shard=2 49/50 unique_trials=546\n"}
+,{"stream_name":"stdout","time":252.193505525,"data":"[MC3 V12] shard=2 50/50 unique_trials=556\n"}
+,{"stream_name":"stdout","time":252.193507794,"data":"{\n"}
+,{"stream_name":"stdout","time":252.193509955,"data":"  \"shard\": 2,\n"}
+,{"stream_name":"stdout","time":252.193512254,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":252.193514529,"data":"  \"unique_trials\": 556\n"}
+,{"stream_name":"stdout","time":252.19351683,"data":"}\n"}
+,{"stream_name":"stdout","time":252.193519016,"data":"[done] V12 MC3 CAL shard=2\n"}
+,{"stream_name":"stdout","time":252.193521314,"data":"[exit] rc=0 shard=2\n"}
+,{"stream_name":"stderr","time":252.194298917,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.19431186,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":252.194315954,"data":"\n"}
+,{"stream_name":"stderr","time":252.194320424,"data":"/kaggle/working/v12_mc3_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":252.194331209,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":254.477233942,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":254.477263117,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":254.620666675,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":254.62069122,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":255.204879697,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":255.490161325,"data":"[NbConvertApp] Writing 10205 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":257.788024161,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":258.193562039,"data":"[NbConvertApp] Writing 287124 bytes to __results__.html\n"}
+]

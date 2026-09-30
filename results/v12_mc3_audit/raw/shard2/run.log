@@ -1,0 +1,57 @@
+Downloading: "https://download.pytorch.org/models/mc3_18-a90a0ba3.pth" to /root/.cache/torch/hub/checkpoints/mc3_18-a90a0ba3.pth
+  0%|          | 0.00/44.7M [00:00<?, ?B/s]  0%|          | 128k/44.7M [00:00<00:39, 1.19MB/s]  1%|          | 384k/44.7M [00:00<00:24, 1.92MB/s]  3%|▎         | 1.50M/44.7M [00:00<00:07, 6.18MB/s] 13%|█▎        | 6.00M/44.7M [00:00<00:01, 21.5MB/s] 18%|█▊        | 8.12M/44.7M [00:00<00:01, 20.8MB/s] 32%|███▏      | 14.5M/44.7M [00:00<00:00, 34.6MB/s] 40%|████      | 17.9M/44.7M [00:00<00:00, 33.0MB/s] 53%|█████▎    | 23.8M/44.7M [00:00<00:00, 40.7MB/s] 62%|██████▏   | 27.9M/44.7M [00:01<00:00, 37.9MB/s] 72%|███████▏  | 32.0M/44.7M [00:01<00:00, 33.9MB/s] 88%|████████▊ | 39.2M/44.7M [00:01<00:00, 41.5MB/s] 97%|█████████▋| 43.4M/44.7M [00:01<00:00, 35.7MB/s]100%|██████████| 44.7M/44.7M [00:01<00:00, 31.4MB/s]
+[MC3 V12] shard=2 1/50 unique_trials=10
+[MC3 V12] shard=2 2/50 unique_trials=20
+[MC3 V12] shard=2 3/50 unique_trials=30
+[MC3 V12] shard=2 4/50 unique_trials=41
+[MC3 V12] shard=2 5/50 unique_trials=54
+[MC3 V12] shard=2 6/50 unique_trials=65
+[MC3 V12] shard=2 7/50 unique_trials=75
+[MC3 V12] shard=2 8/50 unique_trials=85
+[MC3 V12] shard=2 9/50 unique_trials=98
+[MC3 V12] shard=2 10/50 unique_trials=109
+[MC3 V12] shard=2 11/50 unique_trials=121
+[MC3 V12] shard=2 12/50 unique_trials=131
+[MC3 V12] shard=2 13/50 unique_trials=141
+[MC3 V12] shard=2 14/50 unique_trials=153
+[MC3 V12] shard=2 15/50 unique_trials=163
+[MC3 V12] shard=2 16/50 unique_trials=174
+[MC3 V12] shard=2 17/50 unique_trials=187
+[MC3 V12] shard=2 18/50 unique_trials=199
+[MC3 V12] shard=2 19/50 unique_trials=209
+[MC3 V12] shard=2 20/50 unique_trials=221
+[MC3 V12] shard=2 21/50 unique_trials=231
+[MC3 V12] shard=2 22/50 unique_trials=241
+[MC3 V12] shard=2 23/50 unique_trials=251
+[MC3 V12] shard=2 24/50 unique_trials=261
+[MC3 V12] shard=2 25/50 unique_trials=271
+[MC3 V12] shard=2 26/50 unique_trials=283
+[MC3 V12] shard=2 27/50 unique_trials=296
+[MC3 V12] shard=2 28/50 unique_trials=308
+[MC3 V12] shard=2 29/50 unique_trials=319
+[MC3 V12] shard=2 30/50 unique_trials=329
+[MC3 V12] shard=2 31/50 unique_trials=341
+[MC3 V12] shard=2 32/50 unique_trials=352
+[MC3 V12] shard=2 33/50 unique_trials=365
+[MC3 V12] shard=2 34/50 unique_trials=375
+[MC3 V12] shard=2 35/50 unique_trials=385
+[MC3 V12] shard=2 36/50 unique_trials=395
+[MC3 V12] shard=2 37/50 unique_trials=405
+[MC3 V12] shard=2 38/50 unique_trials=418
+[MC3 V12] shard=2 39/50 unique_trials=429
+[MC3 V12] shard=2 40/50 unique_trials=442
+[MC3 V12] shard=2 41/50 unique_trials=452
+[MC3 V12] shard=2 42/50 unique_trials=463
+[MC3 V12] shard=2 43/50 unique_trials=476
+[MC3 V12] shard=2 44/50 unique_trials=490
+[MC3 V12] shard=2 45/50 unique_trials=503
+[MC3 V12] shard=2 46/50 unique_trials=514
+[MC3 V12] shard=2 47/50 unique_trials=524
+[MC3 V12] shard=2 48/50 unique_trials=534
+[MC3 V12] shard=2 49/50 unique_trials=546
+[MC3 V12] shard=2 50/50 unique_trials=556
+{
+  "shard": 2,
+  "n": 50,
+  "unique_trials": 556
+}

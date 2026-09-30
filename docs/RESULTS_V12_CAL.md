@@ -101,3 +101,7 @@ Commit hai policy và toàn bộ CAL choices trước bước tiếp theo. Ưu t
 | Worker Python / Torch / Torchvision | 3.12.13 / 2.10.0+cu128 / 0.25.0+cu128 |
 
 Archive, records, manifest và log gốc được giữ trong `results/v12_lowqp/raw/shardN/`; artifact manifest chứa SHA-256 của toàn bộ file. Metric BD-rate và logic bootstrap không đổi. Mỗi số trong báo cáo được lưu trong calibration_result.json hoặc assessment.json.
+
+## Cập nhật sau freeze: MC3 đã đo
+
+[Audit MC3 trên cùng CAL](RESULTS_V12_MC3_CAL.md): -3.21 [-7.75; +0.39]%; component `FAIL_ON_REUSED_CAL`. Các mục CHƯA ĐO phía trên mô tả trạng thái tại freeze CAL; nay MC3 CAL đã có số, DEV/holdout mới vẫn CHƯA ĐO. Policy/choices và JSON CAL gốc không thay đổi.

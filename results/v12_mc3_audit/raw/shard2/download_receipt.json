@@ -1,0 +1,20 @@
+{
+  "handle": "baoancut/v12-mc3-cal-s2-43f62f3",
+  "version_label": "v1",
+  "direction": "mc3",
+  "shard": 2,
+  "downloaded_at_utc": "2026-09-30T13:51:54.098803+00:00",
+  "archive": "v12_mc3_cal_shard2.tgz",
+  "bytes": 50681,
+  "archive_sha256": "e4ab6b857f54e49b411fcab0a3c428e1c6e76f8fe1e5aaeb589f793c079263fc",
+  "server_log_sha256": "1833454f56548c65df9595e49e0d668b7ef930c2f75e73410e6877bad29f554a",
+  "output_files_listed": 1011,
+  "pages": 6,
+  "archive_members": [
+    "outputs/v12_mc3_cal/shard2/manifest.json",
+    "outputs/v12_mc3_cal/shard2/manifest.sha256",
+    "outputs/v12_mc3_cal/shard2/run.log",
+    "outputs/v12_mc3_cal/shard2/shard_records.jsonl"
+  ],
+  "extracted_folder": "D:\\STUDY\\LAB\\proxy_v3\\v12_dual_study\\mc3_audit\\collection_20260930T135139Z\\shard2\\extracted\\outputs\\v12_mc3_cal\\shard2"
+}

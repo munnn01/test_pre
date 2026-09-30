@@ -1,0 +1,4 @@
+{"generated": "trmnguyn111/v12-mc3-cal-s0-43f62f3", "payload_sha256": {"notebook.ipynb": "582dd4d7f756defaac62c6d164bf87ac64e9012dce0bf0b3d47c321d479e1d19", "kernel-metadata.json": "07600c74858d17c9ebab45075b51d6044c81e2a5f25925331b35dc40f9e7c24b"}}
+{"new_destination_proof": {"handle": "trmnguyn111/v12-mc3-cal-s0-43f62f3", "authenticated_owner": "trmnguyn111", "owned_count": 31, "pages": 1, "owned_refs_sha256": "4c564afbdf5861944f5a7bba9eb89a45d608156ec2d87fb8d5501a5ac1353788", "destination_absent": true}}
+Kernel version 1 successfully pushed.  Please check progress at https://www.kaggle.com/code/trmnguyn111/v12-mc3-cal-s0-43f62f3
+

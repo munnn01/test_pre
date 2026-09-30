@@ -1,0 +1,4 @@
+{"generated": "shungg05/v12-mc3-cal-s1-43f62f3", "payload_sha256": {"notebook.ipynb": "0644b183f4ac5848c9b51a57c18842225ec5e235d1ac5634de581142177f819d", "kernel-metadata.json": "a52462ca3c57e8f35bb09a5bd39f46486d1d4a4db27cc669f2821a770d819b2d"}}
+{"new_destination_proof": {"handle": "shungg05/v12-mc3-cal-s1-43f62f3", "authenticated_owner": "shungg05", "owned_count": 40, "pages": 1, "owned_refs_sha256": "a1b90251bbf09f742732076cf5e700b45a778df5580c470d469d7ed627255de2", "destination_absent": true}}
+Kernel version 1 successfully pushed.  Please check progress at https://www.kaggle.com/code/shungg05/v12-mc3-cal-s1-43f62f3
+

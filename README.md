@@ -2,7 +2,7 @@
 
 ## Hướng V12 mới: semantic / CAL-only
 
-Đã hoàn tất 4/4 shard, đủ 200 nguồn CAL cũ và 6000 trial encode/decode. [Kết quả V12](docs/RESULTS_V12_CAL.md): R2 BD-rate -13.03%, R3 -12.92% so với identity; PASS sàng lọc CAL, chưa đạt gate gốc −15%. Policy đã chọn và choices được freeze để chuẩn bị protocol DEV mới. **mc3_18, DEV mới, holdout và runtime đầy đủ: CHƯA ĐO.** CI trên CAL chỉ mô tả sau chọn policy. [Hồ sơ triển khai](docs/V12_KAGGLE_LAUNCH.md), [preregistration](docs/PREREGISTRATION_V12_SEMANTIC_LOWQP.md). Các kết quả lịch sử giữ phạm vi riêng.
+Đã hoàn tất 4/4 shard, đủ 200 nguồn CAL cũ và 6000 trial encode/decode. [Kết quả V12](docs/RESULTS_V12_CAL.md): R2 BD-rate -13.03%, R3 -12.92% so với identity; PASS sàng lọc CAL, chưa đạt gate gốc −15%. Policy đã chọn và choices được freeze để chuẩn bị protocol DEV mới. **mc3_18 đã đo sau freeze trên cùng CAL:** BD-rate -3.21 [-7.75; +0.39]% so với identity; worst same-QP gap -4.00 pp; component `FAIL_ON_REUSED_CAL`. [Audit cả hai policy](docs/RESULTS_V12_MC3_CAL.md). **DEV mới, holdout và runtime đầy đủ: CHƯA ĐO.** CI trên CAL chỉ mô tả sau chọn policy. [Hồ sơ triển khai](docs/V12_KAGGLE_LAUNCH.md), [preregistration](docs/PREREGISTRATION_V12_SEMANTIC_LOWQP.md). Các kết quả lịch sử giữ phạm vi riêng.
 
 
 This `preprocessing` checkout is the development copy for the paper-validation

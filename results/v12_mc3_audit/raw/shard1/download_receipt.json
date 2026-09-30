@@ -1,0 +1,20 @@
+{
+  "handle": "shungg05/v12-mc3-cal-s1-43f62f3",
+  "version_label": "v1",
+  "direction": "mc3",
+  "shard": 1,
+  "downloaded_at_utc": "2026-09-30T13:51:53.326322+00:00",
+  "archive": "v12_mc3_cal_shard1.tgz",
+  "bytes": 51120,
+  "archive_sha256": "b94e389d5ea7bbb21174486a78e0a87cf602d8a25ccdb4be5f7893ed865f3b86",
+  "server_log_sha256": "aeb7dae9e3a936f5e4aa09bad7c43a60ffa70a2592765d5a2f9a94a6152d0754",
+  "output_files_listed": 1011,
+  "pages": 6,
+  "archive_members": [
+    "outputs/v12_mc3_cal/shard1/manifest.json",
+    "outputs/v12_mc3_cal/shard1/manifest.sha256",
+    "outputs/v12_mc3_cal/shard1/run.log",
+    "outputs/v12_mc3_cal/shard1/shard_records.jsonl"
+  ],
+  "extracted_folder": "D:\\STUDY\\LAB\\proxy_v3\\v12_dual_study\\mc3_audit\\collection_20260930T135139Z\\shard1\\extracted\\outputs\\v12_mc3_cal\\shard1"
+}

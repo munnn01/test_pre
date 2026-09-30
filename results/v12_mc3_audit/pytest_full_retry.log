@@ -1,0 +1,43 @@
+........................................................................ [ 13%]
+........................................................................ [ 26%]
+........................................................................ [ 39%]
+........................................................................ [ 52%]
+........................................................................ [ 65%]
+........................................................................ [ 78%]
+...............................................................F........ [ 91%]
+............................................                             [100%]
+================================== FAILURES ===================================
+________ test_codec_mismatch_stops_before_any_model_inference[pixels] _________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000256E4C6EF10>
+damage = 'pixels'
+
+    @pytest.mark.parametrize('damage',['pixels','bpp'])
+    def test_codec_mismatch_stops_before_any_model_inference(monkeypatch,damage):
+        source,clip=fixture_source()
+        codec,predict,calls=fake_evaluation(monkeypatch,source,clip,damage)
+        with pytest.raises(ValueError): study.evaluate_source(source,clip,codec,predict,10)
+>       assert calls==[]
+E       assert [array([[[[0,... dtype=uint8)] == []
+E         
+E         Left contains one more item: array([[[[0, 0, 0],\n         [0, 0, 0],\n         [0, 0, 0],\n         ...,\n         [0, 0, 0],\n         [0, 0, 0],\n    ... 0],\n         ...,\n         [0, 0, 0],\n         [0, 0, 0],\n         [0, 0, 0]]]], shape=(16, 128, 128, 3), dtype=uint8)
+E         Use -v to get more diff
+
+tests\test_v12_mc3_audit.py:68: AssertionError
+============================== warnings summary ===============================
+tests/test_sandwich.py::test_joint_gradients_reach_pre_and_post
+  C:\Users\Admin/.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+    warnings.warn("xFormers is not available (SwiGLU)")
+
+tests/test_sandwich.py::test_joint_gradients_reach_pre_and_post
+  C:\Users\Admin/.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\attention.py:33: UserWarning: xFormers is not available (Attention)
+    warnings.warn("xFormers is not available (Attention)")
+
+tests/test_sandwich.py::test_joint_gradients_reach_pre_and_post
+  C:\Users\Admin/.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\block.py:40: UserWarning: xFormers is not available (Block)
+    warnings.warn("xFormers is not available (Block)")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_v12_mc3_audit.py::test_codec_mismatch_stops_before_any_model_inference[pixels]
+1 failed, 547 passed, 3 warnings in 265.23s (0:04:25)

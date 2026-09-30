@@ -1,0 +1,4 @@
+{"generated": "baoancut/v12-mc3-cal-s2-43f62f3", "payload_sha256": {"notebook.ipynb": "87dec1a4c9ee04069d07d268dde003207d57582cbb797884a964c37996d07843", "kernel-metadata.json": "101c31ccfa2ad14df2bfc1893364125cc804fc642a052a883af4bffe34809516"}}
+{"new_destination_proof": {"handle": "baoancut/v12-mc3-cal-s2-43f62f3", "authenticated_owner": "baoancut", "owned_count": 13, "pages": 1, "owned_refs_sha256": "d56b883c9878d572ae327f03ba642b356d037bc9287cfe6e1f856869333c6cf5", "destination_absent": true}}
+Kernel version 1 successfully pushed.  Please check progress at https://www.kaggle.com/code/baoancut/v12-mc3-cal-s2-43f62f3
+

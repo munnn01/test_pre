@@ -11,3 +11,13 @@ research/v12_lowqp/bootstrap_reference.py.txt -text
 
 results/v12_lowqp/**/*.log binary
 results/v12_lowqp_validation.* -text
+
+configs/v12_mc3_audit/** -text
+results/v12_mc3_audit/** -text
+results/v12_mc3_audit/**/*.log binary
+
+results/v12_mc3_audit_validation.* -text
+docs/RESULTS_V12_MC3_CAL.md -text
+docs/PREREGISTRATION_V12_MC3_CAL_AUDIT.md text eol=lf
+
+results/v12_mc3_audit/*.patch binary

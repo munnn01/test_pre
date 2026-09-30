@@ -1,0 +1,21 @@
+{
+  "command": [
+    "D:\\STUDY\\AI\\envs\\ten_env\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "D:\\STUDY\\LAB\\proxy_v3\\v12_dual_study\\mc3_audit\\pytest_tmp_pytest_full_fixed_fixture"
+  ],
+  "code_commit": "43f62f3aff682b557bc00bbb4707479abbe268b7",
+  "finished_at_utc": "2026-09-30T14:15:14.561499+00:00",
+  "exit_code": 0,
+  "elapsed_s": 262.3349031000398,
+  "log_sha256": "03fc645157413274dbc94d4471fa8e66fa40586782beaac257686f801058f934",
+  "python": "3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]",
+  "OMP_NUM_THREADS": 2,
+  "MKL_NUM_THREADS": 2
+}

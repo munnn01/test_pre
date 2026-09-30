@@ -1,0 +1,423 @@
+{
+  "kind": "v12_mc3_CAL_launch_receipt",
+  "submitted_at_utc": "2026-09-30T13:43:35.134231+00:00",
+  "provenance": {
+    "experiment": "v12_mc3_frozen_CAL_diagnostic",
+    "scope": "post-freeze diagnostic on reused CAL; no fit or policy selection",
+    "repository_url": "https://github.com/munnn01/preeee.git",
+    "code_commit": "43f62f3aff682b557bc00bbb4707479abbe268b7",
+    "code_fingerprint": "c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c",
+    "preregistration_commit": "fda9e069643e084d715c6f71a0cdefc9000f0204",
+    "preregistration_sha256": "093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f",
+    "protocol_sha256": "994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd",
+    "selection_sha256": "bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103",
+    "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+    "parent_freezes": {
+      "v12a": {
+        "repository_url": "https://github.com/munnn01/preeee.git",
+        "freeze_commit": "31733000ce4c4c4af007d09db96be88838dd63fa",
+        "frozen_policy_sha256": "918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe",
+        "calibration_result_sha256": "2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d",
+        "selected_choices_sha256": "bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35",
+        "policy": {
+          "tau_relative": 0.5,
+          "rate_slack": 0.5,
+          "qp_mode": "lowmid"
+        }
+      },
+      "v12b": {
+        "repository_url": "https://github.com/munnn01/test_pre.git",
+        "freeze_commit": "67859444caeae26f4f4c927106d0efa1924616d9",
+        "frozen_policy_sha256": "68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8",
+        "calibration_result_sha256": "366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861",
+        "selected_choices_sha256": "e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499",
+        "policy": {
+          "tau_relative": 0.25,
+          "rate_slack": 0.25,
+          "qp_mode": "lowmid"
+        }
+      }
+    },
+    "model": {
+      "name": "mc3_18",
+      "weights": "KINETICS400_V1",
+      "url": "https://download.pytorch.org/models/mc3_18-a90a0ba3.pth",
+      "checkpoint_sha256": "a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b",
+      "state_sha256": "8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7",
+      "categories_sha256": "af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57",
+      "clip_size": 112,
+      "mean": [
+        0.43216,
+        0.394666,
+        0.37645
+      ],
+      "std": [
+        0.22803,
+        0.22145,
+        0.216989
+      ]
+    },
+    "bootstrap_unit": "source video; all QPs and five arms paired",
+    "bootstrap_seed": 20261010,
+    "bootstrap_draws": 2000,
+    "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+    "bootstrap_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+  },
+  "jobs": [
+    {
+      "handle": "trmnguyn111/v12-mc3-cal-s0-43f62f3",
+      "account": "trmnguyn111",
+      "shard": 0,
+      "n": 50,
+      "direction": "mc3",
+      "private": true,
+      "enable_gpu": true,
+      "url": "https://www.kaggle.com/code/trmnguyn111/v12-mc3-cal-s0-43f62f3",
+      "provenance": {
+        "experiment": "v12_mc3_frozen_CAL_diagnostic",
+        "scope": "post-freeze diagnostic on reused CAL; no fit or policy selection",
+        "repository_url": "https://github.com/munnn01/preeee.git",
+        "code_commit": "43f62f3aff682b557bc00bbb4707479abbe268b7",
+        "code_fingerprint": "c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c",
+        "preregistration_commit": "fda9e069643e084d715c6f71a0cdefc9000f0204",
+        "preregistration_sha256": "093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f",
+        "protocol_sha256": "994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd",
+        "selection_sha256": "bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103",
+        "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+        "parent_freezes": {
+          "v12a": {
+            "repository_url": "https://github.com/munnn01/preeee.git",
+            "freeze_commit": "31733000ce4c4c4af007d09db96be88838dd63fa",
+            "frozen_policy_sha256": "918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe",
+            "calibration_result_sha256": "2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d",
+            "selected_choices_sha256": "bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35",
+            "policy": {
+              "tau_relative": 0.5,
+              "rate_slack": 0.5,
+              "qp_mode": "lowmid"
+            }
+          },
+          "v12b": {
+            "repository_url": "https://github.com/munnn01/test_pre.git",
+            "freeze_commit": "67859444caeae26f4f4c927106d0efa1924616d9",
+            "frozen_policy_sha256": "68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8",
+            "calibration_result_sha256": "366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861",
+            "selected_choices_sha256": "e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499",
+            "policy": {
+              "tau_relative": 0.25,
+              "rate_slack": 0.25,
+              "qp_mode": "lowmid"
+            }
+          }
+        },
+        "model": {
+          "name": "mc3_18",
+          "weights": "KINETICS400_V1",
+          "url": "https://download.pytorch.org/models/mc3_18-a90a0ba3.pth",
+          "checkpoint_sha256": "a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b",
+          "state_sha256": "8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7",
+          "categories_sha256": "af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57",
+          "clip_size": 112,
+          "mean": [
+            0.43216,
+            0.394666,
+            0.37645
+          ],
+          "std": [
+            0.22803,
+            0.22145,
+            0.216989
+          ]
+        },
+        "bootstrap_unit": "source video; all QPs and five arms paired",
+        "bootstrap_seed": 20261010,
+        "bootstrap_draws": 2000,
+        "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+        "bootstrap_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+      },
+      "planned_unique_trials": 568,
+      "submission_exit_code": 0,
+      "submission_verified": true,
+      "push_log_sha256": "1a5040a5c569f5a69af7974a40535888a636cbb60c23915518cb9a03fb7b07fa",
+      "payload_sha256": {
+        "notebook.ipynb": "582dd4d7f756defaac62c6d164bf87ac64e9012dce0bf0b3d47c321d479e1d19",
+        "kernel-metadata.json": "07600c74858d17c9ebab45075b51d6044c81e2a5f25925331b35dc40f9e7c24b"
+      }
+    },
+    {
+      "handle": "shungg05/v12-mc3-cal-s1-43f62f3",
+      "account": "shungg05",
+      "shard": 1,
+      "n": 50,
+      "direction": "mc3",
+      "private": true,
+      "enable_gpu": true,
+      "url": "https://www.kaggle.com/code/shungg05/v12-mc3-cal-s1-43f62f3",
+      "provenance": {
+        "experiment": "v12_mc3_frozen_CAL_diagnostic",
+        "scope": "post-freeze diagnostic on reused CAL; no fit or policy selection",
+        "repository_url": "https://github.com/munnn01/preeee.git",
+        "code_commit": "43f62f3aff682b557bc00bbb4707479abbe268b7",
+        "code_fingerprint": "c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c",
+        "preregistration_commit": "fda9e069643e084d715c6f71a0cdefc9000f0204",
+        "preregistration_sha256": "093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f",
+        "protocol_sha256": "994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd",
+        "selection_sha256": "bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103",
+        "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+        "parent_freezes": {
+          "v12a": {
+            "repository_url": "https://github.com/munnn01/preeee.git",
+            "freeze_commit": "31733000ce4c4c4af007d09db96be88838dd63fa",
+            "frozen_policy_sha256": "918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe",
+            "calibration_result_sha256": "2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d",
+            "selected_choices_sha256": "bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35",
+            "policy": {
+              "tau_relative": 0.5,
+              "rate_slack": 0.5,
+              "qp_mode": "lowmid"
+            }
+          },
+          "v12b": {
+            "repository_url": "https://github.com/munnn01/test_pre.git",
+            "freeze_commit": "67859444caeae26f4f4c927106d0efa1924616d9",
+            "frozen_policy_sha256": "68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8",
+            "calibration_result_sha256": "366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861",
+            "selected_choices_sha256": "e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499",
+            "policy": {
+              "tau_relative": 0.25,
+              "rate_slack": 0.25,
+              "qp_mode": "lowmid"
+            }
+          }
+        },
+        "model": {
+          "name": "mc3_18",
+          "weights": "KINETICS400_V1",
+          "url": "https://download.pytorch.org/models/mc3_18-a90a0ba3.pth",
+          "checkpoint_sha256": "a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b",
+          "state_sha256": "8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7",
+          "categories_sha256": "af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57",
+          "clip_size": 112,
+          "mean": [
+            0.43216,
+            0.394666,
+            0.37645
+          ],
+          "std": [
+            0.22803,
+            0.22145,
+            0.216989
+          ]
+        },
+        "bootstrap_unit": "source video; all QPs and five arms paired",
+        "bootstrap_seed": 20261010,
+        "bootstrap_draws": 2000,
+        "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+        "bootstrap_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+      },
+      "planned_unique_trials": 565,
+      "submission_exit_code": 0,
+      "submission_verified": true,
+      "push_log_sha256": "4b626c3692e142d387a6f4207cb92f64c825d05aafac414105b0def33fb53977",
+      "payload_sha256": {
+        "notebook.ipynb": "0644b183f4ac5848c9b51a57c18842225ec5e235d1ac5634de581142177f819d",
+        "kernel-metadata.json": "a52462ca3c57e8f35bb09a5bd39f46486d1d4a4db27cc669f2821a770d819b2d"
+      }
+    },
+    {
+      "handle": "baoancut/v12-mc3-cal-s2-43f62f3",
+      "account": "baoancut",
+      "shard": 2,
+      "n": 50,
+      "direction": "mc3",
+      "private": true,
+      "enable_gpu": true,
+      "url": "https://www.kaggle.com/code/baoancut/v12-mc3-cal-s2-43f62f3",
+      "provenance": {
+        "experiment": "v12_mc3_frozen_CAL_diagnostic",
+        "scope": "post-freeze diagnostic on reused CAL; no fit or policy selection",
+        "repository_url": "https://github.com/munnn01/preeee.git",
+        "code_commit": "43f62f3aff682b557bc00bbb4707479abbe268b7",
+        "code_fingerprint": "c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c",
+        "preregistration_commit": "fda9e069643e084d715c6f71a0cdefc9000f0204",
+        "preregistration_sha256": "093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f",
+        "protocol_sha256": "994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd",
+        "selection_sha256": "bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103",
+        "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+        "parent_freezes": {
+          "v12a": {
+            "repository_url": "https://github.com/munnn01/preeee.git",
+            "freeze_commit": "31733000ce4c4c4af007d09db96be88838dd63fa",
+            "frozen_policy_sha256": "918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe",
+            "calibration_result_sha256": "2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d",
+            "selected_choices_sha256": "bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35",
+            "policy": {
+              "tau_relative": 0.5,
+              "rate_slack": 0.5,
+              "qp_mode": "lowmid"
+            }
+          },
+          "v12b": {
+            "repository_url": "https://github.com/munnn01/test_pre.git",
+            "freeze_commit": "67859444caeae26f4f4c927106d0efa1924616d9",
+            "frozen_policy_sha256": "68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8",
+            "calibration_result_sha256": "366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861",
+            "selected_choices_sha256": "e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499",
+            "policy": {
+              "tau_relative": 0.25,
+              "rate_slack": 0.25,
+              "qp_mode": "lowmid"
+            }
+          }
+        },
+        "model": {
+          "name": "mc3_18",
+          "weights": "KINETICS400_V1",
+          "url": "https://download.pytorch.org/models/mc3_18-a90a0ba3.pth",
+          "checkpoint_sha256": "a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b",
+          "state_sha256": "8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7",
+          "categories_sha256": "af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57",
+          "clip_size": 112,
+          "mean": [
+            0.43216,
+            0.394666,
+            0.37645
+          ],
+          "std": [
+            0.22803,
+            0.22145,
+            0.216989
+          ]
+        },
+        "bootstrap_unit": "source video; all QPs and five arms paired",
+        "bootstrap_seed": 20261010,
+        "bootstrap_draws": 2000,
+        "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+        "bootstrap_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+      },
+      "planned_unique_trials": 556,
+      "submission_exit_code": 0,
+      "submission_verified": true,
+      "push_log_sha256": "2702a491d98a4df60743fdb15e50ec137145a9ef47a7059635fade6a81c69be2",
+      "payload_sha256": {
+        "notebook.ipynb": "87dec1a4c9ee04069d07d268dde003207d57582cbb797884a964c37996d07843",
+        "kernel-metadata.json": "101c31ccfa2ad14df2bfc1893364125cc804fc642a052a883af4bffe34809516"
+      }
+    },
+    {
+      "handle": "trnhlng/v12-mc3-cal-s3-43f62f3",
+      "account": "trnhlng",
+      "shard": 3,
+      "n": 50,
+      "direction": "mc3",
+      "private": true,
+      "enable_gpu": true,
+      "url": "https://www.kaggle.com/code/trnhlng/v12-mc3-cal-s3-43f62f3",
+      "provenance": {
+        "experiment": "v12_mc3_frozen_CAL_diagnostic",
+        "scope": "post-freeze diagnostic on reused CAL; no fit or policy selection",
+        "repository_url": "https://github.com/munnn01/preeee.git",
+        "code_commit": "43f62f3aff682b557bc00bbb4707479abbe268b7",
+        "code_fingerprint": "c1ffe1ed3d66c9dcb11ff27b020dcf54006f1abb40cb31c92ca95dead0ff4c1c",
+        "preregistration_commit": "fda9e069643e084d715c6f71a0cdefc9000f0204",
+        "preregistration_sha256": "093844f1c76c3e4982fc1c8b669705eb0923bdb7e05462c90e7bc13831f1e14f",
+        "protocol_sha256": "994ce274c58a77ae65233d41558af0bd65228f7c952ed2a770fd08b1c86771bd",
+        "selection_sha256": "bd677379e4420a50a71e8b0a630f1ce3519f42707da21667ac198eb3c93d9103",
+        "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+        "parent_freezes": {
+          "v12a": {
+            "repository_url": "https://github.com/munnn01/preeee.git",
+            "freeze_commit": "31733000ce4c4c4af007d09db96be88838dd63fa",
+            "frozen_policy_sha256": "918c205a88de9e3422a8d65c3e327ee1515c717ee9e89ea8b124127d9d529cbe",
+            "calibration_result_sha256": "2bd161d4b18f6f78ea85edeb9987079bd832e67d3b9e7e04b837a5bd6af81d1d",
+            "selected_choices_sha256": "bf60f1d51584ba86047f25f80acee8194381882bdf0d9eb990add87f69201c35",
+            "policy": {
+              "tau_relative": 0.5,
+              "rate_slack": 0.5,
+              "qp_mode": "lowmid"
+            }
+          },
+          "v12b": {
+            "repository_url": "https://github.com/munnn01/test_pre.git",
+            "freeze_commit": "67859444caeae26f4f4c927106d0efa1924616d9",
+            "frozen_policy_sha256": "68ae2ecb2b6d5b8fc2eb93b4ea4396ff60fd2b2d035623b67347043333e83cf8",
+            "calibration_result_sha256": "366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861",
+            "selected_choices_sha256": "e0d14ae6b772e7c7651f6737161bd1cb1463ae2a02927ead32fe30c9a6586499",
+            "policy": {
+              "tau_relative": 0.25,
+              "rate_slack": 0.25,
+              "qp_mode": "lowmid"
+            }
+          }
+        },
+        "model": {
+          "name": "mc3_18",
+          "weights": "KINETICS400_V1",
+          "url": "https://download.pytorch.org/models/mc3_18-a90a0ba3.pth",
+          "checkpoint_sha256": "a90a0ba35ca1242d15b77511ff28bfb29cc596988b5ea36081042f8e2f54212b",
+          "state_sha256": "8d68c39a4c53e74e6639e98073c6a9e2fa619f2fb3aab8b6d9fa9dcba5ef2cc7",
+          "categories_sha256": "af3283ace9c5869eb2bf7f8a1c4c2dd8c7593e10a78590abdbdbec64ccdc5b57",
+          "clip_size": 112,
+          "mean": [
+            0.43216,
+            0.394666,
+            0.37645
+          ],
+          "std": [
+            0.22803,
+            0.22145,
+            0.216989
+          ]
+        },
+        "bootstrap_unit": "source video; all QPs and five arms paired",
+        "bootstrap_seed": 20261010,
+        "bootstrap_draws": 2000,
+        "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+        "bootstrap_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+      },
+      "planned_unique_trials": 575,
+      "submission_exit_code": 0,
+      "submission_verified": true,
+      "push_log_sha256": "f616a387221ca20197ebcd52f69008fdce77130afd3ffaebfcc96b1f9b119fa4",
+      "payload_sha256": {
+        "notebook.ipynb": "d68c4083040c4257b72ac0414d4ee29ae310f3fd77598549dfe8834776d38a87",
+        "kernel-metadata.json": "0b66b0d83b2fb0af0536a5c3a6fb6c3549ef92f76b6d0e5f553ce31e95e02b58"
+      }
+    }
+  ],
+  "status_snapshot": [
+    {
+      "handle": "trmnguyn111/v12-mc3-cal-s0-43f62f3",
+      "status_exit_code": 0,
+      "status_api_output": "trmnguyn111/v12-mc3-cal-s0-43f62f3 has status \"KernelWorkerStatus.RUNNING\""
+    },
+    {
+      "handle": "shungg05/v12-mc3-cal-s1-43f62f3",
+      "status_exit_code": 0,
+      "status_api_output": "shungg05/v12-mc3-cal-s1-43f62f3 has status \"KernelWorkerStatus.RUNNING\""
+    },
+    {
+      "handle": "baoancut/v12-mc3-cal-s2-43f62f3",
+      "status_exit_code": 0,
+      "status_api_output": "baoancut/v12-mc3-cal-s2-43f62f3 has status \"KernelWorkerStatus.RUNNING\""
+    },
+    {
+      "handle": "trnhlng/v12-mc3-cal-s3-43f62f3",
+      "status_exit_code": 0,
+      "status_api_output": "trnhlng/v12-mc3-cal-s3-43f62f3 has status \"KernelWorkerStatus.RUNNING\""
+    }
+  ],
+  "metrics": "CHƯA ĐO",
+  "actual_bootstrap_draws": 0,
+  "planned_bootstrap_draws": 2000,
+  "seed": 20261010,
+  "test_evidence": {
+    "command": "python -B -m pytest tests/test_v12_mc3_audit.py tests/test_v12_lowqp.py -q -p no:cacheprovider",
+    "passed": 29,
+    "elapsed_s": 37.09,
+    "output_chunk_id": "fff31c",
+    "new_mc3_tests": 10,
+    "existing_v12_tests": 19
+  },
+  "bash_syntax": "PASS"
+}

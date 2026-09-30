@@ -1,0 +1,20 @@
+{
+  "handle": "trmnguyn111/v12-mc3-cal-s0-43f62f3",
+  "version_label": "v1",
+  "direction": "mc3",
+  "shard": 0,
+  "downloaded_at_utc": "2026-09-30T13:51:53.318251+00:00",
+  "archive": "v12_mc3_cal_shard0.tgz",
+  "bytes": 51488,
+  "archive_sha256": "6971f868f794702676ec4516e195f55ea7b45f22649dd80e1986d9ea99222921",
+  "server_log_sha256": "634b56a86504625fa6c568d4e3e127fc78647d83f052289da23a3aad3865f2b9",
+  "output_files_listed": 1011,
+  "pages": 6,
+  "archive_members": [
+    "outputs/v12_mc3_cal/shard0/manifest.json",
+    "outputs/v12_mc3_cal/shard0/manifest.sha256",
+    "outputs/v12_mc3_cal/shard0/run.log",
+    "outputs/v12_mc3_cal/shard0/shard_records.jsonl"
+  ],
+  "extracted_folder": "D:\\STUDY\\LAB\\proxy_v3\\v12_dual_study\\mc3_audit\\collection_20260930T135139Z\\shard0\\extracted\\outputs\\v12_mc3_cal\\shard0"
+}

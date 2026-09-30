@@ -1,0 +1,17 @@
+{
+  "scope": "test-only correction after frozen MC3 measurements; no production changes",
+  "scorer_and_merge_commit": "43f62f3aff682b557bc00bbb4707479abbe268b7",
+  "old_committed_fixture_sha256": "1ad148e94fd96782abfa6f79ed3a3433e6606451df406aa7955a89e423727e02",
+  "new_worktree_fixture_sha256": "30d1aaf149a2186157aafe5b05a1b4308b30bf56284d03af8a2e25fc1a192330",
+  "patch_sha256": "4e9b2ba953ccc259d839400e415ede5c2572dcbadfd28aebbd2e61afb7de77a0",
+  "cause": "fixture built its stream dictionary from a set; PYTHONHASHSEED could put area112 before intentionally corrupt identity128",
+  "correction": "dict.fromkeys(arms.values()) preserves identity128 first for the before-inference failure assertion",
+  "production_metric_bootstrap_policy_or_results_changed": false,
+  "initial_full_suite": "506 passed, 42 errors: inaccessible inherited pytest temp directory",
+  "retry_full_suite": "547 passed, 1 failed: order-dependent MC3 fixture",
+  "final_full_suite_receipt": "pytest_full_fixed_fixture_receipt.json",
+  "bootstrap_seed": 20261010,
+  "bootstrap_unit": "source video; all QPs and five arms paired",
+  "actual_bootstrap_draws": 2000,
+  "merged_result_sha256": "b626431c0d84a71d876a120b3fd83850fc66bc69ecfd1dd6fede78e1f1627cc4"
+}

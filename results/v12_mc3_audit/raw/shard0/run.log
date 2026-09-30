@@ -1,0 +1,57 @@
+Downloading: "https://download.pytorch.org/models/mc3_18-a90a0ba3.pth" to /root/.cache/torch/hub/checkpoints/mc3_18-a90a0ba3.pth
+  0%|          | 0.00/44.7M [00:00<?, ?B/s] 22%|██▏       | 9.75M/44.7M [00:00<00:00, 102MB/s] 59%|█████▉    | 26.2M/44.7M [00:00<00:00, 143MB/s]100%|██████████| 44.7M/44.7M [00:00<00:00, 157MB/s]
+[MC3 V12] shard=0 1/50 unique_trials=11
+[MC3 V12] shard=0 2/50 unique_trials=21
+[MC3 V12] shard=0 3/50 unique_trials=34
+[MC3 V12] shard=0 4/50 unique_trials=47
+[MC3 V12] shard=0 5/50 unique_trials=58
+[MC3 V12] shard=0 6/50 unique_trials=68
+[MC3 V12] shard=0 7/50 unique_trials=78
+[MC3 V12] shard=0 8/50 unique_trials=88
+[MC3 V12] shard=0 9/50 unique_trials=98
+[MC3 V12] shard=0 10/50 unique_trials=108
+[MC3 V12] shard=0 11/50 unique_trials=118
+[MC3 V12] shard=0 12/50 unique_trials=129
+[MC3 V12] shard=0 13/50 unique_trials=140
+[MC3 V12] shard=0 14/50 unique_trials=151
+[MC3 V12] shard=0 15/50 unique_trials=161
+[MC3 V12] shard=0 16/50 unique_trials=175
+[MC3 V12] shard=0 17/50 unique_trials=186
+[MC3 V12] shard=0 18/50 unique_trials=197
+[MC3 V12] shard=0 19/50 unique_trials=208
+[MC3 V12] shard=0 20/50 unique_trials=218
+[MC3 V12] shard=0 21/50 unique_trials=228
+[MC3 V12] shard=0 22/50 unique_trials=238
+[MC3 V12] shard=0 23/50 unique_trials=252
+[MC3 V12] shard=0 24/50 unique_trials=262
+[MC3 V12] shard=0 25/50 unique_trials=276
+[MC3 V12] shard=0 26/50 unique_trials=288
+[MC3 V12] shard=0 27/50 unique_trials=300
+[MC3 V12] shard=0 28/50 unique_trials=314
+[MC3 V12] shard=0 29/50 unique_trials=325
+[MC3 V12] shard=0 30/50 unique_trials=336
+[MC3 V12] shard=0 31/50 unique_trials=348
+[MC3 V12] shard=0 32/50 unique_trials=360
+[MC3 V12] shard=0 33/50 unique_trials=370
+[MC3 V12] shard=0 34/50 unique_trials=380
+[MC3 V12] shard=0 35/50 unique_trials=391
+[MC3 V12] shard=0 36/50 unique_trials=404
+[MC3 V12] shard=0 37/50 unique_trials=417
+[MC3 V12] shard=0 38/50 unique_trials=427
+[MC3 V12] shard=0 39/50 unique_trials=439
+[MC3 V12] shard=0 40/50 unique_trials=449
+[MC3 V12] shard=0 41/50 unique_trials=460
+[MC3 V12] shard=0 42/50 unique_trials=471
+[MC3 V12] shard=0 43/50 unique_trials=482
+[MC3 V12] shard=0 44/50 unique_trials=492
+[MC3 V12] shard=0 45/50 unique_trials=504
+[MC3 V12] shard=0 46/50 unique_trials=517
+[MC3 V12] shard=0 47/50 unique_trials=531
+[MC3 V12] shard=0 48/50 unique_trials=543
+[MC3 V12] shard=0 49/50 unique_trials=554
+[MC3 V12] shard=0 50/50 unique_trials=568
+{
+  "shard": 0,
+  "n": 50,
+  "unique_trials": 568
+}
