@@ -1,0 +1,92 @@
+{
+  "experiment": "v12_semantic_lowqp_h265_cal",
+  "direction": "semantic",
+  "repository_url": "https://github.com/munnn01/test_pre.git",
+  "preregistration_path": "docs/PREREGISTRATION_V12_SEMANTIC_LOWQP.md",
+  "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+  "cal_input_path": "configs/v12_lowqp/cal_input.json",
+  "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+  "primary_outcomes_path": "configs/v12_lowqp/cal_primary_outcomes.json",
+  "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+  "cal_cache_tree_sha256": "3b0e4c62635b0c7efb52cb1c7cae180cdbaaae88b69233aa6e103ce150768ebc",
+  "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+  "n_sources": 200,
+  "shards": 4,
+  "codec": "h265",
+  "preset": "medium",
+  "qps": [
+    30,
+    35,
+    40,
+    45,
+    50
+  ],
+  "seed": 20261009,
+  "bootstrap_draws": 2000,
+  "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+  "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+  "grid": {
+    "tau_relative": [
+      0.0,
+      0.1,
+      0.25,
+      0.5
+    ],
+    "rate_slack": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "qp_modes": {
+      "low": [
+        30,
+        35
+      ],
+      "lowmid": [
+        30,
+        35,
+        40
+      ]
+    }
+  },
+  "cal_primary_gate": {
+    "bd_rate_strict_less_than_pct": -10.0,
+    "max_regression_vs_v6_pp": 2.0,
+    "bd_accuracy_strict_greater_than_pp": 0.0,
+    "worst_same_qp_gap_min_pp": -1.0,
+    "min_mean_lowqp_proxy_reduction": 1e-06,
+    "min_valid_bootstrap_draws": 1900
+  },
+  "original_gate": "both primary BD-rate < -15% and BD-accuracy >0 at one codec; unchanged; not confirmatory CAL",
+  "next_dev_gate": "both primary BD-rate < -10%; mc3 <0 with CI upper <=+1%; all BD-accuracy >0 and worst same-QP gap >=-1 pp; >=1900/2000 valid draws",
+  "teacher": {
+    "name": "resnet18",
+    "weights": "IMAGENET1K_V1",
+    "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+    "checkpoint_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+    "state_sha256": "e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2",
+    "layers": [
+      "layer2",
+      "layer3"
+    ],
+    "input_size": 112,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "core_git_blob_sha256": {
+    "src/codecs/standard.py": "7f7e451296703103a384511b020f63078f38dc2ac08c5fd9e50bc644635e352b",
+    "src/models/codec_search.py": "185763a94e534f0720d160655b224147d9ef4fef0ff52b7c23683b6d18b623cd",
+    "src/data/video_dataset.py": "3a46d686bf77c69d434c2cfedf287d344c557ae7ec9a159689b01504dfd741dd",
+    "src/metrics/bd_rate.py": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487"
+  },
+  "bootstrap_upstream_path": "ops/v8_motion_pilot.py",
+  "bootstrap_upstream_sha256": "4c461954ed076f9a276c70f693cfcb3ce3ee054d1070529de5b1f379c497abc9"
+}

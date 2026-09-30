@@ -1,3 +1,8 @@
 results/codec_search_ar_confirm_1000/*.json text eol=lf
 results/codec_search_ar_confirm_1000/*.tar.gz binary
 kaggle/dual_codec_search_cell.sh text eol=lf
+configs/v12_lowqp/** -text
+results/v12_lowqp/** -text
+results/v12_lowqp_launch/** -text
+research/v12_lowqp/*.py text eol=lf
+kaggle/v12_lowqp_cal_cell.sh text eol=lf
