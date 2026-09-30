@@ -1,0 +1,26 @@
+........................................................................ [ 15%]
+........................................................................ [ 31%]
+........................................................................ [ 46%]
+........................................................................ [ 62%]
+........................................................................ [ 77%]
+........................................................................ [ 93%]
+...............................                                          [100%]
+============================== warnings summary ===============================
+src\models\cast_ar.py:1
+  D:\STUDY\LAB\proxy_v3\v12_dual_study\test_pre\src\models\cast_ar.py:1: DeprecationWarning: invalid escape sequence '\-'
+    """CAST-AR decoder-side temporal task enhancement.
+
+tests/test_sandwich.py::test_joint_gradients_reach_pre_and_post
+  C:\Users\Admin/.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+    warnings.warn("xFormers is not available (SwiGLU)")
+
+tests/test_sandwich.py::test_joint_gradients_reach_pre_and_post
+  C:\Users\Admin/.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\attention.py:33: UserWarning: xFormers is not available (Attention)
+    warnings.warn("xFormers is not available (Attention)")
+
+tests/test_sandwich.py::test_joint_gradients_reach_pre_and_post
+  C:\Users\Admin/.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\block.py:40: UserWarning: xFormers is not available (Block)
+    warnings.warn("xFormers is not available (Block)")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+463 passed, 4 warnings in 107.43s (0:01:47)

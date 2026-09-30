@@ -1,0 +1,19 @@
+{
+  "generated": "baoancut/v12b-semantic-cal-s2-f75e623",
+  "payload_sha256": {
+    "notebook.ipynb": "acfd97fc12ab140cee21329f56187e6c96f78bfb09ba12ec0f6f7b9fe885f560",
+    "kernel-metadata.json": "68610bb0940208bf817321332f20d017e16216327f773a8fd97889ffdda07837"
+  }
+}
+{
+  "new_destination_proof": {
+    "handle": "baoancut/v12b-semantic-cal-s2-f75e623",
+    "authenticated_owner": "baoancut",
+    "owned_count": 12,
+    "pages": 1,
+    "owned_refs_sha256": "9266c6402a5d340acb30f11cd4914ec2cba474406283c804e2f6183c5bc2184d",
+    "destination_absent": true
+  }
+}
+Kernel version 1 successfully pushed.  Please check progress at https://www.kaggle.com/code/baoancut/v12b-semantic-cal-s2-f75e623
+

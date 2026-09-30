@@ -1,0 +1,75 @@
+{
+  "provenance": {
+    "experiment": "v12_semantic_lowqp_h265_cal",
+    "direction": "semantic",
+    "repository_url": "https://github.com/munnn01/test_pre.git",
+    "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+    "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+    "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+    "code_commit": "f75e6231ff7a29396d9eb66ee5591fdb1107f956",
+    "code_fingerprint": "694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331",
+    "preregistration_commit": "225e06509ebdd72744ae82c6b75a40ff6f2c16d1",
+    "preregistration_sha256": "8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89",
+    "protocol_sha256": "7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639",
+    "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+    "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+    "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+    "bootstrap_seed": 20261009,
+    "bootstrap_draws": 2000,
+    "teacher": {
+      "name": "resnet18",
+      "weights": "IMAGENET1K_V1",
+      "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+      "checkpoint_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+      "state_sha256": "e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2",
+      "layers": [
+        "layer2",
+        "layer3"
+      ],
+      "input_size": 112,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+    "paired_metrics_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+  },
+  "observed_at_utc": "2026-09-30T11:59:37.095308+00:00",
+  "statuses": [
+    {
+      "handle": "trmnguyn111/v12b-semantic-cal-s0-f75e623",
+      "direction": "semantic",
+      "shard": 0,
+      "status_exit_code": 0,
+      "status_api_output": "trmnguyn111/v12b-semantic-cal-s0-f75e623 has status \"KernelWorkerStatus.RUNNING\""
+    },
+    {
+      "handle": "shungg05/v12b-semantic-cal-s1-f75e623",
+      "direction": "semantic",
+      "shard": 1,
+      "status_exit_code": 0,
+      "status_api_output": "shungg05/v12b-semantic-cal-s1-f75e623 has status \"KernelWorkerStatus.RUNNING\""
+    },
+    {
+      "handle": "baoancut/v12b-semantic-cal-s2-f75e623",
+      "direction": "semantic",
+      "shard": 2,
+      "status_exit_code": 0,
+      "status_api_output": "baoancut/v12b-semantic-cal-s2-f75e623 has status \"KernelWorkerStatus.RUNNING\""
+    },
+    {
+      "handle": "trnhlng/v12b-semantic-cal-s3-f75e623",
+      "direction": "semantic",
+      "shard": 3,
+      "status_exit_code": 0,
+      "status_api_output": "trnhlng/v12b-semantic-cal-s3-f75e623 has status \"KernelWorkerStatus.RUNNING\""
+    }
+  ]
+}

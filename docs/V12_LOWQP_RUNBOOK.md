@@ -18,3 +18,7 @@ Outputs: `v12_semantic_cal_shard0.tgz` through `3.tgz`, each with exact prefix `
 ```
 
 The complete 24-point grid uses only primary CAL correctness and the locked proxy. NO-GO stops before DEV. A selected policy and all CAL choices must be committed before developing a separate registered fresh DEV assessment. Selected-policy CIs use unchanged V8 curves/compare/summarize verbatim, original unchanged BD metric, 2,000 paired source-video draws (seed 20261009). CAL intervals are descriptive after selection, not confirmatory, and MC3 outcomes remain CHƯA ĐO. Future engineering and original −15% research gates remain unchanged.
+
+## Deployment
+
+Four private notebooks are submitted, pinned to worker commit `f75e6231ff7a29396d9eb66ee5591fdb1107f956`. [Launch record, account assignment, dated API status and hashes](V12_KAGGLE_LAUNCH.md). Outcomes remain CHƯA ĐO.

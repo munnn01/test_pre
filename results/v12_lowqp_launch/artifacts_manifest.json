@@ -1,0 +1,67 @@
+{
+  "kind": "v12_launch_artifact_manifest",
+  "provenance": {
+    "experiment": "v12_semantic_lowqp_h265_cal",
+    "direction": "semantic",
+    "repository_url": "https://github.com/munnn01/test_pre.git",
+    "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+    "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+    "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+    "code_commit": "f75e6231ff7a29396d9eb66ee5591fdb1107f956",
+    "code_fingerprint": "694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331",
+    "preregistration_commit": "225e06509ebdd72744ae82c6b75a40ff6f2c16d1",
+    "preregistration_sha256": "8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89",
+    "protocol_sha256": "7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639",
+    "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+    "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+    "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+    "bootstrap_seed": 20261009,
+    "bootstrap_draws": 2000,
+    "teacher": {
+      "name": "resnet18",
+      "weights": "IMAGENET1K_V1",
+      "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+      "checkpoint_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+      "state_sha256": "e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2",
+      "layers": [
+        "layer2",
+        "layer3"
+      ],
+      "input_size": 112,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+    "paired_metrics_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+  },
+  "files_sha256": {
+    "launch_receipt.json": "4fdbf56925ab4660154cc3a6598641c0fddb2e34ef34b3a33e9208bf26481529",
+    "launch_receipt.sha256": "127bbf41faf85534ee03e437069c02004d682ba37448f20aa0e014c7747db62f",
+    "logs/shard0_push.log": "5bd1015db7435b7df854ca67045ebc16e7e61f1c82579a209f77505660df7edf",
+    "logs/shard1_push.log": "4375115b2b07c8d9e4ba24ad2d51a9c9691282c961d223c51a5cd830817043b1",
+    "logs/shard2_push.log": "612afe91e687a71a6e587e6584e3a498da8a8246eeb752ab2ce1120e00e0c288",
+    "logs/shard3_push.log": "6a14c6442c3c1cbe85a019be592be7c2239b8220829ad60f0a826b5e80d79cad",
+    "payloads/shard0/kernel-metadata.json": "cc5d27630c9c904cdaef1fd0860971ed0d169c015f75ccbec29cc73d9a4c8078",
+    "payloads/shard0/notebook.ipynb": "a970a1ccadb92b77aa53968c54a04de34ba42c01fe0c3fa4abb318df8d189592",
+    "payloads/shard1/kernel-metadata.json": "cf25dccb9942fdc8c356710c6af23be6a24bd2c177da6f547e9d866da11f8996",
+    "payloads/shard1/notebook.ipynb": "da3eb8e5e1898f5daebf548133a4f4b8d5982cba662fa7762ee7b49c57c41642",
+    "payloads/shard2/kernel-metadata.json": "68610bb0940208bf817321332f20d017e16216327f773a8fd97889ffdda07837",
+    "payloads/shard2/notebook.ipynb": "acfd97fc12ab140cee21329f56187e6c96f78bfb09ba12ec0f6f7b9fe885f560",
+    "payloads/shard3/kernel-metadata.json": "2faf3832746e8244a907a55c027068c6e869ded8d23226407ceec37537f3d3ee",
+    "payloads/shard3/notebook.ipynb": "07a0a57aa86d5ce7641af58fdd99f7556b8569a71f9c9f2ebb2ec9174d38bb50",
+    "status_snapshot.json": "dae6b221e5f9da04489d3c5a6aab9ec13025c21ef96a31284914f794bd0b4f91",
+    "status_snapshot.sha256": "bad8dfcb40a12f31c7cbff6e9cbf2b2b2ddac72a3402ba103308dd393f8c7115",
+    "testing/full_suite.log": "1432f2aba9bc930e911d36aeb8b99893b5551225ac051e9fa99f3407c458c414",
+    "testing/publisher_tests.log": "41bef67e26cbaa6f9b1b65c41c813f1f1ff0611d053e5df613d8a614cfd5d987",
+    "testing/test_results.json": "7ffa2cc22dd1bd99c491814412c1e23dd654df4379933e859afce23ed1b8c3e2",
+    "testing/test_results.sha256": "da097a509afd97a17582a91153234c2e1c7afa01f33b70d1a6f35450bc145f9e"
+  }
+}

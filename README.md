@@ -2,7 +2,7 @@
 
 ## Hướng V12 mới: semantic / CAL-only
 
-Đang triển khai [pilot V12](docs/V12_LOWQP_RUNBOOK.md), preregistration đã commit trước code và phép đo. Rerank sáu stream bằng đặc trưng 2D ResNet18 ImageNet đóng băng ở QP 30–40; QP 45/50 giữ V6. Bốn shard dùng đúng 200 nguồn CAL cũ, chỉ chọn policy bằng hai analyzer chính. **V12 kết quả, MC3, DEV mới và holdout: CHƯA ĐO.** Gate nghiên cứu gốc <−15% không đổi. [Giao thức/hash/lưới/gate](docs/PREREGISTRATION_V12_SEMANTIC_LOWQP.md). Các tài liệu và kết quả lịch sử dưới đây giữ nguyên phạm vi của từng nghiên cứu.
+Đã gửi bốn notebook private Kaggle, snapshot API xác nhận **4/4 RUNNING**; [hồ sơ triển khai](docs/V12_KAGGLE_LAUNCH.md). [Pilot V12](docs/V12_LOWQP_RUNBOOK.md), preregistration đã commit trước code và phép đo. Rerank sáu stream bằng đặc trưng 2D ResNet18 ImageNet đóng băng ở QP 30–40; QP 45/50 giữ V6. Bốn shard dùng đúng 200 nguồn CAL cũ, chỉ chọn policy bằng hai analyzer chính. **V12 kết quả, MC3, DEV mới và holdout: CHƯA ĐO.** Gate nghiên cứu gốc <−15% không đổi. [Giao thức/hash/lưới/gate](docs/PREREGISTRATION_V12_SEMANTIC_LOWQP.md). Các tài liệu và kết quả lịch sử dưới đây giữ nguyên phạm vi của từng nghiên cứu.
 
 
 This `preprocessing` checkout is the development copy for the paper-validation
