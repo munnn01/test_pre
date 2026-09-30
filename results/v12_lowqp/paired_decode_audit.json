@@ -1,0 +1,6 @@
+{
+  "sources": 200,
+  "overlapping_stream_qp_decoded_hash_checks": 2235,
+  "identical_coded_bytes_and_decoded_pixels": true,
+  "scope": "cross-direction measurement comparability; not AR performance or independent replication"
+}

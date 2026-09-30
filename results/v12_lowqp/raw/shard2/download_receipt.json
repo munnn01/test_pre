@@ -1,0 +1,20 @@
+{
+  "handle": "baoancut/v12b-semantic-cal-s2-f75e623",
+  "version_label": "v1",
+  "direction": "semantic",
+  "shard": 2,
+  "downloaded_at_utc": "2026-09-30T12:40:43.849572+00:00",
+  "archive": "v12_semantic_cal_shard2.tgz",
+  "bytes": 131795,
+  "archive_sha256": "d39c5d208be46942fd6d4e4dc200c264649ddf87c18eb7c3b359669867908fa8",
+  "server_log_sha256": "41fa721b2f371e106e05e0d2b89f98e95f2a76068cc71231ee70bd0e45b547ed",
+  "output_files_listed": 493,
+  "pages": 3,
+  "archive_members": [
+    "outputs/v12_semantic_cal/shard2/manifest.json",
+    "outputs/v12_semantic_cal/shard2/manifest.sha256",
+    "outputs/v12_semantic_cal/shard2/run.log",
+    "outputs/v12_semantic_cal/shard2/shard_records.jsonl"
+  ],
+  "extracted_folder": "D:\\STUDY\\LAB\\proxy_v3\\v12_dual_study\\assessment_20260930T123815Z\\semantic\\shard2\\extracted\\outputs\\v12_semantic_cal\\shard2"
+}

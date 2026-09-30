@@ -1,0 +1,20 @@
+{
+  "handle": "trmnguyn111/v12b-semantic-cal-s0-f75e623",
+  "version_label": "v1",
+  "direction": "semantic",
+  "shard": 0,
+  "downloaded_at_utc": "2026-09-30T12:40:40.790178+00:00",
+  "archive": "v12_semantic_cal_shard0.tgz",
+  "bytes": 131716,
+  "archive_sha256": "36441760f6e46382d547a447431fc35210002c4981e5c0875bc44bcda50fa12b",
+  "server_log_sha256": "a87b0e404bd7899a1c1c7dd8d8b4122ecf37bf79e669f59281f4592ad15ca69d",
+  "output_files_listed": 493,
+  "pages": 3,
+  "archive_members": [
+    "outputs/v12_semantic_cal/shard0/manifest.json",
+    "outputs/v12_semantic_cal/shard0/manifest.sha256",
+    "outputs/v12_semantic_cal/shard0/run.log",
+    "outputs/v12_semantic_cal/shard0/shard_records.jsonl"
+  ],
+  "extracted_folder": "D:\\STUDY\\LAB\\proxy_v3\\v12_dual_study\\assessment_20260930T123815Z\\semantic\\shard0\\extracted\\outputs\\v12_semantic_cal\\shard0"
+}

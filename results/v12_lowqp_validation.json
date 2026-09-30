@@ -1,0 +1,71 @@
+{
+  "kind": "v12_result_validation",
+  "provenance": {
+    "experiment": "v12_semantic_lowqp_h265_cal",
+    "direction": "semantic",
+    "repository_url": "https://github.com/munnn01/test_pre.git",
+    "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+    "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+    "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+    "code_commit": "545a83b11f893293aa8d6c733bd4779f77ae8aff",
+    "code_fingerprint": "694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331",
+    "preregistration_commit": "225e06509ebdd72744ae82c6b75a40ff6f2c16d1",
+    "preregistration_sha256": "8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89",
+    "protocol_sha256": "7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639",
+    "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+    "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+    "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+    "bootstrap_seed": 20261009,
+    "bootstrap_draws": 2000,
+    "teacher": {
+      "name": "resnet18",
+      "weights": "IMAGENET1K_V1",
+      "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+      "checkpoint_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+      "state_sha256": "e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2",
+      "layers": [
+        "layer2",
+        "layer3"
+      ],
+      "input_size": 112,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+    "paired_metrics_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+  },
+  "calibration_result_sha256": "366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861",
+  "artifact_manifest_sha256": "fe849707efe5e542ebeb3d583d41e5b5f969f60158b2777c540e072387b70397",
+  "actual_bootstrap_draws": 2000,
+  "bootstrap_unit": "source video",
+  "bootstrap_seed": 20261009,
+  "audit": {
+    "artifact_hashes_verified": 39,
+    "unique_sources": 200,
+    "registered_grid_size": 24,
+    "common_decoded_stream_hash_checks": 2235,
+    "controls_match_between_directions": true,
+    "selected_choices_frozen": true,
+    "all_comparator_valid_draws": 2000,
+    "metric_and_bootstrap_changed": false,
+    "mc3_inference": false,
+    "holdout_inference": false,
+    "audit_exec_output_chunk_id": "9020af"
+  },
+  "tests": {
+    "command": "python -B -m pytest tests/test_v12_lowqp.py -q -p no:cacheprovider",
+    "passed": 19,
+    "elapsed_s": 7.52,
+    "exit_code": 0,
+    "exec_output_chunk_id": "57fb53",
+    "scope": "V12 policy/protocol/bootstrap/merge/publisher; full unrelated suite not rerun for artifact-only update"
+  }
+}

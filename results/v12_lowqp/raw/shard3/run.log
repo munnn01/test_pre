@@ -1,0 +1,56 @@
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+[V12 semantic] shard=3 1/50 trials=30
+[V12 semantic] shard=3 2/50 trials=60
+[V12 semantic] shard=3 3/50 trials=90
+[V12 semantic] shard=3 4/50 trials=120
+[V12 semantic] shard=3 5/50 trials=150
+[V12 semantic] shard=3 6/50 trials=180
+[V12 semantic] shard=3 7/50 trials=210
+[V12 semantic] shard=3 8/50 trials=240
+[V12 semantic] shard=3 9/50 trials=270
+[V12 semantic] shard=3 10/50 trials=300
+[V12 semantic] shard=3 11/50 trials=330
+[V12 semantic] shard=3 12/50 trials=360
+[V12 semantic] shard=3 13/50 trials=390
+[V12 semantic] shard=3 14/50 trials=420
+[V12 semantic] shard=3 15/50 trials=450
+[V12 semantic] shard=3 16/50 trials=480
+[V12 semantic] shard=3 17/50 trials=510
+[V12 semantic] shard=3 18/50 trials=540
+[V12 semantic] shard=3 19/50 trials=570
+[V12 semantic] shard=3 20/50 trials=600
+[V12 semantic] shard=3 21/50 trials=630
+[V12 semantic] shard=3 22/50 trials=660
+[V12 semantic] shard=3 23/50 trials=690
+[V12 semantic] shard=3 24/50 trials=720
+[V12 semantic] shard=3 25/50 trials=750
+[V12 semantic] shard=3 26/50 trials=780
+[V12 semantic] shard=3 27/50 trials=810
+[V12 semantic] shard=3 28/50 trials=840
+[V12 semantic] shard=3 29/50 trials=870
+[V12 semantic] shard=3 30/50 trials=900
+[V12 semantic] shard=3 31/50 trials=930
+[V12 semantic] shard=3 32/50 trials=960
+[V12 semantic] shard=3 33/50 trials=990
+[V12 semantic] shard=3 34/50 trials=1020
+[V12 semantic] shard=3 35/50 trials=1050
+[V12 semantic] shard=3 36/50 trials=1080
+[V12 semantic] shard=3 37/50 trials=1110
+[V12 semantic] shard=3 38/50 trials=1140
+[V12 semantic] shard=3 39/50 trials=1170
+[V12 semantic] shard=3 40/50 trials=1200
+[V12 semantic] shard=3 41/50 trials=1230
+[V12 semantic] shard=3 42/50 trials=1260
+[V12 semantic] shard=3 43/50 trials=1290
+[V12 semantic] shard=3 44/50 trials=1320
+[V12 semantic] shard=3 45/50 trials=1350
+[V12 semantic] shard=3 46/50 trials=1380
+[V12 semantic] shard=3 47/50 trials=1410
+[V12 semantic] shard=3 48/50 trials=1440
+[V12 semantic] shard=3 49/50 trials=1470
+[V12 semantic] shard=3 50/50 trials=1500
+{
+  "shard": 3,
+  "n": 50,
+  "trial_encode_decode_count": 1500
+}

@@ -1,0 +1,10 @@
+{
+  "status": "FREEZE_BEFORE_NEW_DEV_PROTOCOL",
+  "selected_policy": {
+    "tau_relative": 0.25,
+    "rate_slack": 0.25,
+    "qp_mode": "lowmid"
+  },
+  "feasible_count": 8,
+  "result_sha256": "366d1a8a85cf0a75a5b03f962e9f5162a7775c8b6ce240c9cd9bf3694b1eb861"
+}

@@ -1,0 +1,366 @@
+[{"stream_name":"stderr","time":7.348428315,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.348476622,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.348480887,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.348483717,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.982261503,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.98229383,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.9823037039999996,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.982307204,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":557.595778328,"data":"{\n"}
+,{"stream_name":"stdout","time":557.595883259,"data":"  \"experiment\": \"v12_semantic_lowqp_h265_cal\",\n"}
+,{"stream_name":"stdout","time":557.595890846,"data":"  \"direction\": \"semantic\",\n"}
+,{"stream_name":"stdout","time":557.595895704,"data":"  \"repository_url\": \"https://github.com/munnn01/test_pre.git\",\n"}
+,{"stream_name":"stdout","time":557.59590257,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":557.595910336,"data":"  \"scope\": \"reused CAL development only; no DEV/TEST/holdout or mc3 evaluation\",\n"}
+,{"stream_name":"stdout","time":557.595913768,"data":"  \"bootstrap_unit\": \"source video; all QPs, arms and primary analyzers paired\",\n"}
+,{"stream_name":"stdout","time":557.595917207,"data":"  \"code_commit\": \"f75e6231ff7a29396d9eb66ee5591fdb1107f956\",\n"}
+,{"stream_name":"stdout","time":557.595920664,"data":"  \"code_fingerprint\": \"694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331\",\n"}
+,{"stream_name":"stdout","time":557.595923974,"data":"  \"preregistration_commit\": \"225e06509ebdd72744ae82c6b75a40ff6f2c16d1\",\n"}
+,{"stream_name":"stdout","time":557.595927365,"data":"  \"preregistration_sha256\": \"8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89\",\n"}
+,{"stream_name":"stdout","time":557.595930732,"data":"  \"protocol_sha256\": \"7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639\",\n"}
+,{"stream_name":"stdout","time":557.595934232,"data":"  \"cal_input_sha256\": \"db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d\",\n"}
+,{"stream_name":"stdout","time":557.595937541,"data":"  \"primary_outcomes_sha256\": \"35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d\",\n"}
+,{"stream_name":"stdout","time":557.595940999,"data":"  \"upstream_input_commit\": \"a02fdd250b5e04491f7d3619105ef79d0b6e64f8\",\n"}
+,{"stream_name":"stdout","time":557.595944351,"data":"  \"bootstrap_seed\": 20261009,\n"}
+,{"stream_name":"stdout","time":557.595947651,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":557.595950934,"data":"  \"teacher\": {\n"}
+,{"stream_name":"stdout","time":557.595954156,"data":"    \"name\": \"resnet18\",\n"}
+,{"stream_name":"stdout","time":557.595957412,"data":"    \"weights\": \"IMAGENET1K_V1\",\n"}
+,{"stream_name":"stdout","time":557.59596075,"data":"    \"url\": \"https://download.pytorch.org/models/resnet18-f37072fd.pth\",\n"}
+,{"stream_name":"stdout","time":557.595964067,"data":"    \"checkpoint_sha256\": \"f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec\",\n"}
+,{"stream_name":"stdout","time":557.595975938,"data":"    \"state_sha256\": \"e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2\",\n"}
+,{"stream_name":"stdout","time":557.595978815,"data":"    \"layers\": [\n"}
+,{"stream_name":"stdout","time":557.595981297,"data":"      \"layer2\",\n"}
+,{"stream_name":"stdout","time":557.595983749,"data":"      \"layer3\"\n"}
+,{"stream_name":"stdout","time":557.595986132,"data":"    ],\n"}
+,{"stream_name":"stdout","time":557.595988486,"data":"    \"input_size\": 112,\n"}
+,{"stream_name":"stdout","time":557.595991013,"data":"    \"mean\": [\n"}
+,{"stream_name":"stdout","time":557.595993414,"data":"      0.485,\n"}
+,{"stream_name":"stdout","time":557.595995956,"data":"      0.456,\n"}
+,{"stream_name":"stdout","time":557.595998427,"data":"      0.406\n"}
+,{"stream_name":"stdout","time":557.596000806,"data":"    ],\n"}
+,{"stream_name":"stdout","time":557.596003196,"data":"    \"std\": [\n"}
+,{"stream_name":"stdout","time":557.596005588,"data":"      0.229,\n"}
+,{"stream_name":"stdout","time":557.596008002,"data":"      0.224,\n"}
+,{"stream_name":"stdout","time":557.596010312,"data":"      0.225\n"}
+,{"stream_name":"stdout","time":557.596012637,"data":"    ]\n"}
+,{"stream_name":"stdout","time":557.596015044,"data":"  },\n"}
+,{"stream_name":"stdout","time":557.59601751,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":557.596020142,"data":"  \"paired_metrics_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":557.596022719,"data":"}\n"}
+,{"stream_name":"stdout","time":557.59602513,"data":"Downloading: \"https://download.pytorch.org/models/resnet18-f37072fd.pth\" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth\n"}
+,{"stream_name":"stdout","time":557.59602783,"data":"[V12 semantic] shard=1 1/50 trials=30\n"}
+,{"stream_name":"stdout","time":557.596030278,"data":"[V12 semantic] shard=1 2/50 trials=60\n"}
+,{"stream_name":"stdout","time":557.596034628,"data":"[V12 semantic] shard=1 3/50 trials=90\n"}
+,{"stream_name":"stdout","time":557.59603707,"data":"[V12 semantic] shard=1 4/50 trials=120\n"}
+,{"stream_name":"stdout","time":557.596039469,"data":"[V12 semantic] shard=1 5/50 trials=150\n"}
+,{"stream_name":"stdout","time":557.596041968,"data":"[V12 semantic] shard=1 6/50 trials=180\n"}
+,{"stream_name":"stdout","time":557.596044336,"data":"[V12 semantic] shard=1 7/50 trials=210\n"}
+,{"stream_name":"stdout","time":557.596046716,"data":"[V12 semantic] shard=1 8/50 trials=240\n"}
+,{"stream_name":"stdout","time":557.596049078,"data":"[V12 semantic] shard=1 9/50 trials=270\n"}
+,{"stream_name":"stdout","time":557.596051429,"data":"[V12 semantic] shard=1 10/50 trials=300\n"}
+,{"stream_name":"stdout","time":557.596053801,"data":"[V12 semantic] shard=1 11/50 trials=330\n"}
+,{"stream_name":"stdout","time":557.596056201,"data":"[V12 semantic] shard=1 12/50 trials=360\n"}
+,{"stream_name":"stdout","time":557.596058566,"data":"[V12 semantic] shard=1 13/50 trials=390\n"}
+,{"stream_name":"stdout","time":557.596060948,"data":"[V12 semantic] shard=1 14/50 trials=420\n"}
+,{"stream_name":"stdout","time":557.596063308,"data":"[V12 semantic] shard=1 15/50 trials=450\n"}
+,{"stream_name":"stdout","time":557.596065672,"data":"[V12 semantic] shard=1 16/50 trials=480\n"}
+,{"stream_name":"stdout","time":557.596068044,"data":"[V12 semantic] shard=1 17/50 trials=510\n"}
+,{"stream_name":"stdout","time":557.596070396,"data":"[V12 semantic] shard=1 18/50 trials=540\n"}
+,{"stream_name":"stdout","time":557.596075376,"data":"[V12 semantic] shard=1 19/50 trials=570\n"}
+,{"stream_name":"stdout","time":557.596077935,"data":"[V12 semantic] shard=1 20/50 trials=600\n"}
+,{"stream_name":"stdout","time":557.596080304,"data":"[V12 semantic] shard=1 21/50 trials=630\n"}
+,{"stream_name":"stdout","time":557.596082723,"data":"[V12 semantic] shard=1 22/50 trials=660\n"}
+,{"stream_name":"stdout","time":557.596085096,"data":"[V12 semantic] shard=1 23/50 trials=690\n"}
+,{"stream_name":"stdout","time":557.596087468,"data":"[V12 semantic] shard=1 24/50 trials=720\n"}
+,{"stream_name":"stdout","time":557.596089832,"data":"[V12 semantic] shard=1 25/50 trials=750\n"}
+,{"stream_name":"stdout","time":557.596092206,"data":"[V12 semantic] shard=1 26/50 trials=780\n"}
+,{"stream_name":"stdout","time":557.59609456,"data":"[V12 semantic] shard=1 27/50 trials=810\n"}
+,{"stream_name":"stdout","time":557.596096991,"data":"[V12 semantic] shard=1 28/50 trials=840\n"}
+,{"stream_name":"stdout","time":557.596099348,"data":"[V12 semantic] shard=1 29/50 trials=870\n"}
+,{"stream_name":"stdout","time":557.596101754,"data":"[V12 semantic] shard=1 30/50 trials=900\n"}
+,{"stream_name":"stdout","time":557.596104113,"data":"[V12 semantic] shard=1 31/50 trials=930\n"}
+,{"stream_name":"stdout","time":557.596106483,"data":"[V12 semantic] shard=1 32/50 trials=960\n"}
+,{"stream_name":"stdout","time":557.59610885,"data":"[V12 semantic] shard=1 33/50 trials=990\n"}
+,{"stream_name":"stdout","time":557.596111222,"data":"[V12 semantic] shard=1 34/50 trials=1020\n"}
+,{"stream_name":"stdout","time":557.596113601,"data":"[V12 semantic] shard=1 35/50 trials=1050\n"}
+,{"stream_name":"stdout","time":557.596115982,"data":"[V12 semantic] shard=1 36/50 trials=1080\n"}
+,{"stream_name":"stdout","time":557.596118364,"data":"[V12 semantic] shard=1 37/50 trials=1110\n"}
+,{"stream_name":"stdout","time":557.596120776,"data":"[V12 semantic] shard=1 38/50 trials=1140\n"}
+,{"stream_name":"stdout","time":557.596123142,"data":"[V12 semantic] shard=1 39/50 trials=1170\n"}
+,{"stream_name":"stdout","time":557.59612552,"data":"[V12 semantic] shard=1 40/50 trials=1200\n"}
+,{"stream_name":"stdout","time":557.596127881,"data":"[V12 semantic] shard=1 41/50 trials=1230\n"}
+,{"stream_name":"stdout","time":557.596130254,"data":"[V12 semantic] shard=1 42/50 trials=1260\n"}
+,{"stream_name":"stdout","time":557.596132615,"data":"[V12 semantic] shard=1 43/50 trials=1290\n"}
+,{"stream_name":"stdout","time":557.59613501,"data":"[V12 semantic] shard=1 44/50 trials=1320\n"}
+,{"stream_name":"stdout","time":557.596137395,"data":"[V12 semantic] shard=1 45/50 trials=1350\n"}
+,{"stream_name":"stdout","time":557.596139901,"data":"[V12 semantic] shard=1 46/50 trials=1380\n"}
+,{"stream_name":"stdout","time":557.596142263,"data":"[V12 semantic] shard=1 47/50 trials=1410\n"}
+,{"stream_name":"stdout","time":557.596144632,"data":"[V12 semantic] shard=1 48/50 trials=1440\n"}
+,{"stream_name":"stdout","time":557.596146988,"data":"[V12 semantic] shard=1 49/50 trials=1470\n"}
+,{"stream_name":"stdout","time":557.596149354,"data":"[V12 semantic] shard=1 50/50 trials=1500\n"}
+,{"stream_name":"stdout","time":557.596151731,"data":"{\n"}
+,{"stream_name":"stdout","time":557.596154064,"data":"  \"shard\": 1,\n"}
+,{"stream_name":"stdout","time":557.596156496,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":557.596158916,"data":"  \"trial_encode_decode_count\": 1500\n"}
+,{"stream_name":"stdout","time":557.596161387,"data":"}\n"}
+,{"stream_name":"stdout","time":557.596163714,"data":"[done] V12 semantic CAL shard=1\n"}
+,{"stream_name":"stdout","time":557.596166135,"data":"[exit] rc=0 direction=semantic shard=1\n"}
+,{"stream_name":"stderr","time":557.596960431,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":557.596974743,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":557.596979664,"data":"\n"}
+,{"stream_name":"stderr","time":557.596983217,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":557.596987172,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":560.137184623,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":560.137229845,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":560.312756607,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":560.312783283,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":560.980084101,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":561.313572326,"data":"[NbConvertApp] Writing 8925 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":563.786749032,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":564.217929636,"data":"[NbConvertApp] Writing 286465 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":7.348428315,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.348476622,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.348480887,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.348483717,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.982261503,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.98229383,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.9823037039999996,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.982307204,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":557.595778328,"data":"{\n"}
+,{"stream_name":"stdout","time":557.595883259,"data":"  \"experiment\": \"v12_semantic_lowqp_h265_cal\",\n"}
+,{"stream_name":"stdout","time":557.595890846,"data":"  \"direction\": \"semantic\",\n"}
+,{"stream_name":"stdout","time":557.595895704,"data":"  \"repository_url\": \"https://github.com/munnn01/test_pre.git\",\n"}
+,{"stream_name":"stdout","time":557.59590257,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":557.595910336,"data":"  \"scope\": \"reused CAL development only; no DEV/TEST/holdout or mc3 evaluation\",\n"}
+,{"stream_name":"stdout","time":557.595913768,"data":"  \"bootstrap_unit\": \"source video; all QPs, arms and primary analyzers paired\",\n"}
+,{"stream_name":"stdout","time":557.595917207,"data":"  \"code_commit\": \"f75e6231ff7a29396d9eb66ee5591fdb1107f956\",\n"}
+,{"stream_name":"stdout","time":557.595920664,"data":"  \"code_fingerprint\": \"694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331\",\n"}
+,{"stream_name":"stdout","time":557.595923974,"data":"  \"preregistration_commit\": \"225e06509ebdd72744ae82c6b75a40ff6f2c16d1\",\n"}
+,{"stream_name":"stdout","time":557.595927365,"data":"  \"preregistration_sha256\": \"8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89\",\n"}
+,{"stream_name":"stdout","time":557.595930732,"data":"  \"protocol_sha256\": \"7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639\",\n"}
+,{"stream_name":"stdout","time":557.595934232,"data":"  \"cal_input_sha256\": \"db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d\",\n"}
+,{"stream_name":"stdout","time":557.595937541,"data":"  \"primary_outcomes_sha256\": \"35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d\",\n"}
+,{"stream_name":"stdout","time":557.595940999,"data":"  \"upstream_input_commit\": \"a02fdd250b5e04491f7d3619105ef79d0b6e64f8\",\n"}
+,{"stream_name":"stdout","time":557.595944351,"data":"  \"bootstrap_seed\": 20261009,\n"}
+,{"stream_name":"stdout","time":557.595947651,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":557.595950934,"data":"  \"teacher\": {\n"}
+,{"stream_name":"stdout","time":557.595954156,"data":"    \"name\": \"resnet18\",\n"}
+,{"stream_name":"stdout","time":557.595957412,"data":"    \"weights\": \"IMAGENET1K_V1\",\n"}
+,{"stream_name":"stdout","time":557.59596075,"data":"    \"url\": \"https://download.pytorch.org/models/resnet18-f37072fd.pth\",\n"}
+,{"stream_name":"stdout","time":557.595964067,"data":"    \"checkpoint_sha256\": \"f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec\",\n"}
+,{"stream_name":"stdout","time":557.595975938,"data":"    \"state_sha256\": \"e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2\",\n"}
+,{"stream_name":"stdout","time":557.595978815,"data":"    \"layers\": [\n"}
+,{"stream_name":"stdout","time":557.595981297,"data":"      \"layer2\",\n"}
+,{"stream_name":"stdout","time":557.595983749,"data":"      \"layer3\"\n"}
+,{"stream_name":"stdout","time":557.595986132,"data":"    ],\n"}
+,{"stream_name":"stdout","time":557.595988486,"data":"    \"input_size\": 112,\n"}
+,{"stream_name":"stdout","time":557.595991013,"data":"    \"mean\": [\n"}
+,{"stream_name":"stdout","time":557.595993414,"data":"      0.485,\n"}
+,{"stream_name":"stdout","time":557.595995956,"data":"      0.456,\n"}
+,{"stream_name":"stdout","time":557.595998427,"data":"      0.406\n"}
+,{"stream_name":"stdout","time":557.596000806,"data":"    ],\n"}
+,{"stream_name":"stdout","time":557.596003196,"data":"    \"std\": [\n"}
+,{"stream_name":"stdout","time":557.596005588,"data":"      0.229,\n"}
+,{"stream_name":"stdout","time":557.596008002,"data":"      0.224,\n"}
+,{"stream_name":"stdout","time":557.596010312,"data":"      0.225\n"}
+,{"stream_name":"stdout","time":557.596012637,"data":"    ]\n"}
+,{"stream_name":"stdout","time":557.596015044,"data":"  },\n"}
+,{"stream_name":"stdout","time":557.59601751,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":557.596020142,"data":"  \"paired_metrics_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":557.596022719,"data":"}\n"}
+,{"stream_name":"stdout","time":557.59602513,"data":"Downloading: \"https://download.pytorch.org/models/resnet18-f37072fd.pth\" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth\n"}
+,{"stream_name":"stdout","time":557.59602783,"data":"[V12 semantic] shard=1 1/50 trials=30\n"}
+,{"stream_name":"stdout","time":557.596030278,"data":"[V12 semantic] shard=1 2/50 trials=60\n"}
+,{"stream_name":"stdout","time":557.596034628,"data":"[V12 semantic] shard=1 3/50 trials=90\n"}
+,{"stream_name":"stdout","time":557.59603707,"data":"[V12 semantic] shard=1 4/50 trials=120\n"}
+,{"stream_name":"stdout","time":557.596039469,"data":"[V12 semantic] shard=1 5/50 trials=150\n"}
+,{"stream_name":"stdout","time":557.596041968,"data":"[V12 semantic] shard=1 6/50 trials=180\n"}
+,{"stream_name":"stdout","time":557.596044336,"data":"[V12 semantic] shard=1 7/50 trials=210\n"}
+,{"stream_name":"stdout","time":557.596046716,"data":"[V12 semantic] shard=1 8/50 trials=240\n"}
+,{"stream_name":"stdout","time":557.596049078,"data":"[V12 semantic] shard=1 9/50 trials=270\n"}
+,{"stream_name":"stdout","time":557.596051429,"data":"[V12 semantic] shard=1 10/50 trials=300\n"}
+,{"stream_name":"stdout","time":557.596053801,"data":"[V12 semantic] shard=1 11/50 trials=330\n"}
+,{"stream_name":"stdout","time":557.596056201,"data":"[V12 semantic] shard=1 12/50 trials=360\n"}
+,{"stream_name":"stdout","time":557.596058566,"data":"[V12 semantic] shard=1 13/50 trials=390\n"}
+,{"stream_name":"stdout","time":557.596060948,"data":"[V12 semantic] shard=1 14/50 trials=420\n"}
+,{"stream_name":"stdout","time":557.596063308,"data":"[V12 semantic] shard=1 15/50 trials=450\n"}
+,{"stream_name":"stdout","time":557.596065672,"data":"[V12 semantic] shard=1 16/50 trials=480\n"}
+,{"stream_name":"stdout","time":557.596068044,"data":"[V12 semantic] shard=1 17/50 trials=510\n"}
+,{"stream_name":"stdout","time":557.596070396,"data":"[V12 semantic] shard=1 18/50 trials=540\n"}
+,{"stream_name":"stdout","time":557.596075376,"data":"[V12 semantic] shard=1 19/50 trials=570\n"}
+,{"stream_name":"stdout","time":557.596077935,"data":"[V12 semantic] shard=1 20/50 trials=600\n"}
+,{"stream_name":"stdout","time":557.596080304,"data":"[V12 semantic] shard=1 21/50 trials=630\n"}
+,{"stream_name":"stdout","time":557.596082723,"data":"[V12 semantic] shard=1 22/50 trials=660\n"}
+,{"stream_name":"stdout","time":557.596085096,"data":"[V12 semantic] shard=1 23/50 trials=690\n"}
+,{"stream_name":"stdout","time":557.596087468,"data":"[V12 semantic] shard=1 24/50 trials=720\n"}
+,{"stream_name":"stdout","time":557.596089832,"data":"[V12 semantic] shard=1 25/50 trials=750\n"}
+,{"stream_name":"stdout","time":557.596092206,"data":"[V12 semantic] shard=1 26/50 trials=780\n"}
+,{"stream_name":"stdout","time":557.59609456,"data":"[V12 semantic] shard=1 27/50 trials=810\n"}
+,{"stream_name":"stdout","time":557.596096991,"data":"[V12 semantic] shard=1 28/50 trials=840\n"}
+,{"stream_name":"stdout","time":557.596099348,"data":"[V12 semantic] shard=1 29/50 trials=870\n"}
+,{"stream_name":"stdout","time":557.596101754,"data":"[V12 semantic] shard=1 30/50 trials=900\n"}
+,{"stream_name":"stdout","time":557.596104113,"data":"[V12 semantic] shard=1 31/50 trials=930\n"}
+,{"stream_name":"stdout","time":557.596106483,"data":"[V12 semantic] shard=1 32/50 trials=960\n"}
+,{"stream_name":"stdout","time":557.59610885,"data":"[V12 semantic] shard=1 33/50 trials=990\n"}
+,{"stream_name":"stdout","time":557.596111222,"data":"[V12 semantic] shard=1 34/50 trials=1020\n"}
+,{"stream_name":"stdout","time":557.596113601,"data":"[V12 semantic] shard=1 35/50 trials=1050\n"}
+,{"stream_name":"stdout","time":557.596115982,"data":"[V12 semantic] shard=1 36/50 trials=1080\n"}
+,{"stream_name":"stdout","time":557.596118364,"data":"[V12 semantic] shard=1 37/50 trials=1110\n"}
+,{"stream_name":"stdout","time":557.596120776,"data":"[V12 semantic] shard=1 38/50 trials=1140\n"}
+,{"stream_name":"stdout","time":557.596123142,"data":"[V12 semantic] shard=1 39/50 trials=1170\n"}
+,{"stream_name":"stdout","time":557.59612552,"data":"[V12 semantic] shard=1 40/50 trials=1200\n"}
+,{"stream_name":"stdout","time":557.596127881,"data":"[V12 semantic] shard=1 41/50 trials=1230\n"}
+,{"stream_name":"stdout","time":557.596130254,"data":"[V12 semantic] shard=1 42/50 trials=1260\n"}
+,{"stream_name":"stdout","time":557.596132615,"data":"[V12 semantic] shard=1 43/50 trials=1290\n"}
+,{"stream_name":"stdout","time":557.59613501,"data":"[V12 semantic] shard=1 44/50 trials=1320\n"}
+,{"stream_name":"stdout","time":557.596137395,"data":"[V12 semantic] shard=1 45/50 trials=1350\n"}
+,{"stream_name":"stdout","time":557.596139901,"data":"[V12 semantic] shard=1 46/50 trials=1380\n"}
+,{"stream_name":"stdout","time":557.596142263,"data":"[V12 semantic] shard=1 47/50 trials=1410\n"}
+,{"stream_name":"stdout","time":557.596144632,"data":"[V12 semantic] shard=1 48/50 trials=1440\n"}
+,{"stream_name":"stdout","time":557.596146988,"data":"[V12 semantic] shard=1 49/50 trials=1470\n"}
+,{"stream_name":"stdout","time":557.596149354,"data":"[V12 semantic] shard=1 50/50 trials=1500\n"}
+,{"stream_name":"stdout","time":557.596151731,"data":"{\n"}
+,{"stream_name":"stdout","time":557.596154064,"data":"  \"shard\": 1,\n"}
+,{"stream_name":"stdout","time":557.596156496,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":557.596158916,"data":"  \"trial_encode_decode_count\": 1500\n"}
+,{"stream_name":"stdout","time":557.596161387,"data":"}\n"}
+,{"stream_name":"stdout","time":557.596163714,"data":"[done] V12 semantic CAL shard=1\n"}
+,{"stream_name":"stdout","time":557.596166135,"data":"[exit] rc=0 direction=semantic shard=1\n"}
+,{"stream_name":"stderr","time":557.596960431,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":557.596974743,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":557.596979664,"data":"\n"}
+,{"stream_name":"stderr","time":557.596983217,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":557.596987172,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":560.137184623,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":560.137229845,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":560.312756607,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":560.312783283,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":560.980084101,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":561.313572326,"data":"[NbConvertApp] Writing 8925 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":563.786749032,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":564.217929636,"data":"[NbConvertApp] Writing 286465 bytes to __results__.html\n"}
+]
+[{"stream_name":"stderr","time":7.348428315,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.348476622,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.348480887,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.348483717,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.982261503,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.98229383,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.9823037039999996,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.982307204,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":557.595778328,"data":"{\n"}
+,{"stream_name":"stdout","time":557.595883259,"data":"  \"experiment\": \"v12_semantic_lowqp_h265_cal\",\n"}
+,{"stream_name":"stdout","time":557.595890846,"data":"  \"direction\": \"semantic\",\n"}
+,{"stream_name":"stdout","time":557.595895704,"data":"  \"repository_url\": \"https://github.com/munnn01/test_pre.git\",\n"}
+,{"stream_name":"stdout","time":557.59590257,"data":"  \"source_fingerprint\": \"ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721\",\n"}
+,{"stream_name":"stdout","time":557.595910336,"data":"  \"scope\": \"reused CAL development only; no DEV/TEST/holdout or mc3 evaluation\",\n"}
+,{"stream_name":"stdout","time":557.595913768,"data":"  \"bootstrap_unit\": \"source video; all QPs, arms and primary analyzers paired\",\n"}
+,{"stream_name":"stdout","time":557.595917207,"data":"  \"code_commit\": \"f75e6231ff7a29396d9eb66ee5591fdb1107f956\",\n"}
+,{"stream_name":"stdout","time":557.595920664,"data":"  \"code_fingerprint\": \"694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331\",\n"}
+,{"stream_name":"stdout","time":557.595923974,"data":"  \"preregistration_commit\": \"225e06509ebdd72744ae82c6b75a40ff6f2c16d1\",\n"}
+,{"stream_name":"stdout","time":557.595927365,"data":"  \"preregistration_sha256\": \"8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89\",\n"}
+,{"stream_name":"stdout","time":557.595930732,"data":"  \"protocol_sha256\": \"7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639\",\n"}
+,{"stream_name":"stdout","time":557.595934232,"data":"  \"cal_input_sha256\": \"db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d\",\n"}
+,{"stream_name":"stdout","time":557.595937541,"data":"  \"primary_outcomes_sha256\": \"35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d\",\n"}
+,{"stream_name":"stdout","time":557.595940999,"data":"  \"upstream_input_commit\": \"a02fdd250b5e04491f7d3619105ef79d0b6e64f8\",\n"}
+,{"stream_name":"stdout","time":557.595944351,"data":"  \"bootstrap_seed\": 20261009,\n"}
+,{"stream_name":"stdout","time":557.595947651,"data":"  \"bootstrap_draws\": 2000,\n"}
+,{"stream_name":"stdout","time":557.595950934,"data":"  \"teacher\": {\n"}
+,{"stream_name":"stdout","time":557.595954156,"data":"    \"name\": \"resnet18\",\n"}
+,{"stream_name":"stdout","time":557.595957412,"data":"    \"weights\": \"IMAGENET1K_V1\",\n"}
+,{"stream_name":"stdout","time":557.59596075,"data":"    \"url\": \"https://download.pytorch.org/models/resnet18-f37072fd.pth\",\n"}
+,{"stream_name":"stdout","time":557.595964067,"data":"    \"checkpoint_sha256\": \"f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec\",\n"}
+,{"stream_name":"stdout","time":557.595975938,"data":"    \"state_sha256\": \"e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2\",\n"}
+,{"stream_name":"stdout","time":557.595978815,"data":"    \"layers\": [\n"}
+,{"stream_name":"stdout","time":557.595981297,"data":"      \"layer2\",\n"}
+,{"stream_name":"stdout","time":557.595983749,"data":"      \"layer3\"\n"}
+,{"stream_name":"stdout","time":557.595986132,"data":"    ],\n"}
+,{"stream_name":"stdout","time":557.595988486,"data":"    \"input_size\": 112,\n"}
+,{"stream_name":"stdout","time":557.595991013,"data":"    \"mean\": [\n"}
+,{"stream_name":"stdout","time":557.595993414,"data":"      0.485,\n"}
+,{"stream_name":"stdout","time":557.595995956,"data":"      0.456,\n"}
+,{"stream_name":"stdout","time":557.595998427,"data":"      0.406\n"}
+,{"stream_name":"stdout","time":557.596000806,"data":"    ],\n"}
+,{"stream_name":"stdout","time":557.596003196,"data":"    \"std\": [\n"}
+,{"stream_name":"stdout","time":557.596005588,"data":"      0.229,\n"}
+,{"stream_name":"stdout","time":557.596008002,"data":"      0.224,\n"}
+,{"stream_name":"stdout","time":557.596010312,"data":"      0.225\n"}
+,{"stream_name":"stdout","time":557.596012637,"data":"    ]\n"}
+,{"stream_name":"stdout","time":557.596015044,"data":"  },\n"}
+,{"stream_name":"stdout","time":557.59601751,"data":"  \"metric_sha256\": \"38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487\",\n"}
+,{"stream_name":"stdout","time":557.596020142,"data":"  \"paired_metrics_sha256\": \"ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36\"\n"}
+,{"stream_name":"stdout","time":557.596022719,"data":"}\n"}
+,{"stream_name":"stdout","time":557.59602513,"data":"Downloading: \"https://download.pytorch.org/models/resnet18-f37072fd.pth\" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth\n"}
+,{"stream_name":"stdout","time":557.59602783,"data":"[V12 semantic] shard=1 1/50 trials=30\n"}
+,{"stream_name":"stdout","time":557.596030278,"data":"[V12 semantic] shard=1 2/50 trials=60\n"}
+,{"stream_name":"stdout","time":557.596034628,"data":"[V12 semantic] shard=1 3/50 trials=90\n"}
+,{"stream_name":"stdout","time":557.59603707,"data":"[V12 semantic] shard=1 4/50 trials=120\n"}
+,{"stream_name":"stdout","time":557.596039469,"data":"[V12 semantic] shard=1 5/50 trials=150\n"}
+,{"stream_name":"stdout","time":557.596041968,"data":"[V12 semantic] shard=1 6/50 trials=180\n"}
+,{"stream_name":"stdout","time":557.596044336,"data":"[V12 semantic] shard=1 7/50 trials=210\n"}
+,{"stream_name":"stdout","time":557.596046716,"data":"[V12 semantic] shard=1 8/50 trials=240\n"}
+,{"stream_name":"stdout","time":557.596049078,"data":"[V12 semantic] shard=1 9/50 trials=270\n"}
+,{"stream_name":"stdout","time":557.596051429,"data":"[V12 semantic] shard=1 10/50 trials=300\n"}
+,{"stream_name":"stdout","time":557.596053801,"data":"[V12 semantic] shard=1 11/50 trials=330\n"}
+,{"stream_name":"stdout","time":557.596056201,"data":"[V12 semantic] shard=1 12/50 trials=360\n"}
+,{"stream_name":"stdout","time":557.596058566,"data":"[V12 semantic] shard=1 13/50 trials=390\n"}
+,{"stream_name":"stdout","time":557.596060948,"data":"[V12 semantic] shard=1 14/50 trials=420\n"}
+,{"stream_name":"stdout","time":557.596063308,"data":"[V12 semantic] shard=1 15/50 trials=450\n"}
+,{"stream_name":"stdout","time":557.596065672,"data":"[V12 semantic] shard=1 16/50 trials=480\n"}
+,{"stream_name":"stdout","time":557.596068044,"data":"[V12 semantic] shard=1 17/50 trials=510\n"}
+,{"stream_name":"stdout","time":557.596070396,"data":"[V12 semantic] shard=1 18/50 trials=540\n"}
+,{"stream_name":"stdout","time":557.596075376,"data":"[V12 semantic] shard=1 19/50 trials=570\n"}
+,{"stream_name":"stdout","time":557.596077935,"data":"[V12 semantic] shard=1 20/50 trials=600\n"}
+,{"stream_name":"stdout","time":557.596080304,"data":"[V12 semantic] shard=1 21/50 trials=630\n"}
+,{"stream_name":"stdout","time":557.596082723,"data":"[V12 semantic] shard=1 22/50 trials=660\n"}
+,{"stream_name":"stdout","time":557.596085096,"data":"[V12 semantic] shard=1 23/50 trials=690\n"}
+,{"stream_name":"stdout","time":557.596087468,"data":"[V12 semantic] shard=1 24/50 trials=720\n"}
+,{"stream_name":"stdout","time":557.596089832,"data":"[V12 semantic] shard=1 25/50 trials=750\n"}
+,{"stream_name":"stdout","time":557.596092206,"data":"[V12 semantic] shard=1 26/50 trials=780\n"}
+,{"stream_name":"stdout","time":557.59609456,"data":"[V12 semantic] shard=1 27/50 trials=810\n"}
+,{"stream_name":"stdout","time":557.596096991,"data":"[V12 semantic] shard=1 28/50 trials=840\n"}
+,{"stream_name":"stdout","time":557.596099348,"data":"[V12 semantic] shard=1 29/50 trials=870\n"}
+,{"stream_name":"stdout","time":557.596101754,"data":"[V12 semantic] shard=1 30/50 trials=900\n"}
+,{"stream_name":"stdout","time":557.596104113,"data":"[V12 semantic] shard=1 31/50 trials=930\n"}
+,{"stream_name":"stdout","time":557.596106483,"data":"[V12 semantic] shard=1 32/50 trials=960\n"}
+,{"stream_name":"stdout","time":557.59610885,"data":"[V12 semantic] shard=1 33/50 trials=990\n"}
+,{"stream_name":"stdout","time":557.596111222,"data":"[V12 semantic] shard=1 34/50 trials=1020\n"}
+,{"stream_name":"stdout","time":557.596113601,"data":"[V12 semantic] shard=1 35/50 trials=1050\n"}
+,{"stream_name":"stdout","time":557.596115982,"data":"[V12 semantic] shard=1 36/50 trials=1080\n"}
+,{"stream_name":"stdout","time":557.596118364,"data":"[V12 semantic] shard=1 37/50 trials=1110\n"}
+,{"stream_name":"stdout","time":557.596120776,"data":"[V12 semantic] shard=1 38/50 trials=1140\n"}
+,{"stream_name":"stdout","time":557.596123142,"data":"[V12 semantic] shard=1 39/50 trials=1170\n"}
+,{"stream_name":"stdout","time":557.59612552,"data":"[V12 semantic] shard=1 40/50 trials=1200\n"}
+,{"stream_name":"stdout","time":557.596127881,"data":"[V12 semantic] shard=1 41/50 trials=1230\n"}
+,{"stream_name":"stdout","time":557.596130254,"data":"[V12 semantic] shard=1 42/50 trials=1260\n"}
+,{"stream_name":"stdout","time":557.596132615,"data":"[V12 semantic] shard=1 43/50 trials=1290\n"}
+,{"stream_name":"stdout","time":557.59613501,"data":"[V12 semantic] shard=1 44/50 trials=1320\n"}
+,{"stream_name":"stdout","time":557.596137395,"data":"[V12 semantic] shard=1 45/50 trials=1350\n"}
+,{"stream_name":"stdout","time":557.596139901,"data":"[V12 semantic] shard=1 46/50 trials=1380\n"}
+,{"stream_name":"stdout","time":557.596142263,"data":"[V12 semantic] shard=1 47/50 trials=1410\n"}
+,{"stream_name":"stdout","time":557.596144632,"data":"[V12 semantic] shard=1 48/50 trials=1440\n"}
+,{"stream_name":"stdout","time":557.596146988,"data":"[V12 semantic] shard=1 49/50 trials=1470\n"}
+,{"stream_name":"stdout","time":557.596149354,"data":"[V12 semantic] shard=1 50/50 trials=1500\n"}
+,{"stream_name":"stdout","time":557.596151731,"data":"{\n"}
+,{"stream_name":"stdout","time":557.596154064,"data":"  \"shard\": 1,\n"}
+,{"stream_name":"stdout","time":557.596156496,"data":"  \"n\": 50,\n"}
+,{"stream_name":"stdout","time":557.596158916,"data":"  \"trial_encode_decode_count\": 1500\n"}
+,{"stream_name":"stdout","time":557.596161387,"data":"}\n"}
+,{"stream_name":"stdout","time":557.596163714,"data":"[done] V12 semantic CAL shard=1\n"}
+,{"stream_name":"stdout","time":557.596166135,"data":"[exit] rc=0 direction=semantic shard=1\n"}
+,{"stream_name":"stderr","time":557.596960431,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":557.596974743,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":557.596979664,"data":"\n"}
+,{"stream_name":"stderr","time":557.596983217,"data":"/kaggle/working/v12_repository/src/models/cast_ar.py:8: SyntaxWarning: invalid escape sequence '\\-'\n"}
+,{"stream_name":"stderr","time":557.596987172,"data":"  \\-\u003e content/QP mixture + safety gate\n"}
+,{"stream_name":"stderr","time":560.137184623,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":560.137229845,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":560.312756607,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":560.312783283,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":560.980084101,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":561.313572326,"data":"[NbConvertApp] Writing 8925 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":563.786749032,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":564.217929636,"data":"[NbConvertApp] Writing 286465 bytes to __results__.html\n"}
+]

@@ -1,0 +1,307 @@
+{
+  "provenance": {
+    "experiment": "v12_semantic_lowqp_h265_cal",
+    "direction": "semantic",
+    "repository_url": "https://github.com/munnn01/test_pre.git",
+    "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+    "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+    "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+    "code_commit": "545a83b11f893293aa8d6c733bd4779f77ae8aff",
+    "code_fingerprint": "694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331",
+    "preregistration_commit": "225e06509ebdd72744ae82c6b75a40ff6f2c16d1",
+    "preregistration_sha256": "8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89",
+    "protocol_sha256": "7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639",
+    "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+    "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+    "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+    "bootstrap_seed": 20261009,
+    "bootstrap_draws": 2000,
+    "teacher": {
+      "name": "resnet18",
+      "weights": "IMAGENET1K_V1",
+      "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+      "checkpoint_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+      "state_sha256": "e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2",
+      "layers": [
+        "layer2",
+        "layer3"
+      ],
+      "input_size": 112,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+    "paired_metrics_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+  },
+  "checked_at_utc": "2026-09-30T12:38:21.620073+00:00",
+  "jobs": [
+    {
+      "job": {
+        "direction": "semantic",
+        "provenance": {
+          "experiment": "v12_semantic_lowqp_h265_cal",
+          "direction": "semantic",
+          "repository_url": "https://github.com/munnn01/test_pre.git",
+          "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+          "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+          "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+          "code_commit": "f75e6231ff7a29396d9eb66ee5591fdb1107f956",
+          "code_fingerprint": "694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331",
+          "preregistration_commit": "225e06509ebdd72744ae82c6b75a40ff6f2c16d1",
+          "preregistration_sha256": "8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89",
+          "protocol_sha256": "7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639",
+          "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+          "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+          "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+          "bootstrap_seed": 20261009,
+          "bootstrap_draws": 2000,
+          "teacher": {
+            "name": "resnet18",
+            "weights": "IMAGENET1K_V1",
+            "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+            "checkpoint_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+            "state_sha256": "e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2",
+            "layers": [
+              "layer2",
+              "layer3"
+            ],
+            "input_size": 112,
+            "mean": [
+              0.485,
+              0.456,
+              0.406
+            ],
+            "std": [
+              0.229,
+              0.224,
+              0.225
+            ]
+          },
+          "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+          "paired_metrics_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+        },
+        "account": "trmnguyn111",
+        "shard": 0,
+        "n": 50,
+        "handle": "trmnguyn111/v12b-semantic-cal-s0-f75e623",
+        "url": "https://www.kaggle.com/code/trmnguyn111/v12b-semantic-cal-s0-f75e623",
+        "private": true,
+        "enable_gpu": true,
+        "dataset": "qktttttttttt/kineticscleaned",
+        "planned_unique_encode_decode_trials": 1500,
+        "submission_exit_code": 0,
+        "submission_verified": true,
+        "push_log_sha256": "5bd1015db7435b7df854ca67045ebc16e7e61f1c82579a209f77505660df7edf",
+        "payload_sha256": {
+          "notebook.ipynb": "a970a1ccadb92b77aa53968c54a04de34ba42c01fe0c3fa4abb318df8d189592",
+          "kernel-metadata.json": "cc5d27630c9c904cdaef1fd0860971ed0d169c015f75ccbec29cc73d9a4c8078"
+        }
+      },
+      "status_exit_code": 0,
+      "status_api_output": "trmnguyn111/v12b-semantic-cal-s0-f75e623 has status \"KernelWorkerStatus.COMPLETE\""
+    },
+    {
+      "job": {
+        "direction": "semantic",
+        "provenance": {
+          "experiment": "v12_semantic_lowqp_h265_cal",
+          "direction": "semantic",
+          "repository_url": "https://github.com/munnn01/test_pre.git",
+          "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+          "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+          "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+          "code_commit": "f75e6231ff7a29396d9eb66ee5591fdb1107f956",
+          "code_fingerprint": "694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331",
+          "preregistration_commit": "225e06509ebdd72744ae82c6b75a40ff6f2c16d1",
+          "preregistration_sha256": "8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89",
+          "protocol_sha256": "7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639",
+          "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+          "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+          "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+          "bootstrap_seed": 20261009,
+          "bootstrap_draws": 2000,
+          "teacher": {
+            "name": "resnet18",
+            "weights": "IMAGENET1K_V1",
+            "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+            "checkpoint_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+            "state_sha256": "e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2",
+            "layers": [
+              "layer2",
+              "layer3"
+            ],
+            "input_size": 112,
+            "mean": [
+              0.485,
+              0.456,
+              0.406
+            ],
+            "std": [
+              0.229,
+              0.224,
+              0.225
+            ]
+          },
+          "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+          "paired_metrics_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+        },
+        "account": "shungg05",
+        "shard": 1,
+        "n": 50,
+        "handle": "shungg05/v12b-semantic-cal-s1-f75e623",
+        "url": "https://www.kaggle.com/code/shungg05/v12b-semantic-cal-s1-f75e623",
+        "private": true,
+        "enable_gpu": true,
+        "dataset": "qktttttttttt/kineticscleaned",
+        "planned_unique_encode_decode_trials": 1500,
+        "submission_exit_code": 0,
+        "submission_verified": true,
+        "push_log_sha256": "4375115b2b07c8d9e4ba24ad2d51a9c9691282c961d223c51a5cd830817043b1",
+        "payload_sha256": {
+          "notebook.ipynb": "da3eb8e5e1898f5daebf548133a4f4b8d5982cba662fa7762ee7b49c57c41642",
+          "kernel-metadata.json": "cf25dccb9942fdc8c356710c6af23be6a24bd2c177da6f547e9d866da11f8996"
+        }
+      },
+      "status_exit_code": 0,
+      "status_api_output": "shungg05/v12b-semantic-cal-s1-f75e623 has status \"KernelWorkerStatus.COMPLETE\""
+    },
+    {
+      "job": {
+        "direction": "semantic",
+        "provenance": {
+          "experiment": "v12_semantic_lowqp_h265_cal",
+          "direction": "semantic",
+          "repository_url": "https://github.com/munnn01/test_pre.git",
+          "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+          "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+          "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+          "code_commit": "f75e6231ff7a29396d9eb66ee5591fdb1107f956",
+          "code_fingerprint": "694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331",
+          "preregistration_commit": "225e06509ebdd72744ae82c6b75a40ff6f2c16d1",
+          "preregistration_sha256": "8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89",
+          "protocol_sha256": "7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639",
+          "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+          "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+          "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+          "bootstrap_seed": 20261009,
+          "bootstrap_draws": 2000,
+          "teacher": {
+            "name": "resnet18",
+            "weights": "IMAGENET1K_V1",
+            "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+            "checkpoint_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+            "state_sha256": "e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2",
+            "layers": [
+              "layer2",
+              "layer3"
+            ],
+            "input_size": 112,
+            "mean": [
+              0.485,
+              0.456,
+              0.406
+            ],
+            "std": [
+              0.229,
+              0.224,
+              0.225
+            ]
+          },
+          "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+          "paired_metrics_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+        },
+        "account": "baoancut",
+        "shard": 2,
+        "n": 50,
+        "handle": "baoancut/v12b-semantic-cal-s2-f75e623",
+        "url": "https://www.kaggle.com/code/baoancut/v12b-semantic-cal-s2-f75e623",
+        "private": true,
+        "enable_gpu": true,
+        "dataset": "qktttttttttt/kineticscleaned",
+        "planned_unique_encode_decode_trials": 1500,
+        "submission_exit_code": 0,
+        "submission_verified": true,
+        "push_log_sha256": "612afe91e687a71a6e587e6584e3a498da8a8246eeb752ab2ce1120e00e0c288",
+        "payload_sha256": {
+          "notebook.ipynb": "acfd97fc12ab140cee21329f56187e6c96f78bfb09ba12ec0f6f7b9fe885f560",
+          "kernel-metadata.json": "68610bb0940208bf817321332f20d017e16216327f773a8fd97889ffdda07837"
+        }
+      },
+      "status_exit_code": 0,
+      "status_api_output": "baoancut/v12b-semantic-cal-s2-f75e623 has status \"KernelWorkerStatus.COMPLETE\""
+    },
+    {
+      "job": {
+        "direction": "semantic",
+        "provenance": {
+          "experiment": "v12_semantic_lowqp_h265_cal",
+          "direction": "semantic",
+          "repository_url": "https://github.com/munnn01/test_pre.git",
+          "source_fingerprint": "ce5acf9334d4f683fdc7757d53b0d5be0ce80cc5a6fd4a4340e30c9357e79721",
+          "scope": "reused CAL development only; no DEV/TEST/holdout or mc3 evaluation",
+          "bootstrap_unit": "source video; all QPs, arms and primary analyzers paired",
+          "code_commit": "f75e6231ff7a29396d9eb66ee5591fdb1107f956",
+          "code_fingerprint": "694cc7e391f05da9ad05e6b4f486673fafb13cb3751d31a3e82e517853a40331",
+          "preregistration_commit": "225e06509ebdd72744ae82c6b75a40ff6f2c16d1",
+          "preregistration_sha256": "8079631803019da5de26c86f4f660122b9093fe368196bb152626ce2fbe50b89",
+          "protocol_sha256": "7cdf2a204b1b39455e8a6e399ffbbd1b5b9e6215eca19c0eee42f0e6e5556639",
+          "cal_input_sha256": "db9fd6eef315657b33f9e0d557260c7af2a89857633193e6d41c83b056a7983d",
+          "primary_outcomes_sha256": "35b42f2874e909fddfc38363c6d0b47ef8a5e85abfcc4adcbea40eaaabb4150d",
+          "upstream_input_commit": "a02fdd250b5e04491f7d3619105ef79d0b6e64f8",
+          "bootstrap_seed": 20261009,
+          "bootstrap_draws": 2000,
+          "teacher": {
+            "name": "resnet18",
+            "weights": "IMAGENET1K_V1",
+            "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+            "checkpoint_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+            "state_sha256": "e8994d93b1b110dc2c4d815d12e2966b6fd07b88c3213bcdbe68d332fef4aca2",
+            "layers": [
+              "layer2",
+              "layer3"
+            ],
+            "input_size": 112,
+            "mean": [
+              0.485,
+              0.456,
+              0.406
+            ],
+            "std": [
+              0.229,
+              0.224,
+              0.225
+            ]
+          },
+          "metric_sha256": "38d373f13366cb2397cd572d294dda4bd57dd71841fc353aa0b50776b2ae6487",
+          "paired_metrics_sha256": "ca61890140e511d101024485cce4e1c96c2b7ff68e2718abfe466e1bd2af9f36"
+        },
+        "account": "trnhlng",
+        "shard": 3,
+        "n": 50,
+        "handle": "trnhlng/v12b-semantic-cal-s3-f75e623",
+        "url": "https://www.kaggle.com/code/trnhlng/v12b-semantic-cal-s3-f75e623",
+        "private": true,
+        "enable_gpu": true,
+        "dataset": "qktttttttttt/kineticscleaned",
+        "planned_unique_encode_decode_trials": 1500,
+        "submission_exit_code": 0,
+        "submission_verified": true,
+        "push_log_sha256": "6a14c6442c3c1cbe85a019be592be7c2239b8220829ad60f0a826b5e80d79cad",
+        "payload_sha256": {
+          "notebook.ipynb": "07a0a57aa86d5ce7641af58fdd99f7556b8569a71f9c9f2ebb2ec9174d38bb50",
+          "kernel-metadata.json": "2faf3832746e8244a907a55c027068c6e869ded8d23226407ceec37537f3d3ee"
+        }
+      },
+      "status_exit_code": 0,
+      "status_api_output": "trnhlng/v12b-semantic-cal-s3-f75e623 has status \"KernelWorkerStatus.COMPLETE\""
+    }
+  ]
+}

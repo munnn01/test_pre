@@ -22,3 +22,7 @@ The complete 24-point grid uses only primary CAL correctness and the locked prox
 ## Deployment
 
 Four private notebooks are submitted, pinned to worker commit `f75e6231ff7a29396d9eb66ee5591fdb1107f956`. [Launch record, account assignment, dated API status and hashes](V12_KAGGLE_LAUNCH.md). Outcomes remain CHƯA ĐO.
+
+## CAL complete
+
+All four v1 archives have passed audit and the locked calibration ran once. [Results, complete grid, CIs, scope and next protocol](RESULTS_V12_CAL.md). The selected policy and all CAL choices are in `results/v12_lowqp/`; commit before any future DEV inference. MC3, new DEV and holdout remain CHƯA ĐO.
