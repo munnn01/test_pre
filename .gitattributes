@@ -6,3 +6,5 @@ results/v12_lowqp/** -text
 results/v12_lowqp_launch/** -text
 research/v12_lowqp/*.py text eol=lf
 kaggle/v12_lowqp_cal_cell.sh text eol=lf
+results/v12_lowqp_launch/*.log binary
+research/v12_lowqp/bootstrap_reference.py.txt -text
