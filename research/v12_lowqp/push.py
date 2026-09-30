@@ -8,6 +8,36 @@ import subprocess
 import sys
 from .study import REPO,protocol,sha
 
+def require_new_destination(api,handle):
+    """Prove absence in a complete authenticated owner listing; never overwrite."""
+    account=handle.split('/')[0]
+    refs=[]
+    cursor=None
+    seen=set()
+    for page in range(100):
+        response=api.kernels_list_with_response(mine=True,page_size=100,page_token=cursor)
+        if response is None:
+            raise ValueError('authenticated kernel listing unavailable')
+        current=[k.ref for k in response.kernels or []]
+        if any(not isinstance(r,str) or not r.startswith(account+'/') for r in current):
+            raise ValueError('credential owner does not match requested account')
+        if handle in current:
+            raise ValueError('kernel already exists; use a fresh name and preserve prior runs')
+        refs.extend(current)
+        cursor=response.next_page_token
+        if not cursor:
+            break
+        if cursor in seen:
+            raise ValueError('authenticated kernel listing repeats pagination cursor')
+        seen.add(cursor)
+    else:
+        raise ValueError('authenticated kernel listing incomplete')
+    if not refs:
+        raise ValueError('cannot verify credential owner from an empty listing')
+    return {'handle':handle,'authenticated_owner':account,'owned_count':len(refs),'pages':page+1,
+            'owned_refs_sha256':sha(json.dumps(sorted(refs),separators=(',',':')).encode()),
+            'destination_absent':True}
+
 def payload(commit,prereg,account,slug,shard,cfg):
     if any(not re.fullmatch('[0-9a-f]{40}',v) for v in (commit,prereg)):
         raise ValueError('full revision hashes required')
@@ -66,11 +96,20 @@ def main():
         if 'KGAT_' in output or token in output:
             raise RuntimeError('refusing credential-bearing output')
         return result.returncode,output
-    code,output=call(['kernels','status',meta['id']])
-    if code==0 and any(v in output.upper() for v in ('RUNNING','QUEUED','PENDING')):
-        raise ValueError('kernel already active; do not replace')
-    if code!=0 and '404' not in output:
-        raise RuntimeError('kernel status check failed; '+output)
+    # Kaggle status returns kernels.get denied for some nonexistent private slugs.
+    # Verify all owned pages instead, rejecting every existing destination.
+    os.environ['KAGGLE_API_TOKEN']=token
+    try:
+        from kaggle.api.kaggle_api_extended import KaggleApi
+        api=KaggleApi()
+        api.authenticate()
+        proof=require_new_destination(api,meta['id'])
+    except Exception as exc:
+        message=str(exc)
+        if 'KGAT_' in message or token in message:
+            raise RuntimeError('refusing credential-bearing output') from None
+        raise RuntimeError('new kernel ownership/absence check failed: '+message) from None
+    print(json.dumps({'new_destination_proof':proof},indent=2),flush=True)
     code,output=call(['kernels','push','-p',str(target)])
     print(output,flush=True)
     if code or 'successfully pushed' not in output.lower():

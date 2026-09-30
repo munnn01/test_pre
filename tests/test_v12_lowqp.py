@@ -8,7 +8,8 @@ import pytest
 import torch
 from research.v12_lowqp import policy,study
 from research.v12_lowqp import paired_metrics
-from research.v12_lowqp.push import payload
+from research.v12_lowqp.push import payload,require_new_destination
+from types import SimpleNamespace
 
 P={'tau_relative':0.1,'rate_slack':0.5,'qp_mode':'lowmid'}
 
@@ -143,3 +144,32 @@ def test_notebooks_pin_correct_repo_revision_gpu_and_exclude_holdout():
         assert f'github.com/munnn01/{repo}.git' in shell and 'a'*40 in shell and 'b'*40 in shell
         assert '__REF__' not in shell and 'holdout' not in shell and 'mc3_18' not in shell
         assert 'research.v12_lowqp.study' in shell and 'shard --source-root' in shell
+
+def fake_listing(pages):
+    calls=[]
+    def listing(**kwargs):
+        calls.append(kwargs)
+        return pages[len(calls)-1]
+    return SimpleNamespace(kernels_list_with_response=listing),calls
+
+def listing_page(refs,cursor=None):
+    return SimpleNamespace(kernels=[SimpleNamespace(ref=r) for r in refs],next_page_token=cursor)
+
+def test_publisher_checks_every_owned_page_before_allowing_a_new_destination():
+    api,calls=fake_listing([listing_page(['example1/old-private'],'page2'),listing_page(['example1/old2'])])
+    proof=require_new_destination(api,'example1/new')
+    assert proof['destination_absent'] and proof['owned_count']==2 and proof['pages']==2
+    assert calls==[{'mine':True,'page_size':100,'page_token':None},
+                   {'mine':True,'page_size':100,'page_token':'page2'}]
+
+@pytest.mark.parametrize('pages',[
+    [listing_page(['example1/old'],'page2'),listing_page(['example1/new'])],
+    [listing_page(['different-owner/old'])],
+    [listing_page([])],
+    [None],
+    [listing_page(['example1/old'],'same'),listing_page(['example1/other'],'same')],
+])
+def test_publisher_rejects_existing_names_wrong_owner_and_incomplete_listings(pages):
+    api,_=fake_listing(pages)
+    with pytest.raises(ValueError):
+        require_new_destination(api,'example1/new')
